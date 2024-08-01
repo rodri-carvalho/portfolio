@@ -39,14 +39,12 @@ function Footer() {
 					Contato
 				</Link>
 			</nav>
-			<aside>
+			<aside className="text-base">
 				<p className="text-center sm:text-left">Rodrigo Carvalho • {new Date().getFullYear()}</p>
-				{/* TODO: LINK */}
-				TODO:
 				<p>
 					Código do projeto deste Portfólio diponível no{" "}
-					<a href="https://google.com" target="_blank">
-						Github
+					<a href="https://github.com/rodri-carvalho/portfolio" target="_blank">
+						GitHub
 					</a>
 					.
 				</p>

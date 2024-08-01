@@ -50,7 +50,7 @@ function About() {
 			</div>
 			<div className="buttons">
 				<button className="cv-btn">Veja meu currículo</button>
-				<button className="contato-btn">Entre me contato</button>
+				<button className="contato-btn">Entre em contato</button>
 			</div>
 		</div>
 	);
