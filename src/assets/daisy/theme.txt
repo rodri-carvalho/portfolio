@@ -1,0 +1,32 @@
+module.exports = {
+  daisyui: {
+    themes: [
+      {
+        mytheme: {
+          
+"primary": "#008dba",
+          
+"secondary": "#008e00",
+          
+"accent": "#0021ff",
+          
+"neutral": "#0b0401",
+          
+"base-100": "#242933",
+          
+"info": "#0097c3",
+          
+"success": "#00dd82",
+          
+"warning": "#ffc500",
+          
+"error": "#ff587a",
+          },
+        },
+      ],
+    },
+    plugins: [
+      require('daisyui'),
+    ],
+    //...
+  }
