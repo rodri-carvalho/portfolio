@@ -34,7 +34,7 @@ function CourseCard({
 					<h2 className="card-title text-2xl">{title}</h2>
 					<p className="text-xl">{subtitle}</p>
 					<div className="flex flex-col card-actions items-center">
-						<div className="w-full flex justify-evenly">
+						<div className="w-full flex justify-center gap-16">
 							<ModalCourses
 								modalId={modalIdDescription}
 								buttonLabel="Descrição"
@@ -52,7 +52,7 @@ function CourseCard({
 
 						<div>
 							{!uniqueCertificate && (
-								<div className="flex justify-between">
+								<div className="flex justify-center">
 									<div className="px-2">
 										<ModalCourses
 											modalId={modalIdCertificate}
