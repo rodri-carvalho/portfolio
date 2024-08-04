@@ -46,7 +46,7 @@ function Home() {
 
 	return (
 		<>
-			<div className="flex flex-col relative">
+			<div className="flex flex-col relative mx-10">
 				<div
 					className="hero h-screen rounded-badge"
 					style={{

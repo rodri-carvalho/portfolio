@@ -31,6 +31,8 @@ a:hover {
 }
 
 body {
+	width: 100vw;
+	overflow-x: hidden;
 	margin: 0;
 	display: flex;
 	place-items: center;

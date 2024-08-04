@@ -28,7 +28,7 @@ function Navbar({ title = "Meu Portfólio" }) {
 	};
 
 	return (
-		<nav className="navbar mb-12 shadow-lg bg-neutral text-neutral-content overflow-hidden">
+		<nav className="navbar mb-12 shadow-lg bg-neutral text-neutral-content w-full">
 			<div className="w-full ml-10 flex mr-10">
 				<div className="flex-none px-2">
 					<Link to="/" className="text-3xl font-bold align-middle">
