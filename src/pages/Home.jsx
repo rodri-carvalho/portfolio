@@ -4,6 +4,7 @@ import sections from "../assets/db/sections";
 import heroBg from "../assets/pics/componentPics/hero-bg.jpg";
 import arrowDown from "../assets/pics/componentPics/white-arrow.png";
 import { PiArrowBendRightDown } from "react-icons/pi";
+import { FaCode } from "react-icons/fa6";
 
 const tagSmile = "<>  :  ) </>";
 
@@ -46,18 +47,20 @@ function Home() {
 
 	return (
 		<>
-			<div className="flex flex-col relative mx-10">
+			<div className="flex flex-col relative mx-4 sm:mx-6 sm:-top-4">
 				<div
-					className="hero h-screen rounded-badge"
+					className="hero h-full md:h-screen rounded-badge"
 					style={{
 						backgroundImage: `url(${heroBg})`,
 					}}>
 					<div className="hero-overlay bg-opacity-80 rounded-badge"></div>
-					<div className="hero-content flex flex-col relative text-neutral-content text-center">
-						<div className="flex flex-col items-center justify-center">
-							<h1 className="mb-5 text-6xl font-bold">Olá e bem-vindo(a) ao meu Portfólio!</h1>
-							<h1 className="text-6xl">{tagSmile}</h1>
-							<p className="mt-10 mb-5 max-w-6xl text-3xl text-center">
+					<div className="hero-content flex flex-col relative text-neutral-content text-center p-0 sm:mx-20 sm:my-20 md:mx-14">
+						<div className="flex flex-col sm:gap-4 items-center justify-center my-20">
+							<h1 className="mb-5 text-3xl md:text-4xl font-bold mx-2">
+								Olá e bem-vindo(a) ao meu Portfólio!
+							</h1>
+							<h1 className="text-3xl md:text-4xl sm:text-nowrap">{tagSmile}</h1>
+							<p className="mt-10 mb-5 mx-6 sm:mx-0 text-xl md:text-2xl text-center">
 								Aqui você vai encontrar todas as informações sobre mim, tecnologias que eu domino,
 								minha formação acadêmica, projetos que já elaborei e como pode me contatar.
 							</p>
@@ -67,22 +70,26 @@ function Home() {
 
 				{showArrow && (
 					<div className={`arrowDiv w-full flex justify-center absolute top-1/3 ${arrowClass}`}>
-						<img src={arrowDown} alt="Arrow Down" className="arrow mt-0 absolute " />
+						<img
+							src={arrowDown}
+							alt="Arrow Down"
+							className="arrow mt-6 absolute sm:mt-10 md:mt-4"
+						/>
 					</div>
 				)}
 
 				<div className="w-full flex justify-center">
-					<div className="divider flex mt-10 w-7/12"></div>
+					<div className="divider w-10/12 self-center mt-12">
+						<FaCode className="w-20" />
+					</div>
 				</div>
 
-				<div className="flex flex-col w-full items-center">
-					<div className="flex w-auto items-center">
-						<h3 className="container w-full flex justify-center title text-4xl">
-							Navegue pelas seções
-						</h3>
-						<PiArrowBendRightDown className="mt-8 ml-4 h-12 w-10" />
+				<div className="flex flex-col mt-4">
+					<div className="flex items-center justify-center">
+						<h3 className="flex text-2xl text-center justify-center ml-4">Navegue pelas seções</h3>
+						<PiArrowBendRightDown className="mt-8 h-12 md:h-10 md:pl-2 w-12 rotate-45 translate-y-4 md:translate-y-3 -translate-x-2 md:mx-2" />
 					</div>
-					<div className="w-full flex justify-center mt-4"></div>
+					<div className="flex p-0 justify-center mt-4"></div>
 
 					<div className="secoes flex flex-col w-full items-center mt-4">
 						{sections.map((section) => (

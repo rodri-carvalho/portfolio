@@ -28,10 +28,10 @@ function Navbar({ title = "Meu Portfólio" }) {
 	};
 
 	return (
-		<nav className="navbar mb-12 shadow-lg bg-neutral text-neutral-content w-full">
-			<div className="w-full ml-10 flex mr-10">
-				<div className="flex-none px-2">
-					<Link to="/" className="text-3xl font-bold align-middle">
+		<nav className="navbar mb-6 sm:mb-8 md:mb-10 lg:mb-11 xl:mb-14 shadow-lg bg-neutral text-neutral-content w-full">
+			<div className="w-full ml-4 flex mr-3">
+				<div className="flex-none px-3">
+					<Link to="/" className="text-2xl sm:text-3xl font-bold align-middle">
 						{title}
 					</Link>
 				</div>
@@ -60,7 +60,7 @@ function Navbar({ title = "Meu Portfólio" }) {
 						</div>
 					</div>
 				) : (
-					<div className="dropdown dropdown-end absolute right-10">
+					<div className="dropdown dropdown-end absolute right-8">
 						<div tabIndex={0} role="button" onClick={toggleDropdown}>
 							<IoMenu className="w-12 h-12" />
 						</div>

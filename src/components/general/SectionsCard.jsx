@@ -38,7 +38,7 @@ function SectionsCard({ page, description, iconId, isOpen, query }) {
 	}, []);
 
 	return (
-		<div className="collapse collapse-arrow bg-base-200 mb-4 w-1/2">
+		<div className="collapse collapse-arrow bg-base-200 mb-4 w-10/12 sm:w-3/5 md:w-3/5">
 			<input
 				type="radio"
 				name="my-accordion"
@@ -52,11 +52,11 @@ function SectionsCard({ page, description, iconId, isOpen, query }) {
 					<div className="ml-4">{page}</div>
 				</label>
 			</div>
-			<div className="collapse-content">
-				<p>{description}</p>
-				<button className="btn btn-active btn-primary">
-					<Link to={`/${query}`} className="btn btn-ghost btn-sm rounded-btn text-xl">
-						Saiba mais
+			<div className="collapse-content flex flex-col items-center">
+				<p className="text-center text-lg">{description}</p>
+				<button className="btn btn-active btn-primary mt-4">
+					<Link to={`/${query}`} className="btn btn-ghost btn-sm rounded-btn text-lg">
+						Ir para a seção
 					</Link>
 				</button>
 			</div>

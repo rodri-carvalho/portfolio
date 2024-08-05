@@ -19,7 +19,7 @@ function Footer() {
 					</a>
 				</div>
 			</nav>
-			<nav className="container mx-auto grid gap-4 text-center md:grid-flow-col">
+			<nav className="container mx-auto grid gap-4 text-center md:grid-flow-col lg:w-4/6 lg:gap-0 xl:w-3/6">
 				<Link to="/" className="btn btn-ghost btn-sm rounded-btn text-xl">
 					Início
 				</Link>

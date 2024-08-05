@@ -4,30 +4,32 @@ import { FaCode } from "react-icons/fa6";
 
 function About() {
 	return (
-		<div className="container flex flex-col items-center w-full mx-10">
-			<div className="info flex gap-4 sm:gap-6 md:gap-8 lg:gap-20 items-center">
-				<div className="titulo-nome text-center flex flex-col items-center">
-					<h1 className="text-4xl lg:text-5xl">Rodrigo Carvalho</h1>
-					<h2 className="mt-4 text-3xl lg:text-4xl">Desenvolvedor Full Stack</h2>
+		<div className="flex flex-col items-center w-full">
+			<div className="info flex sm:gap-6 lg:gap-12 xl:gap-16 items-center mx-2">
+				<div className="titulo-nome text-center flex flex-col items-center mx-4">
+					<h1 className="text-3xl sm:text-4xl lg:text-5xl">Rodrigo Carvalho</h1>
+					<h2 className="mt-2 lg:mt-4 text-2xl sm:text-3xl lg:text-4xl">
+						Desenvolvedor Full Stack
+					</h2>
 				</div>
 				<div className="avatar">
-					<div className="w-32  rounded-2xl">
+					<div className="w-32 rounded-2xl">
 						<img src="src/assets/pics/componentPics/fotoperfil.png" />
 					</div>
 				</div>
 			</div>
 
-			<div className="divider w-9/12 self-center mt-14">
+			<div className="divider w-9/12 self-center mt-10">
 				<FaCode className="w-20" />
 			</div>
 
-			<div className="texto flex justify-center text-justify mt-8 mx-20">
+			<div className="texto flex justify-center text-justify mt-6 mx-6">
 				<div>
-					<p className="flex justify-center text-2xl indent-8">
+					<p className="flex justify-center text-lg sm:text-xl xl:text-2xl text-center">
 						Olá! Me chamo Rodrigo Carvalho 😁, sou de Brasília, Distrito Federal.
 					</p>
 					<br />
-					<div className="text-xl indent-10 leading-8 mt-4">
+					<div className="text-lg xl:text-xl indent-10 leading-8 mt-4 sm:mt-2 sm:mx-4">
 						<p>
 							Sou um amante da tecnologia e de todo seu potencial e no ano de 2023 decidi
 							profissionalizar essa paixão. Sou bacharel em direito e minha carreira até agora foi
@@ -63,34 +65,38 @@ function About() {
 					</div>
 				</div>
 			</div>
-			<div className="buttons mt-10 flex gap-10">
-				{/* Open the modal using document.getElementById('ID').showModal() method */}
-				<button className="btn" onClick={() => document.getElementById("my_modal_1").showModal()}>
-					Veja meu currículo
-				</button>
+			<div className="flex flex-col items-center mt-7 w-full">
+				<div className="buttons w-8/12 max-w-72 md:max-w-full lg:max-w-full xl:max-w-full md:w-4/6 lg:w-7/12 xl:w-6/12 flex flex-col md:flex-row md:justify-center md:gap-16 gap-5 py-2">
+					{/* Open the modal using document.getElementById('ID').showModal() method */}
+					<button
+						className="btn btn-active btn-neutral text-lg md:w-2/5"
+						onClick={() => document.getElementById("my_modal_1").showModal()}>
+						Veja meu currículo
+					</button>
 
-				<dialog id="my_modal_1" className="modal">
-					<div className="mt-10 w-11/12 h-5/6 bg-zinc-700 flex flex-col items-center justify-center rounded-2xl">
-						<iframe
-							src="src/assets/docs/curriculo.pdf"
-							className="border rounded-xl h-full w-11/12 mt-4"></iframe>
-						<div className="w-full flex justify-center">
-							<button
-								className="btn w-40 text-lg my-4 mr-10 mb-0"
-								onClick={() => document.getElementById("my_modal_1").close()}>
-								Fechar
-							</button>
+					<dialog id="my_modal_1" className="modal">
+						<div className="mt-10 w-11/12 h-5/6 bg-zinc-700 flex flex-col items-center rounded-2xl">
+							<iframe
+								src="src/assets/docs/curriculo.pdf"
+								className="border rounded-xl h-full w-11/12 mt-5"></iframe>
+							<div className="flex mt-4">
+								<button
+									className="btn w-40 flex text-lg h-full"
+									onClick={() => document.getElementById("my_modal_1").close()}>
+									Fechar
+								</button>
+							</div>
+
+							<div className="modal-action"></div>
 						</div>
+					</dialog>
 
-						<div className="modal-action"></div>
-					</div>
-				</dialog>
-
-				<button className="btn btn-active btn-neutral">
-					<Link to="/findme" className="btn btn-ghost btn-sm rounded-btn text-xl">
-						Contato
-					</Link>
-				</button>
+					<button className="btn btn-active btn-neutral md:w-2/6">
+						<Link to="/findme" className="btn btn-ghost btn-sm rounded-btn text-lg">
+							Contato
+						</Link>
+					</button>
+				</div>
 			</div>
 		</div>
 	);
