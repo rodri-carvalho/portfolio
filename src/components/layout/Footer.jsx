@@ -5,9 +5,9 @@ function Footer() {
 	const footerYear = new Date().getFullYear();
 
 	return (
-		<footer className="footer footer-center bg-base-200 text-base-content rounded p-10">
-			<nav className="container mx-auto">
-				<div className="grid grid-flow-col gap-16 mb-4 sm:mb-0 sm:justify-center">
+		<footer className="footer footer-center bg-base-200 text-base-content rounded pt-10">
+			<nav className="container mx-auto ">
+				<div className="grid grid-flow-col gap-16">
 					<a href="https://github.com/rodri-carvalho" target="_blank" rel="noopener noreferrer">
 						<FaGithub className="h-10 w-10" />
 					</a>
@@ -19,27 +19,27 @@ function Footer() {
 					</a>
 				</div>
 			</nav>
-			<nav className="container mx-auto grid gap-4 text-center md:grid-flow-col lg:w-4/6 lg:gap-0 xl:w-3/6">
-				<Link to="/" className="btn btn-ghost btn-sm rounded-btn text-xl">
+			<nav className="w-4/12 gap-x-28 grid grid-cols-2 sm:grid-cols-3 md:w-40 md:flex md:justify-center md:gap-2 text-center">
+				<Link to="/" className="btn btn-ghost btn-sm rounded-btn text-lg lg:text-xl">
 					Início
 				</Link>
-				<Link to="/about" className="btn btn-ghost btn-sm rounded-btn text-xl">
+				<Link to="/about" className="btn btn-ghost btn-sm rounded-btn text-lg lg:text-xl">
 					Sobre
 				</Link>
-				<Link to="/knowledge" className="btn btn-ghost btn-sm rounded-btn text-xl">
+				<Link to="/knowledge" className="btn btn-ghost btn-sm rounded-btn text-lg lg:text-xl">
 					Habilidades
 				</Link>
-				<Link to="/education" className="btn btn-ghost btn-sm rounded-btn text-xl">
+				<Link to="/education" className="btn btn-ghost btn-sm rounded-btn text-lg lg:text-xl">
 					Formação
 				</Link>
-				<Link to="/projects" className="btn btn-ghost btn-sm rounded-btn text-xl">
+				<Link to="/projects" className="btn btn-ghost btn-sm rounded-btn text-lg lg:text-xl">
 					Projetos
 				</Link>
-				<Link to="/findme" className="btn btn-ghost btn-sm rounded-btn text-xl">
+				<Link to="/findme" className="btn btn-ghost btn-sm rounded-btn text-lg lg:text-xl">
 					Contato
 				</Link>
 			</nav>
-			<aside className="text-base">
+			<aside className="text-sm mb-8">
 				<p className="text-center sm:text-left">Rodrigo Carvalho • {new Date().getFullYear()}</p>
 				<p>
 					Código do projeto deste Portfólio diponível no{" "}

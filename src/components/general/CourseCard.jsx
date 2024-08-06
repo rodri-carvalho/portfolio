@@ -40,7 +40,6 @@ function CourseCard({
 								buttonLabel="Descrição"
 								content={description}
 								title={title}
-								inactive={true}
 							/>
 							<ModalCourses
 								modalId={modalIdLearned}
@@ -80,6 +79,16 @@ function CourseCard({
 									buttonLabel="Certificado"
 									imageSrc={certificate}
 									title={title}
+								/>
+							) : null}
+
+							{inProgress ? (
+								<ModalCourses
+									modalId={modalIdCertificate}
+									buttonLabel="Certificado"
+									imageSrc={certificate}
+									title={title}
+									inactive={true}
 								/>
 							) : null}
 						</div>

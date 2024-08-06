@@ -23,7 +23,7 @@ function About() {
 				<FaCode className="w-20" />
 			</div>
 
-			<div className="texto flex justify-center text-justify mt-6 mx-6">
+			<div className="texto flex justify-center text-justify mt-6 mx-6 lg:mx-9">
 				<div>
 					<p className="flex justify-center text-lg sm:text-xl xl:text-2xl text-center">
 						Olá! Me chamo Rodrigo Carvalho 😁, sou de Brasília, Distrito Federal.

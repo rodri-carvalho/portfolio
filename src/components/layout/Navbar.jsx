@@ -3,6 +3,10 @@ import { Link } from "react-router-dom";
 import React, { useState, useEffect } from "react";
 import PropTypes from "prop-types";
 
+// TODO:
+// GRID COLS 2 when sm
+// Discord and Instagram icons
+
 function Navbar({ title = "Meu Portfólio" }) {
 	const [windowWidth, setWindowWidth] = useState(window.innerWidth);
 	const [isDropdownOpen, setIsDropdownOpen] = useState(false);
@@ -28,7 +32,7 @@ function Navbar({ title = "Meu Portfólio" }) {
 	};
 
 	return (
-		<nav className="navbar mb-6 sm:mb-8 md:mb-10 lg:mb-11 xl:mb-14 shadow-lg bg-neutral text-neutral-content w-full">
+		<nav className="navbar mb-6 sm:mb-8 md:mb-10 lg:mb-11 xl:mb-8 shadow-lg bg-neutral text-neutral-content w-full">
 			<div className="w-full ml-4 flex mr-3">
 				<div className="flex-none px-3">
 					<Link to="/" className="text-2xl sm:text-3xl font-bold align-middle">
@@ -37,7 +41,7 @@ function Navbar({ title = "Meu Portfólio" }) {
 				</div>
 
 				{windowWidth > 970 ? (
-					<div className="flex-1 right-0 pt-1">
+					<div className="flex-1 right-0 xl:mr-6 pt-1">
 						<div className="flex justify-end">
 							<Link to="/" className="btn btn-ghost btn-sm rounded-btn text-xl">
 								Início
