@@ -20,39 +20,44 @@ function CourseCard({
 
 	return (
 		<>
-			<div className="card bg-base-100 image-full w-full lg:96 md:h-80 sm:h-52 shadow-xl">
+			<div className="card w-fit max-w-xl flex justify-center mx-auto bg-base-100 image-full shadow-xl">
 				<figure>
-					<img src={pic} alt={`logo ${title}`} className="w-full" />
-				</figure>
-				<div className="card-body">
+					<img src={pic} alt={`logo ${title}`} className="w-full opacity-50" />
 					{inProgress && (
-						<div className="emAndamento w-full h-6 flex justify-end items-center">
+						<div className="emAndamento flex absolute -top-1 -right-1 z-10">
 							<div className="badge badge-accent">Em andamento</div>
 						</div>
 					)}
-
-					<h2 className="card-title text-2xl">{title}</h2>
-					<p className="text-xl">{subtitle}</p>
-					<div className="flex flex-col card-actions items-center">
-						<div className="w-full flex justify-center gap-16">
-							<ModalCourses
-								modalId={modalIdDescription}
-								buttonLabel="Descrição"
-								content={description}
-								title={title}
-							/>
-							<ModalCourses
-								modalId={modalIdLearned}
-								buttonLabel="Conteúdo"
-								content={learned}
-								title={title}
-							/>
+				</figure>
+				<div className="card-body w-full h-full px-3">
+					<h2 className="card-title text-2xl px-2">{title}</h2>
+					<p className="text-xl px-2">{subtitle}</p>
+					<div className="card-actions flex flex-col items-center mt-4">
+						<div className="w-full flex flex-col">
+							<div className="flex justify-around">
+								<div className="w-1/2 px-1">
+									<ModalCourses
+										modalId={modalIdDescription}
+										buttonLabel="Descrição"
+										content={description}
+										title={title}
+									/>
+								</div>
+								<div className="w-1/2 px-1">
+									<ModalCourses
+										modalId={modalIdLearned}
+										buttonLabel="Conteúdo"
+										content={learned}
+										title={title}
+									/>
+								</div>
+							</div>
 						</div>
 
-						<div>
+						<div className="w-full flex flex-col">
 							{!uniqueCertificate && (
-								<div className="flex justify-center">
-									<div className="px-2">
+								<div className="flex justify-around">
+									<div className="w-full px-1">
 										<ModalCourses
 											modalId={modalIdCertificate}
 											buttonLabel="Certificado Frontend"
@@ -60,7 +65,7 @@ function CourseCard({
 											title={title}
 										/>
 									</div>
-									<div className="px-2">
+									<div className="w-full px-1">
 										<ModalCourses
 											modalId={modalIdCertificate2}
 											buttonLabel="Certificado Backend"
@@ -72,7 +77,7 @@ function CourseCard({
 							)}
 						</div>
 
-						<div>
+						<div className="w-full flex justify-center max-w-80">
 							{!inProgress && uniqueCertificate ? (
 								<ModalCourses
 									modalId={modalIdCertificate}
@@ -102,7 +107,8 @@ function CourseCard({
 CourseCard.propTypes = {
 	title: PropTypes.string.isRequired,
 	subtitle: PropTypes.string.isRequired,
-	description: PropTypes.string.isRequired,
+	description: PropTypes.oneOfType([PropTypes.string, PropTypes.arrayOf(PropTypes.string)])
+		.isRequired,
 	learned: PropTypes.string.isRequired,
 	pic: PropTypes.string.isRequired,
 	certificate: PropTypes.string.isRequired,

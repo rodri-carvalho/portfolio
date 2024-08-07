@@ -40,7 +40,7 @@ function Footer() {
 				</Link>
 			</nav>
 			<aside className="text-sm mb-8">
-				<p className="text-center sm:text-left">Rodrigo Carvalho • {new Date().getFullYear()}</p>
+				<p className="text-center sm:text-left">Rodrigo Carvalho • {footerYear}</p>
 				<p>
 					Código do projeto deste Portfólio diponível no{" "}
 					<a href="https://github.com/rodri-carvalho/portfolio" target="_blank">

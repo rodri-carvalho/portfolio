@@ -32,10 +32,10 @@ function Navbar({ title = "Meu Portfólio" }) {
 	};
 
 	return (
-		<nav className="navbar mb-6 sm:mb-8 md:mb-10 lg:mb-11 xl:mb-8 shadow-lg bg-neutral text-neutral-content w-full">
+		<nav className="navbar mb-4 sm:mb-5 md:mb-6 lg:mb-7 shadow-lg bg-neutral text-neutral-content w-full">
 			<div className="w-full ml-4 flex mr-3">
 				<div className="flex-none px-3">
-					<Link to="/" className="text-2xl sm:text-3xl font-bold align-middle">
+					<Link to="/" className="text-2xl md:text-3xl font-bold align-middle">
 						{title}
 					</Link>
 				</div>
