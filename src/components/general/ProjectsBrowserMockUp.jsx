@@ -5,17 +5,24 @@ import PropTypes from "prop-types";
 function ProjectsBrowserMockUp({ id, title, projectURL, projectPic, description }) {
 	const modalId = `modal-${id}`;
 
+	const openModal = () => {
+		const modal = document.getElementById(modalId);
+		if (modal) {
+			modal.showModal();
+			// Use requestAnimationFrame para garantir que o modal tenha tempo para abrir antes de rolar
+			requestAnimationFrame(() => {
+				modal.scrollTop = 0;
+			});
+		}
+	};
+
 	return (
 		<>
-			<button
-				onClick={() => document.getElementById(modalId).showModal()}
-				className="p-0 rounded-2xl">
+			<button onClick={openModal} className="p-0 rounded-2xl">
 				<div className="mockup-browser bg-base-300 border">
-					<div className="mockup-browser-toolbar flex justify-between pl-4">
-						<div className="flex justify-start w-full pl-6">
-							<div className="input !flex !justify-start items-center !m-0 !w-11/12">
-								{projectURL}
-							</div>
+					<div className="mockup-browser-toolbar">
+						<div className="flex justify-start w-3/4">
+							<div className="input !flex items-center text-xs">{projectURL}</div>
 						</div>
 					</div>
 					<div className="bg-base-200 flex flex-col justify-center">
@@ -24,7 +31,6 @@ function ProjectsBrowserMockUp({ id, title, projectURL, projectPic, description 
 				</div>
 			</button>
 			<dialog id={modalId} className="modal">
-				{/* TODO: continuar w do modal */}
 				<div className="modal-box max-w-full flex flex-col items-center">
 					<img src={projectPic} alt={`Imagem do Projeto ${title}`} className="rounded-md" />
 					<h2 className="text-xl mt-4">{title}</h2>
@@ -41,9 +47,16 @@ function ProjectsBrowserMockUp({ id, title, projectURL, projectPic, description 
 							<p>{description}</p>
 						)}
 					</div>
-					<div className="modal-action">
-						<form method="dialog">
-							<button className="btn">Fechar</button>
+					<div className="modal-action flex justify-center w-full">
+						<form method="dialog" className="w-full">
+							<div className="flex flex-col items-center gap-4 w-full">
+								<div className="w-full flex justify-center">
+									<Link to={projectURL} target="_blank" className="btn w-3/5 text-xl">
+										Visitar Projeto
+									</Link>
+								</div>
+								<button className="btn w-2/5 text-lg">Fechar</button>
+							</div>
 						</form>
 					</div>
 				</div>
