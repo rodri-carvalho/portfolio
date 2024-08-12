@@ -98,6 +98,24 @@ button:focus-visible {
 	pointer-events: none;
 }
 
+.btn {
+	transition: all 0.3s ease-in-out;
+}
+
+.botaoCurriculo {
+	/* Estilos específicos para botaoCurriculo */
+}
+
+.botaoContato {
+	/* Estilos específicos para botaoContato */
+}
+
+/* Adicione animações e transições comuns aqui */
+.btn:hover {
+	transform: scale(1.05);
+	box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
 @-webkit-keyframes downarrow {
 	0% {
 		-webkit-transform: translateY(0);

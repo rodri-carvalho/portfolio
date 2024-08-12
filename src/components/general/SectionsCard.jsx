@@ -38,7 +38,7 @@ function SectionsCard({ page, description, iconId, isOpen, query }) {
 	}, []);
 
 	return (
-		<div className="collapse collapse-arrow bg-base-200 mb-4 w-10/12 sm:w-3/5 md:w-3/5">
+		<div className="collapse collapse-arrow bg-base-200 mb-4 w-10/12 sm:w-3/5 md:w-3/5 xl:w-2/5 2xl:w-2/6 3xl:w-1/4">
 			<input
 				type="radio"
 				name="my-accordion"
@@ -47,9 +47,11 @@ function SectionsCard({ page, description, iconId, isOpen, query }) {
 				defaultChecked={isOpen}
 			/>
 			<div className="collapse-title text-xl font-medium">
-				<label htmlFor={`accordion-${iconId}`} className="flex items-center cursor-pointer">
+				<label
+					htmlFor={`accordion-${iconId}`}
+					className="flex items-center cursor-pointer xl:text-xl 2xl:text-2xl 3xl:text-3xl">
 					<IconComponent />
-					<div className="ml-4">{page}</div>
+					<div className="ml-4 xl:text-2xl 2xl:text-3xl 3xl:text-4xl 2xl:pl-4">{page}</div>
 				</label>
 			</div>
 			<div className="collapse-content flex flex-col items-center">
