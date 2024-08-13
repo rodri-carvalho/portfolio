@@ -102,19 +102,23 @@ button:focus-visible {
 	transition: all 0.3s ease-in-out;
 }
 
-.botaoCurriculo {
-	/* Estilos específicos para botaoCurriculo */
-}
-
-.botaoContato {
-	/* Estilos específicos para botaoContato */
-}
-
-/* Adicione animações e transições comuns aqui */
 .btn:hover {
 	transform: scale(1.05);
 	box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
 }
+
+/* .collapse-plus>.collapse-title:after {
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	height: 100%;
+	top: 0;
+} */
+
+/* .collapse-plus>.collapse-title:after {
+	padding-top: 1.3%;
+	padding-right: 2.5%;
+} */
 
 @-webkit-keyframes downarrow {
 	0% {

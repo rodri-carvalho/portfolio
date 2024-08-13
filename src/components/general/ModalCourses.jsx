@@ -4,7 +4,7 @@ import PropTypes from "prop-types";
 function ModalCourses({
 	modalId,
 	buttonLabel,
-	content = "",
+	content = [],
 	title,
 	imageSrc = null,
 	inactive = false,
@@ -17,10 +17,17 @@ function ModalCourses({
 		}
 	};
 
+	// Determine if the content is for description or learned
+	const isDescription =
+		Array.isArray(content) &&
+		content.length > 0 &&
+		typeof content[0] === "string" &&
+		!content.some((item) => typeof item !== "string");
+
 	return (
 		<>
 			<button
-				className={`btn w-full text-gray-300 ${inactive ? "disabledBtn" : ""}`}
+				className={`btn w-full text-gray-300 text-base h-fit ${inactive ? "disabledBtn" : ""}`}
 				onClick={!inactive ? openModal : null}
 				aria-label={`Open modal for ${title}`}>
 				{buttonLabel}
@@ -32,16 +39,20 @@ function ModalCourses({
 						<img src={imageSrc} alt={`Certificado do curso ${title}`} />
 					) : (
 						<div>
-							{Array.isArray(content) ? (
+							{isDescription ? (
 								content.map((paragraph, index) => (
-									<p key={index} className="text-justify">
+									<p key={index} className="text-justify mb-2">
 										{paragraph}
-										<br />
 										<br />
 									</p>
 								))
 							) : (
-								<p>{content}</p>
+								// TODO: bullets na lista
+								<ul className="flex justify-center space-y-1">
+									{content.map((item, index) => (
+										<li key={index}>{item}</li>
+									))}
+								</ul>
 							)}
 						</div>
 					)}
@@ -59,7 +70,7 @@ function ModalCourses({
 ModalCourses.propTypes = {
 	modalId: PropTypes.string.isRequired,
 	buttonLabel: PropTypes.string.isRequired,
-	content: PropTypes.oneOfType([PropTypes.string, PropTypes.arrayOf(PropTypes.string)]),
+	content: PropTypes.oneOfType([PropTypes.arrayOf(PropTypes.string), PropTypes.string]).isRequired,
 	title: PropTypes.string.isRequired,
 	imageSrc: PropTypes.string,
 	inactive: PropTypes.bool,

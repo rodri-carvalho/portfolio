@@ -24,15 +24,17 @@ function CourseCard({
 				<figure>
 					<img src={pic} alt={`logo ${title}`} className="w-full opacity-50" />
 					{inProgress && (
-						<div className="emAndamento flex absolute -top-1 -right-1 z-10">
-							<div className="badge badge-accent">Em andamento</div>
+						<div className="emAndamento flex absolute -top-1 md:-top-2 -right-1 z-10">
+							<div className="badge badge-accent md:text-lg h-fit w-fit px-3 py-1">
+								Em andamento
+							</div>
 						</div>
 					)}
 				</figure>
-				<div className="card-body w-full h-full px-3">
-					<h2 className="card-title text-2xl px-2">{title}</h2>
+				<div className="card-body w-full h-full px-3 py-4 gap-y-5">
+					<h2 className="card-title text-2xl px-2 pt-2 md:pt-3">{title}</h2>
 					<p className="text-xl px-2">{subtitle}</p>
-					<div className="card-actions flex flex-col items-center mt-4">
+					<div className="card-actions flex flex-col items-center mt-4 gap-y-2">
 						<div className="w-full flex flex-col">
 							<div className="flex justify-around">
 								<div className="w-1/2 px-1">
@@ -43,7 +45,7 @@ function CourseCard({
 										title={title}
 									/>
 								</div>
-								<div className="w-1/2 px-1">
+								<div className="w-1/2 px-1 ">
 									<ModalCourses
 										modalId={modalIdLearned}
 										buttonLabel="Conteúdo"

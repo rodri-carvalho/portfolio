@@ -30,19 +30,26 @@ function Education() {
 
 	return (
 		<>
-			<div className="flex flex-col w-full justify-evenly mx-4 lg:mx-7 xl:mx-9">
+			<div className="flex flex-col w-full justify-evenly items-center mx-4 lg:mx-7 xl:mx-9">
 				<div
 					ref={formacaoAcademicaRef}
-					className={`collapse collapse-plus border-base-300 bg-base-200 border  ${
+					className={`collapse collapse-plus border-base-300 bg-base-200 border pr-1 xl:pr-4  2xl:w-11/12 3xl:pr-8 ${
 						isFormacaoAcademicaOpen ? "collapse-open" : ""
 					}`}>
 					<div
-						className="collapse-title flex justify-center text-xl sm:text-2xl xl:text-3xl pl-12"
+						className={` ${
+							isFormacaoAcademicaOpen
+								? "collapse-title flex justify-center text-xl sm:text-2xl md:text-3xl lg:text-4xl 2xl:text-4xl 3xl:text-6xl pl-12 3xl:pt-10"
+								: "collapse-title flex justify-center text-xl sm:text-2xl md:text-3xl lg:text-4xl 2xl:text-4xl 3xl:text-6xl pl-12"
+						}`}
 						onClick={() => setIsFormacaoAcademicaOpen(!isFormacaoAcademicaOpen)}>
 						Formação Acadêmica
 					</div>
-					<div className="collapse-content">
-						<div className="grid md:grid-cols-2 lg:grid-cols-2 gap-6 ml-4">
+					<div
+						className={`collapse-content 3xl:pr-12 3xl:pl-0 ${
+							isFormacaoAcademicaOpen ? "collapse-open 2xl:mt-7 3xl:mt-10" : ""
+						}`}>
+						<div className="grid md:grid-cols-2 lg:grid-cols-2 2xl:m-0 2xl:place-content-between 3xl:grid-cols-2 gap-6 3xl:gap-14 3xl:px-10 3xl:pb-10">
 							{education.map((acadCourse, index) => (
 								<EducationCard
 									key={index}
@@ -52,29 +59,33 @@ function Education() {
 									date={acadCourse.date}
 									pic={acadCourse.pic}
 									certificate={acadCourse.certificate}
+									content={acadCourse.institution}
 								/>
 							))}
 						</div>
 					</div>
 				</div>
 				<div className="w-full flex justify-center">
-					<div className="divider w-10/12 self-center">
-						<FaCode className="w-20" />
+					<div className="divider w-10/12 2xl:w-9/12 2xl:h-10 self-center">
+						<FaCode className="w-20 2xl:w-20 2xl:h-20 2xl:mx-8" />
 					</div>
 				</div>
 
 				<div
 					ref={formacaoTecnicaRef}
-					className={`collapse collapse-plus border-base-300 bg-base-200 border ${
+					className={`collapse collapse-plus border-base-300 bg-base-200 border pr-1 xl:pr-4 2xl:w-11/12 3xl:pr-10 ${
 						isFormacaoTecnicaOpen ? "collapse-open" : ""
 					}`}>
 					<div
-						className="collapse-title flex justify-center text-xl sm:text-2xl xl:text-3xl pl-12"
+						className="collapse-title flex justify-center text-xl sm:text-2xl md:text-3xl lg:text-4xl 2xl:text-4xl 3xl:text-6xl pl-12"
 						onClick={() => setIsFormacaoTecnicaOpen(!isFormacaoTecnicaOpen)}>
 						Formação Técnica
 					</div>
-					<div className="collapse-content">
-						<div className="w-full grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 2xl:grid-cols-4 gap-4 sm:gap-6">
+					<div
+						className={`collapse-content ${
+							isFormacaoTecnicaOpen ? "collapse-open 2xl:mt-7 3xl:mt-10" : ""
+						}`}>
+						<div className="w-full grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 3xl:grid-cols-4  gap-4 sm:gap-6">
 							{courses.map((course) => (
 								<CourseCard
 									key={course.id}
