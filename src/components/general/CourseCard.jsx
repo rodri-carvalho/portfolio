@@ -111,7 +111,7 @@ CourseCard.propTypes = {
 	subtitle: PropTypes.string.isRequired,
 	description: PropTypes.oneOfType([PropTypes.string, PropTypes.arrayOf(PropTypes.string)])
 		.isRequired,
-	learned: PropTypes.string.isRequired,
+	learned: PropTypes.oneOfType([PropTypes.string, PropTypes.arrayOf(PropTypes.string)]).isRequired,
 	pic: PropTypes.string.isRequired,
 	certificate: PropTypes.string.isRequired,
 	certificate2: PropTypes.string,

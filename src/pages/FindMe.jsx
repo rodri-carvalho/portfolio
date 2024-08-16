@@ -5,7 +5,7 @@ import ContactCard from "../components/general/ContactCard";
 
 function FindMe() {
 	return (
-		<div className="flex flex-col gap-4 w-full items-center">
+		<div className="flex flex-col gap-4 w-full items-center justify-center">
 			{contactInfo.map((contact, index) => (
 				<ContactCard
 					key={contact.id}

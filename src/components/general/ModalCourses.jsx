@@ -17,13 +17,6 @@ function ModalCourses({
 		}
 	};
 
-	// Determine if the content is for description or learned
-	const isDescription =
-		Array.isArray(content) &&
-		content.length > 0 &&
-		typeof content[0] === "string" &&
-		!content.some((item) => typeof item !== "string");
-
 	return (
 		<>
 			<button
@@ -39,18 +32,19 @@ function ModalCourses({
 						<img src={imageSrc} alt={`Certificado do curso ${title}`} />
 					) : (
 						<div>
-							{isDescription ? (
+							{buttonLabel === "Descrição" ? (
 								content.map((paragraph, index) => (
-									<p key={index} className="text-justify mb-2">
+									<p key={index} className="text-justify mb-4 indent-7">
 										{paragraph}
 										<br />
 									</p>
 								))
 							) : (
-								// TODO: bullets na lista
-								<ul className="flex justify-center space-y-1">
+								<ul className="list-disc list-outside space-y-1 pl-5">
 									{content.map((item, index) => (
-										<li key={index}>{item}</li>
+										<li key={index} className="text-justify">
+											{item}
+										</li>
 									))}
 								</ul>
 							)}

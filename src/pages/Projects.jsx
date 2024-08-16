@@ -1,7 +1,7 @@
 import ProjectsBrowserMockUp from "../components/general/ProjectsBrowserMockUp";
 import MoreProjectsCard from "../components/general/MoreProjectsCard";
 import projects from "../assets/db/projects";
-import moreProjects from "../assets/db/projects";
+import moreProjects from "../assets/db/moreProjects";
 import { useEffect, useRef, useState } from "react";
 import arrowDown from "../assets/pics/componentPics/white-arrow.png";
 
@@ -62,8 +62,6 @@ function Projects() {
 				</div>
 			)}
 
-			{/* ************NOVA SECAO OUTROS PROJETOS********************** */}
-
 			<div
 				ref={moreProjectsRef}
 				className={`collapse collapse-plus border-base-300 bg-base-200 border xl:pr-4  2xl:w-11/12 3xl:pr-8 ${
@@ -96,8 +94,6 @@ function Projects() {
 					</div>
 				</div>
 			</div>
-
-			{/* ************NOVA SECAO OUTROS PROJETOS********************** */}
 		</div>
 	);
 }

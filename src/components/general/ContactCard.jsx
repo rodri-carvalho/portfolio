@@ -19,24 +19,19 @@ function ContactCard({ title, numberOrId, iconId }) {
 			const textToCopy = document.getElementById(`numberOrID-${title}`).innerText;
 			await navigator.clipboard.writeText(textToCopy);
 
-			// Create toast container
 			const toastContainer = document.createElement("div");
 			toastContainer.className = "toast toast-top toast-center";
 
-			// Create alert success
 			const alertSuccess = document.createElement("div");
 			alertSuccess.className = "alert alert-success";
 			const alertSuccessSpan = document.createElement("span");
 			alertSuccessSpan.innerText = "Contato copiado com sucesso";
 			alertSuccess.appendChild(alertSuccessSpan);
 
-			// Append alerts to toast container
 			toastContainer.appendChild(alertSuccess);
 
-			// Append toast container to body
 			document.body.appendChild(toastContainer);
 
-			// Remove toast after a few seconds
 			setTimeout(() => {
 				document.body.removeChild(toastContainer);
 			}, 3000);
@@ -46,31 +41,30 @@ function ContactCard({ title, numberOrId, iconId }) {
 	};
 
 	return (
-		<div className="card bg-base-100 shadow-xl w-10/12 flex">
-			<div className="card-body flex flex-row items-center w-full py-4">
-				<div className="flex justify-between w-5/12">
-					<div className="flex items-center gap-4">
-						<IconComponent className="w-8 h-8" />
-						<h2 className="card-title">{title}</h2>
-					</div>
-					<div className="">
-						<div className="divider rotate-90 w-10"></div>
-					</div>
+		<div className="card bg-base-100 shadow-xl w-11/12 max-w-full p-4 overflow-hidden">
+			<div className="flex justify-center items-center gap-3 mb-2">
+				<IconComponent className="w-8 h-8" />
+				<h2 className="card-title">{title}</h2>
+			</div>
+			<div className="divider w-full m-0"></div>
+			<div className="contactInfo flex items-center h-full justify-center gap-2 mx-1 max-w-full">
+				<div className="flex flex-col items-center">
+					<p
+						id={`numberOrID-${title}`}
+						className="w-full text-center break-words"
+						style={{ wordBreak: "break-word", whiteSpace: "normal" }}>
+						{numberOrId}
+					</p>
 				</div>
-				<div className="w-full">
-					<p id={`numberOrID-${title}`}>{numberOrId}</p>
+				<div className="rotate-90 max-w-full">
+					{/* TODO: ajustar width (que é height) */}
+					<div className="divider w-10 "></div>
 				</div>
 				<div className="flex">
-					<div className="flex">
-						<div className="divider rotate-90 w-10"></div>
-					</div>
-					<div className="flex w-full justify-end">
-						<div className="card-actions justify-end">
-							{" "}
-							<button className="btn" onClick={copyToClipboard}>
-								<FaCopy />{" "}
-							</button>{" "}
-						</div>
+					<div className="card-actions justify-end">
+						<button className="btn" onClick={copyToClipboard}>
+							<FaCopy className="w-4 h-4" />
+						</button>
 					</div>
 				</div>
 			</div>
