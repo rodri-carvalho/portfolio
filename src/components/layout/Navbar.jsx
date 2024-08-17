@@ -42,9 +42,9 @@ function Navbar({ title = "Meu Portfólio" }) {
 					</Link>
 				</div>
 
-				{windowWidth > 970 ? (
+				{windowWidth > 1000 ? (
 					<div className=" flex-1 right-0 xl:mr-6 2xl:mr-10 3xl:mr-14 4xl:mr-20 pt-1 align-middle">
-						<div className="flex justify-end items-center 3xl:gap-5 4xl:gap-10">
+						<div className="flex justify-end items-center 25xl:gap-2 3xl:gap-5 4xl:gap-8">
 							<Link
 								to="/"
 								className="btn-ghost btn-sm rounded-btn text-xl lg:text-2xl 2xl:text-3xl 25xl:text-4xl 4xl:text-6xl flex items-center">

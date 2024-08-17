@@ -36,7 +36,7 @@ function EducationCard({ institution, title, pic, certificate, index, content = 
 						</button>
 
 						<dialog id={modalId} className="modal modal-bottom sm:modal-middle">
-							<div className="modal-box">
+							<div className="modal-box w-full">
 								<img src={certificate} alt={`Diploma do curso de ${title}`} />
 								<div className="modal-action justify-center w-full">
 									<form method="dialog" className="w-full flex justify-center">
