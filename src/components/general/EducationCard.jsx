@@ -35,12 +35,20 @@ function EducationCard({ institution, title, pic, certificate, index, content = 
 							Diploma
 						</button>
 
-						<dialog id={modalId} className="modal modal-bottom sm:modal-middle">
-							<div className="modal-box w-full">
-								<img src={certificate} alt={`Diploma do curso de ${title}`} />
-								<div className="modal-action justify-center w-full">
-									<form method="dialog" className="w-full flex justify-center">
-										<button className="btn w-2/5 text-base">Fechar</button>
+						<dialog
+							id={modalId}
+							className="modal max-w-full w-full modal-bottom sm:modal-middle md:flex md:justify-center">
+							<div className="modal-box 2xl:rounded-3xl md:!max-w-full md:w-8/12 4xl:w-7/12 md:h-fit">
+								<img
+									src={certificate}
+									alt={`Diploma do curso de ${title}`}
+									className="h-full 2xl:p-6 3xl:p-8 4xl:p-10"
+								/>
+								<div className="modal-action justify-center  m-0">
+									<form method="dialog" className=" w-full flex justify-center">
+										<button className="btn !p-0 !min-w-fit w-1/5 text-base md:text-2xl lg:text-2xl xl:text-4xl 3xl:text-5xl 4xl:text-6xl 3xl:min-h-20 4xl:min-h-24">
+											Fechar
+										</button>
 									</form>
 								</div>
 							</div>
