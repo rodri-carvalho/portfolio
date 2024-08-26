@@ -27,14 +27,16 @@ function ModalCourses({
 			</button>
 
 			<dialog id={modalId} className="modal modal-bottom sm:modal-middle">
-				<div className="modal-box pt-4 lg:max-w-fit">
+				<div className="modal-box pt-4 !max-w-full md:w-4/5">
 					{imageSrc ? (
 						<img src={imageSrc} alt={`Certificado do curso ${title}`} />
 					) : (
-						<div>
+						<div className="xl:py-4 xl:px-2">
 							{buttonLabel === "Descrição" ? (
 								content.map((paragraph, index) => (
-									<p key={index} className="text-justify mb-4 indent-7">
+									<p
+										key={index}
+										className="text-justify mb-4 md:mb-6 4xl:mb-16 text-lg md:text-xl xl:text-2xl 2xl:text-3xl 3xl:text-4xl 4xl:text-5xl md:leading-8 xl:leading-10 2xl:leading-normal 3xl:leading-relaxed 4xl:leading-relaxed">
 										{paragraph}
 										<br />
 									</p>
@@ -50,9 +52,11 @@ function ModalCourses({
 							)}
 						</div>
 					)}
-					<div className="modal-action w-full mt-4">
+					<div className="modal-action w-full mt-0">
 						<form method="dialog" className="w-full flex justify-center">
-							<button className="btn p-1 w-2/6 text-base">Fechar</button>
+							<button className="btn p-1 w-1/6 text-base md:text-lg xl:text-xl 2xl:text-2xl 25xl:text-3xl 3xl:text-4xl 4xl:text-5xl 3xl:min-h-24">
+								Fechar
+							</button>
 						</form>
 					</div>
 				</div>

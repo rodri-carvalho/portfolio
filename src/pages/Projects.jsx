@@ -64,14 +64,15 @@ function Projects() {
 
 			<div
 				ref={moreProjectsRef}
-				className={`collapse collapse-plus border-base-300 bg-base-200 border xl:pr-4  2xl:w-11/12 3xl:pr-8 ${
+				className={`collapse collapse-plus border-base-300 bg-base-200 border mt-5 ${
 					isMoreProjects ? "collapse-open" : ""
 				}`}>
+				{/* TODO: ajustar padding do collapse: */}
 				<div
 					className={` ${
 						isMoreProjects
-							? "collapse-title flex justify-center text-xl sm:text-2xl md:text-3xl lg:text-4xl 2xl:text-4xl 3xl:text-6xl pl-12 3xl:pt-10"
-							: "collapse-title flex justify-center text-xl sm:text-2xl md:text-3xl lg:text-4xl 2xl:text-4xl 3xl:text-6xl pl-12"
+							? "collapse-title flex justify-start text-xl sm:text-2xl md:text-3xl lg:text-4xl 2xl:text-4xl 3xl:text-6xl 3xl:pt-10 max-w-fit pl-6 pr-44"
+							: "collapse-title flex justify-start text-xl sm:text-2xl md:text-3xl lg:text-4xl 2xl:text-4xl 3xl:text-6xl max-w-fit pl-6 pr-44"
 					}`}
 					onClick={() => setIsMoreProjects(!isMoreProjects)}>
 					Outros Projetos
