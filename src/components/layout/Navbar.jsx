@@ -2,10 +2,7 @@ import { IoMenu } from "react-icons/io5";
 import { Link } from "react-router-dom";
 import React, { useState, useEffect } from "react";
 import PropTypes from "prop-types";
-
-// TODO:
-// GRID COLS 2 when sm
-// Discord and Instagram icons
+import ThemeToggleButton from "./ThemeButton";
 
 function Navbar({ title = "Meu Portfólio" }) {
 	const [windowWidth, setWindowWidth] = useState(window.innerWidth);
@@ -42,7 +39,7 @@ function Navbar({ title = "Meu Portfólio" }) {
 					</Link>
 				</div>
 
-				{windowWidth > 1000 ? (
+				{windowWidth > 1100 ? (
 					<div className=" flex-1 right-0 xl:mr-6 2xl:mr-10 3xl:mr-14 4xl:mr-20 pt-1 align-middle">
 						<div className="flex justify-end items-center 25xl:gap-2 3xl:gap-5 4xl:gap-8">
 							<Link
@@ -75,6 +72,7 @@ function Navbar({ title = "Meu Portfólio" }) {
 								className="btn-ghost btn-sm rounded-btn text-xl lg:text-2xl 2xl:text-3xl 25xl:text-4xl 4xl:text-6xl flex items-center">
 								Contato
 							</Link>
+							<ThemeToggleButton />
 						</div>
 					</div>
 				) : (
@@ -115,6 +113,9 @@ function Navbar({ title = "Meu Portfólio" }) {
 									<Link to="/findme" className="btn btn-ghost btn-sm rounded-btn text-xl">
 										Contato
 									</Link>
+								</li>
+								<li>
+									<ThemeToggleButton />
 								</li>
 							</ul>
 						)}

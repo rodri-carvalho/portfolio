@@ -20,9 +20,11 @@ function ProjectsBrowserMockUp({ id, title, projectURL, projectPic, description 
 		<>
 			<button onClick={openModal} className="p-0 rounded-2xl">
 				<div className="mockup-browser bg-base-300 border">
-					<div className="mockup-browser-toolbar">
-						<div className="flex justify-start w-3/4">
-							<div className="input !flex items-center text-xs">{projectURL}</div>
+					<div className="mockup-browser-toolbar gap-2 lg:gap-4 2xl:gap-6 3xl:gap-8 4xl:gap-10">
+						<div className="campo flex justify-start w-3/4 md:w-full">
+							<div className="input !flex !m-0 2xl:py-6 3xl:py-8 4xl:py-14 items-center md:!w-7/12 xl:!w-6/12 2xl:!w-5/12 4xl:!w-4/12  text-xs md:text-base lg:text-lg 2xl:text-3xl 3xl:text-4xl 4xl:text-5xl">
+								{projectURL}
+							</div>
 						</div>
 					</div>
 					<div className="bg-base-200 flex flex-col justify-center">
@@ -31,31 +33,46 @@ function ProjectsBrowserMockUp({ id, title, projectURL, projectPic, description 
 				</div>
 			</button>
 			<dialog id={modalId} className="modal">
-				<div className="modal-box max-w-full flex flex-col items-center">
-					<img src={projectPic} alt={`Imagem do Projeto ${title}`} className="rounded-md" />
-					<h2 className="text-xl mt-4">{title}</h2>
+				<div className="modal-box max-w-full 3xl:w-4/6 flex flex-col items-center p-3 md:p-6 lg:p-8 2xl:p-9 3xl:p-14 4xl:p-16 2xl:rounded-3xl">
+					<img
+						src={projectPic}
+						alt={`Imagem do Projeto ${title}`}
+						className="rounded-md 4xl:rounded-xl"
+					/>
+					<h2 className="text-2xl md:text-3xl lg:text-4xl 2xl:text-5xl 3xl:text-6xl  4xl:text-7xl mt-4 3xl:mt-14 4xl:mt-16 lg:my-6 xl:my-8 3xl:my-10 3xl:my-12">
+						{title}
+					</h2>
 					<div className="mt-3">
 						{Array.isArray(description) ? (
 							description.map((paragraph, index) => (
-								<p key={index} className="text-justify">
+								<p
+									key={index}
+									className="text-justify md:text-xl md:text-2xl 2xl:text-4xl 3xl:text-5xl 4xl:text-6xl indent-7 lg:indent-9 2xl:indent-12 3xl:indent-20 4xl:indent-28 md:leading-relaxed 2xl:leading-normal 3xl:leading-normal 4xl:leading-normal">
 									{paragraph}
 									<br />
 									<br />
 								</p>
 							))
 						) : (
-							<p>{description}</p>
+							<p className="text-justify md:text-xl md:text-2xl 2xl:text-4xl 3xl:text-5xl 4xl:text-6xl indent-7 lg:indent-9 2xl:indent-12 3xl:indent-20 4xl:indent-28 md:leading-relaxed 2xl:leading-normal 3xl:leading-normal 4xl:leading-normal">
+								{description}
+							</p>
 						)}
 					</div>
-					<div className="modal-action flex justify-center w-full">
+					<div className="modal-action flex justify-center w-full mt-0">
 						<form method="dialog" className="w-full">
 							<div className="flex flex-col items-center gap-4 w-full">
 								<div className="w-full flex justify-center">
-									<Link to={projectURL} target="_blank" className="btn w-3/5 text-xl">
+									<Link
+										to={projectURL}
+										target="_blank"
+										className="btn w-3/5 md:w-2/5 lg:w-2/6 2xl:w-1/4 text-lg md:text-2xl lg:text-3xl 2xl:text-4xl 3xl:text-5xl 4xl:text-6xl lg:min-h-14 2xl:min-h-16 3xl:min-h-20 4xl:min-h-32 2xl:rounded-2xl 4xl:rounded-3xl">
 										Visitar Projeto
 									</Link>
 								</div>
-								<button className="btn w-2/5 text-lg">Fechar</button>
+								<button className="btn p-0 w-2/5 md:w-1/5 2xl:w-1/6 text-base md:text-xl lg:text-2xl 2xl:text-3xl 3xl:text-4xl 4xl:text-5xl 3xl:min-h-16 4xl:min-h-24 2xl:my-3 3xl:mt-5 2xl:rounded-2xl 4xl:rounded-3xl">
+									<div className="min-h-fit">Fechar</div>
+								</button>
 							</div>
 						</form>
 					</div>

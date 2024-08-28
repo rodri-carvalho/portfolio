@@ -1,6 +1,6 @@
-import React from "react";
+import React, { useState, useEffect, useRef } from "react";
 import PropTypes from "prop-types";
-import { FaWhatsapp, FaLinkedin, FaCopy, FaInstagram, FaGithub } from "react-icons/fa";
+import { FaWhatsapp, FaLinkedin, FaCopy, FaInstagram, FaGithub, FaDiscord } from "react-icons/fa";
 import { MdOutlineEmail } from "react-icons/md";
 
 const iconMap = {
@@ -9,10 +9,42 @@ const iconMap = {
 	2: FaGithub,
 	3: FaLinkedin,
 	4: FaInstagram,
+	5: FaDiscord,
 };
 
-function ContactCard({ title, numberOrId, iconId }) {
+function ContactCard({ title, numberOrId, iconId, href }) {
 	const IconComponent = iconMap[iconId] || (() => <div>No Icon</div>);
+
+	const [shouldBreak, setShouldBreak] = useState(false);
+	const textRef = useRef(null);
+
+	useEffect(() => {
+		const checkScreenWidth = () => {
+			const screenWidth = window.innerWidth;
+			if (screenWidth <= 768) {
+				setShouldBreak(true);
+			} else {
+				setShouldBreak(false);
+			}
+		};
+
+		checkScreenWidth();
+
+		window.addEventListener("resize", checkScreenWidth);
+		return () => window.removeEventListener("resize", checkScreenWidth);
+	}, []);
+
+	const splitLink = (link) => {
+		const parts = link.split("/");
+		if (parts.length > 3) {
+			const baseLink = parts.slice(0, 3).join("/");
+			const remainingLink = parts.slice(3).join("/");
+			return [baseLink, remainingLink];
+		}
+		return [link];
+	};
+
+	const [baseLink, remainingLink] = splitLink(numberOrId);
 
 	const copyToClipboard = async () => {
 		try {
@@ -41,52 +73,53 @@ function ContactCard({ title, numberOrId, iconId }) {
 	};
 
 	return (
-		<div className="card bg-base-100 shadow-xl w-11/12 max-w-full p-4 overflow-hidden">
-			<div className="flex justify-center items-center gap-3 mb-2">
-				<IconComponent className="w-8 h-8" />
-				<h2 className="card-title">{title}</h2>
+		<div className="card bg-base-100 shadow-xl w-11/12 lg:w-9/12 2xl:w-5/12 3xl:w-5/12 4xl:w-1/2 max-w-full px-1 overflow-hidden 2xl:place-self-center">
+			<div className="flex justify-center items-center mt-2 xxs:mt-3 xs:mt-4 md:mt-5 xxs:mb-1">
+				<h2 className="card-title text-lg xs:text-xl md:text-3xl lg:text-4xl 4xl:text-6xl 4xl:pt-1 pr-4 xxs:pr-7 md:pr-9 pb-1 lg:pb-4">
+					<a
+						href={href}
+						target="_blank"
+						rel="noopener noreferrer"
+						className="flex items-center gap-2 md:gap-3 lg:gap-4">
+						<IconComponent className="w-6 h-6 xs:w-7 xs:h-7 md:w-9 md:h-9 3xl:w-10 3xl:h-10 4xl:w-20 4xl:h-20" />
+						<div className="">{title}</div>
+					</a>
+				</h2>
 			</div>
-			<div className="divider w-full m-0"></div>
-			<div className="contactInfo flex items-center h-full justify-center gap-2 mx-1 max-w-full">
-				<div className="flex flex-col items-center">
+			<div className="w-full max-w-full flex flex-col items-center justify-center">
+				<div className="divider self-center w-8/12 pr-2 3xl:w-10/12 m-0 lg:mr-10"></div>
+			</div>
+			<div className="contactInfo flex items-center h-full justify-between gap-2 ml-4 max-w-full w-11/12 pb-2 xxs:pt-1 xxs:pb-3 xs:pt-3 xs:pb-6 3xl:5 3xl:pb-8 4xl:pt-7 4xl:pb-10">
+				<div className="flex flex-col items-center justify-center w-full sm:pl-24 md:pl-6 lg:pl-16 2xl:pl-14 4xl:pl-40">
 					<p
 						id={`numberOrID-${title}`}
-						className="w-full text-center break-words"
+						ref={textRef}
+						className="w-full text-center break-words pt-1 xxs:text-lg xs:text-xl md:text-3xl 3xl:text-4xl 4xl:text-6xl pl-8 xxs:pl-4 md:pl-20"
 						style={{ wordBreak: "break-word", whiteSpace: "normal" }}>
-						{numberOrId}
+						{shouldBreak && remainingLink ? (
+							<>
+								{baseLink}/<br />
+								{remainingLink}
+							</>
+						) : (
+							numberOrId
+						)}
 					</p>
 				</div>
 				<div className="rotate-90 max-w-full">
-					{/* TODO: ajustar width (que é height) */}
-					<div className="divider w-10 "></div>
+					<div className="divider w-12 4xl:w-20 hidden sm:flex"></div>
 				</div>
-				<div className="flex">
-					<div className="card-actions justify-end">
-						<button className="btn" onClick={copyToClipboard}>
-							<FaCopy className="w-4 h-4" />
+				<div className="flex justify-end">
+					<div className="card-actions justify-end pt-1 xxs:pt-2">
+						<button
+							className="btn w-8 h-8 md:w-11 md:h-11 lg:w-14 lg:h-14 4xl:h-20 4xl:w-20 min-h-0 p-0"
+							onClick={copyToClipboard}>
+							<FaCopy className="w-4 h-4 md:w-6 md:h-6 lg:w-8 lg:h-8 4xl:h-12 4xl:w-12 m-0" />
 						</button>
 					</div>
 				</div>
 			</div>
 		</div>
-
-		// <div className="card bg-base-100 shadow-xl w-10/12 flex">
-		// 	<div className="card-body flex flex-row items-center w-full p-4">
-		// 		<div className="flex gap-6 items-center justify-center">
-		// 			<IconComponent />
-		// 			<h2 className="card-title">{title}</h2>
-		// 		</div>
-		// 		<div className="flex w-full flex-col">
-		// 			<div className="divider rotate-90 w-10"></div>
-		// 		</div>
-		// 		<p id={`numberOrID-${title}`}>{numberOrId}</p>
-		// 		<div className="card-actions justify-end">
-		// 			<button className="btn" onClick={copyToClipboard}>
-		// 				<FaCopy />
-		// 			</button>
-		// 		</div>
-		// 	</div>
-		// </div>
 	);
 }
 
@@ -94,6 +127,7 @@ ContactCard.propTypes = {
 	title: PropTypes.string.isRequired,
 	numberOrId: PropTypes.string.isRequired,
 	iconId: PropTypes.number.isRequired,
+	href: PropTypes.string.isRequired,
 };
 
 export default ContactCard;

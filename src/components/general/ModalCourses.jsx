@@ -20,14 +20,16 @@ function ModalCourses({
 	return (
 		<>
 			<button
-				className={`btn w-full text-gray-300 text-base h-fit ${inactive ? "disabledBtn" : ""}`}
+				className={`btn w-full 25xl:w-5/6 text-gray-300 text-base h-fit 2xl:text-xl 4xl:text-3xl ${
+					inactive ? "disabledBtn" : ""
+				}`}
 				onClick={!inactive ? openModal : null}
 				aria-label={`Open modal for ${title}`}>
 				{buttonLabel}
 			</button>
 
 			<dialog id={modalId} className="modal modal-bottom sm:modal-middle">
-				<div className="modal-box pt-4 !max-w-full md:w-4/5">
+				<div className="modal-box pt-4 sm:!max-w-fit md:w-4/5">
 					{imageSrc ? (
 						<img src={imageSrc} alt={`Certificado do curso ${title}`} />
 					) : (
@@ -36,26 +38,30 @@ function ModalCourses({
 								content.map((paragraph, index) => (
 									<p
 										key={index}
-										className="text-justify mb-4 md:mb-6 4xl:mb-16 text-lg md:text-xl xl:text-2xl 2xl:text-3xl 3xl:text-4xl 4xl:text-5xl md:leading-8 xl:leading-10 2xl:leading-normal 3xl:leading-relaxed 4xl:leading-relaxed">
+										className="text-justify mb-4 md:mb-6 4xl:mb-16 text-lg md:text-xl lg:text-2xl 2xl:text-3xl 25xl:text-4xl 4xl:text-5xl md:leading-8 xl:leading-10 2xl:leading-normal 3xl:leading-relaxed 4xl:leading-relaxed">
 										{paragraph}
 										<br />
 									</p>
 								))
 							) : (
-								<ul className="list-disc list-outside space-y-1 pl-5">
-									{content.map((item, index) => (
-										<li key={index} className="text-justify">
-											{item}
-										</li>
-									))}
-								</ul>
+								<div className="sm:flex sm:justify-center pl-12 pr-6">
+									<ul className="list-disc list-outside space-y-1 text-lg md:text-xl lg:text-2xl 2xl:text-3xl 25xl:text-4xl 4xl:text-5xl">
+										{content.map((item, index) => (
+											<li
+												key={index}
+												className="text-left pl-2 pb-1 sm:pb-2 25xl:pb-4 3xl:pb-5 4xl:pb-8">
+												{item}
+											</li>
+										))}
+									</ul>
+								</div>
 							)}
 						</div>
 					)}
 					<div className="modal-action w-full mt-0">
 						<form method="dialog" className="w-full flex justify-center">
-							<button className="btn p-1 w-1/6 text-base md:text-lg xl:text-xl 2xl:text-2xl 25xl:text-3xl 3xl:text-4xl 4xl:text-5xl 3xl:min-h-24">
-								Fechar
+							<button className="btn flex justify-center items-center py-0 px-4 mt-3 md:mt-4 2xl:mt-0 text-lg lg:text-xl 2xl:text-3xl 25xl:text-4xl 4xl:text-5xl min-h-10 2xl:min-h-16 25xl:min-h-18 25xl:px-10 3xl:min-h-20 3xl:px-12 4xl:min-h-28 4xl:px-14">
+								<div className="">Fechar</div>
 							</button>
 						</form>
 					</div>
@@ -68,7 +74,7 @@ function ModalCourses({
 ModalCourses.propTypes = {
 	modalId: PropTypes.string.isRequired,
 	buttonLabel: PropTypes.string.isRequired,
-	content: PropTypes.oneOfType([PropTypes.arrayOf(PropTypes.string), PropTypes.string]).isRequired,
+	content: PropTypes.oneOfType([PropTypes.arrayOf(PropTypes.string), PropTypes.string]),
 	title: PropTypes.string.isRequired,
 	imageSrc: PropTypes.string,
 	inactive: PropTypes.bool,

@@ -1,11 +1,9 @@
 import contactInfo from "../assets/db/contact";
 import ContactCard from "../components/general/ContactCard";
 
-// TODO: copy button + toast confirm
-
 function FindMe() {
 	return (
-		<div className="flex flex-col gap-4 w-full items-center justify-center">
+		<div className="flex flex-col gap-4 w-full items-center justify-center 4xl:my-8">
 			{contactInfo.map((contact, index) => (
 				<ContactCard
 					key={contact.id}
@@ -13,6 +11,7 @@ function FindMe() {
 					numberOrId={contact.numberOrId}
 					iconId={contact.iconId}
 					id={contact.id}
+					href={contact.href}
 				/>
 			))}
 		</div>
@@ -20,3 +19,5 @@ function FindMe() {
 }
 
 export default FindMe;
+
+// 2xl:grid 2xl:grid-cols-2 2xl:mx-auto 2xl:gap-x-0

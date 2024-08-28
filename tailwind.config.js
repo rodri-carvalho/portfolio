@@ -6,6 +6,10 @@ export default {
 	theme: {
 		extend: {},
 		screens: {
+			xxs: "380px",
+
+			xs: "395px",
+
 			sm: "640px",
 			// => @media (min-width: 640px) { ... }
 
@@ -25,7 +29,7 @@ export default {
 
 			"3xl": "2100px",
 
-			"4xl": "3000px"
+			"4xl": "3000px",
 		},
 	},
 	plugins: [daisyui],
