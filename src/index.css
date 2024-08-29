@@ -107,6 +107,15 @@ button:focus-visible {
 	box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
 }
 
+.mockup-browser .mockup-browser-toolbar::before {
+	@apply 3xl:hidden;
+}
+
+.mockup-browser .mockup-browser-toolbar .input:before,
+.mockup-browser .mockup-browser-toolbar .input:after {
+	@apply 3xl:hidden;
+}
+
 @-webkit-keyframes downarrow {
 	0% {
 		-webkit-transform: translateY(0);

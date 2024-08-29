@@ -31,15 +31,18 @@ function CourseCard({
 						</div>
 					)}
 				</figure>
-				<div className="card-body w-full h-full px-3 py-4 gap-y-5">
-					<h2 className="card-title text-2xl px-2 pt-2 md:pt-3 2xl:text-3xl 4xl:text-5xl 4xl:pt-10">
+				<div className="card-body w-full h-full px-3 py-4 gap-y-5 25xl:flex 25xl:justify-center">
+					<h2 className="card-title text-2xl px-2 pt-2 md:pt-3 2xl:text-3xl 3xl:text-4xl 4xl:text-5xl 4xl:pt-10">
 						{title}
 					</h2>
-					<p className="text-xl px-2 2xl:text-2xl 4xl:text-4xl 4xl:pt-6">{subtitle}</p>
-					<div className="card-actions flex flex-col items-center justify-center mt-4 gap-y-2 4xl:pt-10 2xl:px-2 25xl:px-0">
-						<div className="w-full flex flex-col items-center">
-							<div className="flex gap-x-4 25xl:gap-x-0">
-								<div className="w-1/2 px-1">
+					<p className="text-xl px-2 2xl:text-2xl 3xl:text-3xl 4xl:text-4xl 4xl:pt-6">{subtitle}</p>
+					<div
+						className={`card-actions flex flex-col items-center mt-4 4xl:pt-10 2xl:px-2 25xl:px-0 max-h20 25xl:text-center 4xl:w-full 3xl:gap-y-4 4xl:gap-y-6 ${
+							!uniqueCertificate && "translate-y-3 2xl:translate-y-2 3xl:translate-y-4"
+						}`}>
+						<div className="w-full 4xl:w-3/4 flex flex-col 25xl:items-center">
+							<div className="flex gap-x-4 25xl:w-full">
+								<div className="w-1/2 4xl:w-full px-1">
 									<ModalCourses
 										modalId={modalIdDescription}
 										buttonLabel="Descrição"
@@ -47,7 +50,7 @@ function CourseCard({
 										title={title}
 									/>
 								</div>
-								<div className="w-1/2 px-1 ">
+								<div className="w-1/2 4xl:w-full px-1">
 									<ModalCourses
 										modalId={modalIdLearned}
 										buttonLabel="Conteúdo"
@@ -58,9 +61,9 @@ function CourseCard({
 							</div>
 						</div>
 
-						<div className="w-full flex flex-col items-center">
-							{!uniqueCertificate && (
-								<div className="flex justify-around gap-x-4 25xl:gap-x-0">
+						{!uniqueCertificate && (
+							<div className="w-full 4xl:w-3/4 flex flex-col 25xl:items-center">
+								<div className="flex gap-x-4 25xl:w-full">
 									<div className="w-full px-1">
 										<ModalCourses
 											modalId={modalIdCertificate}
@@ -78,10 +81,10 @@ function CourseCard({
 										/>
 									</div>
 								</div>
-							)}
-						</div>
+							</div>
+						)}
 
-						<div className="w-full flex justify-center max-w-80">
+						<div className="w-4/6 flex justify-center max-w-80">
 							{!inProgress && uniqueCertificate ? (
 								<ModalCourses
 									modalId={modalIdCertificate}

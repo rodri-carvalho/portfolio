@@ -17,7 +17,7 @@ const techItems = [
 		title: "Javascript",
 		inProgress: false,
 		techList:
-			"Funções e Callback Functions; Objetos, Prototipagem e Herança; Arrays e seus Métodos (map, filter, reduce, etc.); Manipulação do DOM e Eventos; Promises e Async/Await; High Order Functions e Closure; Classes e Objetos; JSON e Manipulação de Erros (try...catch); Estruturas de Dados (stack, filas, mapas, conjuntos); Features do ES6+ (let, const, arrow functions, destructuring, operadores spread e rest); Módulos (CommonJS, ES Modules); API Fetch e Local Storage e Session Storage; Regex; Testes Unitários; Contexto de Execução e Escopo;",
+			"Funções e Callback Functions; Objetos, Prototipagem e Herança; Arrays e seus Métodos (map, filter, reduce, etc.); Manipulação do DOM e Eventos; Promises e Async/Await; High Order Functions e Closure; Classes e Objetos; JSON; Manipulação de Erros (try...catch); Estruturas de Dados (stack, filas, mapas, conjuntos); Features do ES6+ (let, const, arrow functions, destructuring, operadores spread e rest); Módulos (CommonJS, ES Modules); API Fetch e Local Storage e Session Storage; Regex; Testes Unitários; Contexto de Execução e Escopo;",
 	},
 	{
 		iconId: 2,
@@ -33,7 +33,7 @@ const techItems = [
 		title: "React",
 		inProgress: false,
 		techList:
-			"Componentes Funcionais e Componentes de Classe; JSX; Props e State; Hooks (useState, useEffect, useContext, etc.); Context API, Providers; Refs e Manipulação de DOM; Renderização Condicional; Listas, Chaves, Formulários e Controle de Eventos; Custom Hooks; React Router; Gerenciamento de Estado (Redux, MobX, Zustand); React.memo e PureComponent; Performance e Otimização; Styled Components; Error Boundaries; Server-Side Rendering (SSR) e Static Site Generation (SSG);",
+			"Componentes Funcionais e de Classe; JSX; Props e State; Hooks (useState, useEffect, useContext, etc.); Context API, Providers; Refs e Manipulação de DOM; Renderização Condicional; Listas, Chaves, Formulários, Controle de Eventos; Custom Hooks; React Router; Gerenciamento de Estado (Redux); React.memo e PureComponent; Performance e Otimização; Styled Components; Error Boundaries; Server-Side Rendering (SSR); Static Site Generation (SSG);",
 	},
 	{
 		iconId: 4,
@@ -49,7 +49,7 @@ const techItems = [
 		title: "Express",
 		inProgress: false,
 		techList:
-			"Criação e Configuração de Servidores; Roteamento e Manipulação de Rotas - Parâmetros e Query Strings; Middlewares; Manipulação de Requisições, Respostas e Erros (req, res, err); Configuração de Cabeçalhos HTTP; Autenticação, Autorização e Sessões e Cookies; Tratamento de Dados de Formulários e Upload e Manipulação de Arquivos; Integração com Bancos de Dados (SQL e NoSQL); Testes de Endpoints e APIs; Configuração de Variáveis de Ambiente; Performance e Otimização; Documentação de APIs (Swagger); Gerenciamento de Dependências;",
+			"Criação e Configuração de Servidores; Roteamento e Manipulação de Rotas (Parâmetros e Query Strings); Middlewares; Manipulação de Requisições, Respostas e Erros (req, res, err); Configuração de Cabeçalhos HTTP; Autenticação, Autorização, Sessões e Cookies; Tratamento de Dados de Formulários; Upload e Manipulação de Arquivos; Integração com Bancos de Dados (SQL e NoSQL); Testes de Endpoints e APIs; Configuração de Variáveis de Ambiente; Performance e Otimização; Documentação de APIs (Swagger); Gerenciamento de Dependências;",
 	},
 	{
 		iconId: 6,
@@ -57,7 +57,7 @@ const techItems = [
 		title: "Axios",
 		inProgress: false,
 		techList:
-			"Criação e Configuração de Instâncias; Requisições HTTP (GET, POST, PUT, PATCH, DELETE); Configuração de Headers; Manipulação de Parâmetros de Consulta; Interceptadores de Requisição e Resposta (req, res); Transformação de Dados de Requisição e Resposta; Cancelamento de Requisições; Tratamento de Erros; Manipulação de Dados de Resposta; Configuração de Tempo de Espera (Timeout); Autenticação (tokens bearer); Requisições Simultâneas e Encadeamento; Configuração Global e Local; Manipulação de Status Codes; Uso com async/await e promises;",
+			"Criação e Configuração de Instâncias; Requisições HTTP (GET, POST, PUT, PATCH, DELETE); Configuração de Headers; Manipulação de Parâmetros de Consulta; Interceptadores de Requisição e Resposta (req, res); Transformação de Dados de Requisição e Resposta; Cancelamento de Requisições; Tratamento de Erros; Manipulação de Dados de Resposta; Configuração de Tempo de Espera (Timeout); Autenticação (token bearer); Requisições Simultâneas e Encadeamento; Configuração Global e Local; Manipulação de Status Codes; Uso com async/await e promises;",
 	},
 	{
 		iconId: 7,
@@ -65,7 +65,7 @@ const techItems = [
 		title: "Jest",
 		inProgress: false,
 		techList:
-			"Configuração e Instalação; Estrutura de Testes; Testes Unitários; Testes de Integração; Mocking de Funções e Módulos; Testes Assíncronos e Promises; Assertions e Matchers; Testes de Componentes (React); Arquivos de Configuração (jest.config.js); Testes de Snapshot; Testes de Tempo; Manipulação de Dados de Teste; Testes de Erros e Exceções; Hooks e Contextos em React; Utilização de beforeEach, afterEach, beforeAll, e afterAll; Integrando com CI/CD; Execução e Filtragem de Testes;",
+			"Configuração e Instalação; Estrutura de Testes; Testes Unitários; Testes de Integração; Mocking de Funções e Módulos; Testes Assíncronos e Promises; Assertions e Matchers; Testes de Componentes (React); Arquivos de Configuração (jest.config.js); Testes de Snapshot; Testes de Tempo; Manipulação de Dados de Teste; Testes de Erros e Exceções; Hooks e Contexto em React; Utilização de beforeEach, afterEach, beforeAll, e afterAll; Execução e Filtragem de Testes;",
 	},
 	{
 		iconId: 8,
@@ -73,7 +73,7 @@ const techItems = [
 		title: "PostgreSQL",
 		inProgress: false,
 		techList:
-			"Instalação e Configuração; Comandos SQL Básicos (SELECT, INSERT, UPDATE, DELETE); Criação e Gerenciamento de Tabelas; Tipos de Dados (textos, números, datas, etc.); Chaves Primárias e Estrangeiras; Índices e Otimização de Consultas; Views e Common Table Expressions; Procedimentos Armazenados e Funções; Transações e Controle de Concurrency; Normalização e Desnormalização; Constraints e Validações de Dados; Joins e Operações Relacionais; Subconsultas e Operações Aninhadas; Manipulação de Dados em Massa; Backup e Recuperação de Dados; Administração de Usuários e Permissões; Configuração e Ajuste de Parâmetros; Monitoramento e Logging;",
+			"Instalação e Configuração; Comandos SQL Padrão (SELECT, INSERT, UPDATE, DELETE); Criação e Gerenciamento de Tabelas; Tipos de Dados (textos, números, datas, etc.); Chaves Primárias e Estrangeiras; Índices e Otimização de Consultas; Views e Common Table Expressions; Procedimentos Armazenados e Funções; Constraints e Validações de Dados; Joins e Operações Relacionais; Subconsultas e Operações Aninhadas; Manipulação de Dados em Massa; Backup e Recuperação de Dados; Administração de Usuários e Permissões; Configuração e Ajuste de Parâmetros; Monitoramento e Logging;",
 	},
 	{
 		iconId: 9,
@@ -97,7 +97,7 @@ const techItems = [
 		title: "Git",
 		inProgress: false,
 		techList:
-			"Instalação e Configuração; Comandos regulares; Fluxo de Trabalho com Git; Branching e Merging; Resolução de Conflitos de Merge; Controle de Histórico (git log, git diff, git blame); Stashing e Aplicação de Stash; Tags e Versionamento; Manipulação de Repositórios Remotos (git remote, git fetch, git pull, git push); Configuração de Usuário e Repositórios (git config); Gerenciamento de Submódulos; Revertendo Commits e Históricos (git revert, git reset); Criação e Utilização de Hooks; Integração com GitHub; Automatização de Workflow com Aliases e Scripts; Resolução de Problemas e Recuperação; Visualização de Branches e Históricos;",
+			"Instalação e Configuração; Comandos regulares; Fluxo de Trabalho com Git; Branching e Merging; Resolução de Conflitos de Merge; Controle de Histórico (git log, git diff, git blame); Stashing e Aplicação de Stash; Tags e Versionamento; Manipulação de Repositórios Remotos (git remote, git fetch, git pull, git push); Configuração de Usuário e Repositórios (git config); Gerenciamento de Submódulos; Reversão de Commits e Históricos (git revert, git reset); Criação e Utilização de Hooks; Integração com GitHub; Automatização de Workflow com Aliases e Scripts; Resolução de Problemas e Recuperação; Visualização de Branches e Históricos;",
 	},
 	{
 		iconId: 12,
@@ -105,7 +105,7 @@ const techItems = [
 		title: "GitHub",
 		inProgress: false,
 		techList:
-			"Criação e Gerenciamento de Repositórios e Clonagem de Repositórios; Commit e Push de Mudanças; Branches e Pull Requests, incluindo Merge e Rebase via Pull Requests, e Resolução de Conflitos de Merge; Revisão de Código e Comentários em Pull Requests; GitHub Actions e Automação de Workflow, incluindo Configuração de Webhooks; Uso de Issues e Projetos; Gerenciamento de Colaboradores e Permissões; GitHub Pages para Hospedagem de Sites; Integração com CI/CD; Criação e Uso de Git Tags; Reversão e Restauração de Commits e Configuração de Branch Protegida; Visualização e Análise de Históricos de Commit; Configuração de Repositórios Privados e Públicos; Criação e Gestão de Gists; Utilização de Templates de Repositório;",
+			"Criação, Gerenciamento e Clonagem de Repositórios; Commit e Push de Alterações; Branches e Pull Requests, incluindo Merge e Rebase via Pull Requests; Resolução de Conflitos de Merge; Revisão de Código e Comentários em Pull Requests; GitHub Actions e Automação de Workflow, incluindo Configuração de Webhooks; Uso de Issues e Projetos; Gerenciamento de Colaboradores e Permissões; GitHub Pages para Hospedagem de Sites; Integração com CI/CD; Criação e Uso de Git Tags; Reversão e Restauração de Commits e Configuração de Branch Protegida; Visualização e Análise de Históricos de Commit; Configuração de Repositórios Privados e Públicos; Criação e Gestão de Gists; Utilização de Templates de Repositório;",
 	},
 	{
 		iconId: 13,
@@ -113,7 +113,7 @@ const techItems = [
 		title: "HTML5",
 		inProgress: false,
 		techList:
-			"Estrutura Básica de Documento HTML; Elementos e Tags Semânticas (header, footer, article, section, nav, etc.); Atributos e Propriedades de Elementos; Formulários e Tipos de Input; Validação de Formulários; Elementos de Mídia (audio, video, iframe); Elementos de Dados (data attributes); APIs HTML5 (Canvas, Web Storage, Geolocation); Elementos de Layout (aside, figure, figcaption); Novos Elementos de Texto (mark, time, progress, meter); Recursos de Responsividade (viewport meta tag); Armazenamento Local e Sessão (localStorage, sessionStorage); Gerenciamento de Recursos de Mídia (srcset, sizes); Microdata e RDFa; Acessibilidade e ARIA; Técnicas de SEO e Semântica; Estrutura e Tipos de Listagem (ul, ol, dl); Links e Navegação (a, href, anchors);",
+			"Estrutura Básica de Documento HTML; Elementos e Tags Semânticas (header, footer, article, section, nav, etc.); Atributos e Propriedades de Elementos; Formulários e Tipos de Input; Validação de Formulários; Elementos de Mídia (audio, video, iframe); Elementos de Dados (data attributes); APIs HTML5 (Canvas, Web Storage, Geolocation); Elementos de Layout (aside, figure, figcaption); Novos Elementos de Texto (mark, time, progress, meter); Recursos de Responsividade (viewport meta tag); Armazenamento Local e Sessão (localStorage, sessionStorage); Gerenciamento de Recursos de Mídia (srcset, sizes); Microdata e RDFa; Acessibilidade e ARIA; Técnicas de SEO e Semântica; Estrutura e Tipos de Listagem (ul, ol, dl); Links e Navegação (href, anchors);",
 	},
 	{
 		iconId: 14,
@@ -121,7 +121,7 @@ const techItems = [
 		title: "CSS3",
 		inProgress: false,
 		techList:
-			"Seletores e Especificidade; Box Model (margem, borda, padding, conteúdo); Layouts com Flexbox e Grid; Propriedades de Layout (display, position, float); Estilização de Tipografia (font-family, font-size, font-weight, line-height); Cores e Gradientes (rgba, hsla, gradientes lineares e radiais); Transições e Animações; Transformações 2D e 3D (rotate, scale, translate); Media Queries e Design Responsivo; Pseudo-classes e Pseudo-elementos (::before, ::after); Estilização de Formulários (input, select, textarea); Custom Properties (Variáveis CSS); Customização de Listas e Tabelas; Web Fonts (Google Fonts, @font-face, @font-awesome); Layouts Avançados com Grid e Flexbox; Manipulação de Opacidade e Visibilidade; Backgrounds e Imagens de Fundo (background-image, background-position);",
+			"Seletores e Especificidade; Box Model (margem, borda, padding, conteúdo); Layouts com Flexbox e Grid; Propriedades de Layout (display, position, float); Estilização de Tipografia (font-family, font-size, font-weight, line-height); Cores e Gradientes (rgba, hsla, gradientes lineares e radiais); Transições e Animações; Transformações 2D e 3D (rotate, scale, translate); Media Queries e Design Responsivo; Pseudo-classes (:nth-child, :first-child, :last:child, etc.); Pseudo-elementos (::before, ::after, etc.); Estilização de Formulários (input, select, textarea); Custom Properties (Variáveis CSS); Customização de Listas e Tabelas; Web Fonts (Google Fonts, @font-face, @font-awesome); Layouts Avançados com Grid e Flexbox; Manipulação de Opacidade e Visibilidade; Backgrounds e Imagens de Fundo (background-image, background-position);",
 	},
 ];
 

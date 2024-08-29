@@ -20,7 +20,7 @@ function ModalCourses({
 	return (
 		<>
 			<button
-				className={`btn w-full 25xl:w-5/6 text-gray-300 text-base h-fit 2xl:text-xl 4xl:text-3xl ${
+				className={`btn w-full text-gray-300 text-base h-fit 2xl:text-xl 3xl:text-2xl 4xl:text-3xl ${
 					inactive ? "disabledBtn" : ""
 				}`}
 				onClick={!inactive ? openModal : null}

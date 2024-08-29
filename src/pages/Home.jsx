@@ -65,8 +65,10 @@ function Home() {
 
 				<div className="flex flex-col mt-4">
 					<div className="flex items-center justify-center">
-						<h3 className="flex text-2xl text-center justify-center ml-4 xl:text-3xl 2xl:text-4xl 3xl:text-5xl">Navegue pelas seções</h3>
-						<PiArrowBendRightDown className="mt-8 h-12 md:h-10 md:pl-2 w-12 rotate-45 translate-y-4 md:translate-y-3 -translate-x-2 md:mx-2 xl:text-3xl 2xl:text-4xl 3xl:h-16 3xl:w-16 3xl:rotate-45 3xl:translate-y-6"/>
+						<h3 className="flex text-2xl text-center justify-center ml-4 xl:text-3xl 2xl:text-4xl 3xl:text-5xl">
+							Navegue pelas seções
+						</h3>
+						<PiArrowBendRightDown className="mt-8 h-12 md:h-10 md:pl-2 w-12 rotate-45 translate-y-4 md:translate-y-3 -translate-x-2 md:mx-2 xl:text-3xl 2xl:text-4xl 3xl:h-16 3xl:w-16 3xl:rotate-45 3xl:translate-y-6" />
 					</div>
 					<div className="flex p-0 justify-center mt-4"></div>
 

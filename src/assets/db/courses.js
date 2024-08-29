@@ -32,7 +32,7 @@ const courses = [
 	{
 		id: 1,
 		title: "The Complete Web Development Bootcamp",
-		subtitle: "Curso integral frontend e backend com tutoria Web Dev",
+		subtitle: "Curso integral frontend e backend com tutoria",
 		description: [
 			"Neste curso, mergulhei ainda mais profundamente no desenvolvimento web, aprendendo desde os fundamentos até técnicas avançadas.",
 			"O curso ensinou as ferramentas e tecnologias mais recentes utilizadas por grandes empresas. Foram trabalhados dezenas de projetos práticos, o que me proporcionou uma experiência de aprendizado completa e atualizada, tendo me preparado para me tornar um desenvolvedor web completo, oferecendo acesso a materiais de alta qualidade e a mesma metodologia dos maiores e melhores bootcamps presenciais do mundo, adquirindo fluência no desenvolvimento web.",
