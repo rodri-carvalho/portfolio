@@ -29,12 +29,12 @@ function Navbar({ title = "Meu Portfólio" }) {
 	};
 
 	return (
-		<nav className="navbar mb-4 sm:mb-5 md:mb-6 lg:mb-7 shadow-lg bg-neutral text-neutral-content w-full">
-			<div className="w-full ml-4 2xl:ml-8 3xl:ml-12 4xl:ml-16 flex mr-3 2xl:py-4 25xl:py-6">
+		<nav className="navbar shadow-lg bg-neutral text-neutral-content w-full">
+			<div className="w-full ml-4 2xl:ml-8 3xl:ml-12 4xl:ml-16 flex mr-3 2xl:py-2 25xl:py-6">
 				<div className="flex-none px-3">
 					<Link
 						to="/"
-						className="text-2xl md:text-3xl lg:text-4xl 25xl:text-5xl 4xl:text-7xl font-bold align-middle">
+						className="text-2xl md:text-3xl lg:text-3xl 25xl:text-5xl 4xl:text-7xl font-bold align-middle">
 						{title}
 					</Link>
 				</div>
@@ -44,32 +44,32 @@ function Navbar({ title = "Meu Portfólio" }) {
 						<div className="flex justify-end items-center 25xl:gap-2 3xl:gap-5 4xl:gap-8">
 							<Link
 								to="/"
-								className="btn-ghost btn-sm rounded-btn text-xl lg:text-2xl 2xl:text-3xl 25xl:text-4xl 4xl:text-6xl flex items-center">
+								className="btn-ghost btn-sm rounded-btn text-xl lg:text-2xl 25xl:text-4xl 4xl:text-6xl flex items-center p-2">
 								Início
 							</Link>
 							<Link
 								to="/about"
-								className="btn-ghost btn-sm rounded-btn text-xl lg:text-2xl 2xl:text-3xl 25xl:text-4xl 4xl:text-6xl flex items-center">
+								className="btn-ghost btn-sm rounded-btn text-xl lg:text-2xl 25xl:text-4xl 4xl:text-6xl flex items-center p-2">
 								Sobre
 							</Link>
 							<Link
 								to="/knowledge"
-								className="btn-ghost btn-sm rounded-btn text-xl lg:text-2xl 2xl:text-3xl 25xl:text-4xl 4xl:text-6xl flex items-center">
+								className="btn-ghost btn-sm rounded-btn text-xl lg:text-2xl 25xl:text-4xl 4xl:text-6xl flex items-cente p-2r">
 								Habilidades
 							</Link>
 							<Link
 								to="/education"
-								className="btn-ghost btn-sm rounded-btn text-xl lg:text-2xl 2xl:text-3xl 25xl:text-4xl 4xl:text-6xl flex items-center">
+								className="btn-ghost btn-sm rounded-btn text-xl lg:text-2xl 25xl:text-4xl 4xl:text-6xl flex items-center p-2">
 								Formação
 							</Link>
 							<Link
 								to="/projects"
-								className="btn-ghost btn-sm rounded-btn text-xl lg:text-2xl 2xl:text-3xl 25xl:text-4xl 4xl:text-6xl flex items-center">
+								className="btn-ghost btn-sm rounded-btn text-xl lg:text-2xl 25xl:text-4xl 4xl:text-6xl flex items-center p-2">
 								Projetos
 							</Link>
 							<Link
 								to="/findme"
-								className="btn-ghost btn-sm rounded-btn text-xl lg:text-2xl 2xl:text-3xl 25xl:text-4xl 4xl:text-6xl flex items-center">
+								className="btn-ghost btn-sm rounded-btn text-xl lg:text-2xl 25xl:text-4xl 4xl:text-6xl flex items-cente p-2r">
 								Contato
 							</Link>
 							<ThemeToggleButton />

@@ -5,9 +5,9 @@ import { MdOutlineEmail } from "react-icons/md";
 
 const iconMap = {
 	0: MdOutlineEmail,
-	1: FaWhatsapp,
-	2: FaGithub,
-	3: FaLinkedin,
+	1: FaLinkedin,
+	2: FaWhatsapp,
+	3: FaGithub,
 	4: FaInstagram,
 	5: FaDiscord,
 };
@@ -73,9 +73,9 @@ function ContactCard({ title, numberOrId, iconId, href }) {
 	};
 
 	return (
-		<div className="card bg-base-100 shadow-xl w-11/12 lg:w-9/12 2xl:w-5/12 3xl:w-5/12 4xl:w-1/2 max-w-full px-1 overflow-hidden 2xl:place-self-center">
+		<div className="card bg-base-100 shadow-xl w-11/12 lg:w-11/12 2xl:w-5/12 3xl:w-5/12 4xl:w-1/2 max-w-full px-1 overflow-hidden 2xl:place-self-center">
 			<div className="flex justify-center items-center mt-2 xxs:mt-3 xs:mt-4 md:mt-5 xxs:mb-1">
-				<h2 className="card-title text-lg xs:text-xl md:text-3xl lg:text-4xl 4xl:text-6xl 4xl:pt-1 pr-4 xxs:pr-7 md:pr-9 pb-1 lg:pb-4">
+				<h2 className="card-title text-lg xs:text-xl md:text-3xl lg:text-3xl 4xl:text-6xl 4xl:pt-1 pb-1 lg:pb-2">
 					<a
 						href={href}
 						target="_blank"
@@ -87,14 +87,14 @@ function ContactCard({ title, numberOrId, iconId, href }) {
 				</h2>
 			</div>
 			<div className="w-full max-w-full flex flex-col items-center justify-center">
-				<div className="divider self-center w-8/12 pr-2 3xl:w-10/12 m-0 lg:mr-10"></div>
+				<div className="divider self-center w-9/12 pr-2 3xl:w-10/12 m-0 lg:mr-10"></div>
 			</div>
-			<div className="contactInfo flex items-center h-full justify-between gap-2 ml-4 max-w-full w-11/12 pb-2 xxs:pt-1 xxs:pb-3 xs:pt-3 xs:pb-6 3xl:5 3xl:pb-8 4xl:pt-7 4xl:pb-10">
+			<div className="contactInfo flex items-center h-full justify-between gap-2 ml-4 max-w-full w-11/12 pb-2 xxs:pt-1 xxs:pb-3 xs:pt-3 xs:pb-6  2xl:pt-0 2xl:pb-2 3xl:5 3xl:pb-8 4xl:pt-7 4xl:pb-10">
 				<div className="flex flex-col items-center justify-center w-full sm:pl-24 md:pl-6 lg:pl-16 2xl:pl-14 4xl:pl-40">
 					<p
 						id={`numberOrID-${title}`}
 						ref={textRef}
-						className="w-full text-center break-words pt-1 xxs:text-lg xs:text-xl md:text-3xl 3xl:text-4xl 4xl:text-6xl pl-8 xxs:pl-4 md:pl-20"
+						className="w-full text-center break-words pt-1 xxs:text-lg xs:text-xl md:text-2xl 3xl:text-4xl 4xl:text-6xl"
 						style={{ wordBreak: "break-word", whiteSpace: "normal" }}>
 						{shouldBreak && remainingLink ? (
 							<>

@@ -29,11 +29,11 @@ function KnowledgeCard({ iconId, techId, inProgress, techList }) {
 					</div>
 				)}
 				<div className="flex items-center">
-					<div className="card-body flex items-center p-1 gap-6 lg:gap-8 lg:h-full lg:justify-around">
+					<div className="card-body flex items-center p-1 gap-5 lg:h-full lg:justify-around">
 						<label htmlFor={`tech-${iconId}`} className="flex items-center cursor-pointer pt-3">
-							<IconComponent className="text-6xl lg:text-7xl xl:text-8xl 25xl:text-9xl 4xl:text-9xl" />
+							<IconComponent className="text-6xl lg:text-7xl xl:text-6xl 25xl:text-9xl 4xl:text-9xl" />
 						</label>
-						<p className="lg:h-full text-xl lg:text-3xl 2xl:text-5xl 25xl:text-6xl 4xl:text-8xl 4xl:mt-14">
+						<p className="lg:h-full text-xl lg:text-3xl 2xl:text-3xl 25xl:text-6xl 4xl:text-8xl 4xl:mt-14">
 							{techName}
 						</p>
 						<div className="card-actions justify-end"></div>

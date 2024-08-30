@@ -6,13 +6,14 @@ export default {
 	theme: {
 		extend: {},
 		screens: {
+			xxxs: "370px",
 			xxs: "380px",
 			xs: "395px",
 			sm: "640px",
 			md: "768px",
 			lg: "1024px",
 			xl: "1280px",
-			"2xl": "1536px",
+			"2xl": "1336px",
 			"25xl": "2000px",
 			"3xl": "2100px",
 			"4xl": "3000px",

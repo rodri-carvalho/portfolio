@@ -49,15 +49,15 @@ function SectionsCard({ page, description, iconId, isOpen, query }) {
 			<div className="collapse-title text-xl font-medium">
 				<label
 					htmlFor={`accordion-${iconId}`}
-					className="flex items-center cursor-pointer xl:text-xl 2xl:text-2xl 3xl:text-3xl">
+					className="flex items-center cursor-pointer 2xl:text-2xl 3xl:text-3xl">
 					<IconComponent />
-					<div className="ml-4 xl:text-2xl 2xl:text-3xl 3xl:text-4xl 2xl:pl-4">{page}</div>
+					<div className="ml-4 xs:text-2xl 2xl:text-3xl 3xl:text-4xl 2xl:pl-4">{page}</div>
 				</label>
 			</div>
 			<div className="collapse-content flex flex-col items-center">
-				<p className="text-center text-lg">{description}</p>
-				<button className="btn btn-active btn-primary mt-4">
-					<Link to={`/${query}`} className="btn btn-ghost btn-sm rounded-btn text-lg">
+				<p className="text-center text-lg xs:text-xl">{description}</p>
+				<button className="btn-ghost btn btn-active mt-4">
+					<Link to={`/${query}`} className="text-lg xs:text-xl">
 						Ir para a seção
 					</Link>
 				</button>

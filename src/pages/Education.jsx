@@ -14,6 +14,16 @@ function Education() {
 
 	useEffect(() => {
 		const handleClickOutside = (event) => {
+			const scrollbarWidth = window.innerWidth - document.documentElement.clientWidth;
+			const isClickOnScrollbar = event.clientX >= document.documentElement.clientWidth;
+
+			const isClickOnThemeToggleButton = event.target.closest(".theme-toggle-button");
+			const isClickInsideDropdown = event.target.closest(".dropdown");
+
+			if (isClickOnScrollbar || isClickOnThemeToggleButton || isClickInsideDropdown) {
+				return;
+			}
+
 			if (formacaoAcademicaRef.current && !formacaoAcademicaRef.current.contains(event.target)) {
 				setIsFormacaoAcademicaOpen(false);
 			}

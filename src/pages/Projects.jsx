@@ -3,12 +3,9 @@ import ProjectsBrowserMockUp from "../components/general/ProjectsBrowserMockUp";
 import MoreProjectsCard from "../components/general/MoreProjectsCard";
 import projects from "../assets/db/projects";
 import moreProjects from "../assets/db/moreProjects";
-import arrowDown from "../assets/pics/componentPics/white-arrow.png";
 import { FaArrowDown } from "react-icons/fa";
 
 function Projects() {
-	const [showArrow, setShowArrow] = useState(true);
-	const [hasScrolled, setHasScrolled] = useState(false);
 	const [isMoreProjects, setIsMoreProjects] = useState(false);
 	const [visibleProjects, setVisibleProjects] = useState(6);
 
@@ -16,6 +13,16 @@ function Projects() {
 
 	useEffect(() => {
 		const handleClickOutside = (event) => {
+			const scrollbarWidth = window.innerWidth - document.documentElement.clientWidth;
+			const isClickOnScrollbar = event.clientX >= document.documentElement.clientWidth;
+
+			const isClickOnThemeToggleButton = event.target.closest(".theme-toggle-button");
+			const isClickInsideDropdown = event.target.closest(".dropdown");
+
+			if (isClickOnScrollbar || isClickOnThemeToggleButton || isClickInsideDropdown) {
+				return;
+			}
+
 			if (moreProjectsRef.current && !moreProjectsRef.current.contains(event.target)) {
 				setIsMoreProjects(false);
 			}
@@ -32,7 +39,7 @@ function Projects() {
 	};
 
 	return (
-		<div className="flex flex-col w-full px-5 sm:px-9 md:px-10 lg:px-14 2xl:px-48 3xl:px-72 4xl:px-80 3xl:py-8 gap-3 sm:gap-6 md:gap-7 lg:gap-8 xl:gap-9 2xl:gap-10 25xl:gap-12 3xl:gap-16 4xl:gap-20">
+		<div className="flex flex-col w-full px-5 sm:px-9 md:px-10 lg:px-14 2xl:px-60 3xl:px-72 4xl:px-80 3xl:py-8 gap-3 sm:gap-6 md:gap-7 lg:gap-8 xl:gap-9 2xl:gap-10 25xl:gap-12 3xl:gap-16 4xl:gap-20">
 			{projects.map((project, index) => (
 				<ProjectsBrowserMockUp
 					key={project.id}
@@ -53,7 +60,7 @@ function Projects() {
 					className={`${
 						isMoreProjects
 							? "collapse-title max-w-full w-full xl:w-11/12 flex text-xl sm:text-2xl md:text-3xl lg:text-4xl 2xl:text-4xl 3xl:text-6xl pr-4 xxs:ml-2 xs:ml-0 2xl:ml-16 3xl:ml-24 4xl:ml-32 lg:mt-4 2xl:mt-6 3xl:mt-8 4xl:mt-10 md:mb-2 lg:mb-8"
-							: "collapse-title max-w-full w-full xl:w-11/12 flex text-xl sm:text-2xl md:text-3xl lg:text-4xl 2xl:text-4xl 3xl:text-6xl pr-4 xxs:ml-2 xs:ml-0 2xl:ml-16 3xl:ml-24 4xl:ml-32 lg:my-4 2xl:my-6 3xl:my-8 4xl:my-10"
+							: "collapse-title max-w-full w-full xl:w-11/12 flex text-xl sm:text-2xl md:text-3xl lg:text-3xl 3xl:text-6xl pr-4 xxs:ml-2 xs:ml-0 2xl:ml-16 3xl:ml-24 4xl:ml-32 lg:my-4 2xl:my-6 3xl:my-8 4xl:my-10"
 					}`}
 					onClick={() => setIsMoreProjects(!isMoreProjects)}>
 					Outros Projetos

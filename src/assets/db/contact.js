@@ -9,24 +9,25 @@ const contactInfo = [
 	{
 		id: 1,
 		iconId: 1,
+		title: "Linkedin",
+		numberOrId: "/in/rodricarvalho/",
+		href: "https://www.https://www.linkedin.com/in/rodricarvalho/",
+	},
+	{
+		id: 2,
+		iconId: 2,
 		title: "WhatsApp",
 		numberOrId: "(61) 999662404",
 		href: "https://wa.me/5561999662404",
 	},
 	{
-		id: 2,
-		iconId: 2,
+		id: 3,
+		iconId: 3,
 		title: "GitHub",
 		numberOrId: "rodri-carvalho",
 		href: "https://github.com/rodri-carvalho",
 	},
-	{
-		id: 3,
-		iconId: 3,
-		title: "Linkedin",
-		numberOrId: "https://www.linkedin.com/in/rodrigo-carvalho-m/",
-		href: "https://www.linkedin.com/in/rodrigo-carvalho-m/",
-	},
+
 	{
 		id: 4,
 		iconId: 4,

@@ -4,34 +4,34 @@ import { FaCode } from "react-icons/fa6";
 
 function About() {
 	return (
-		<div className="flex flex-col items-center w-full mt-5 2xl:gap-10 2xl:mt-20">
+		<div className="flex flex-col items-center w-full 2xl:gap-7 2xl:mt-5">
 			<div className="info flex sm:gap-6 lg:gap-12 xl:gap-16 items-center mx-2">
 				<div className="titulo-nome text-center flex flex-col items-center mx-4 xl:gap-3 3xl:gap-6">
-					<h1 className="text-3xl sm:text-4xl lg:text-5xl xl:text-6xl 2xl:text-7xl 3xl:text-8xl">
+					<h1 className="text-3xl sm:text-4xl lg:text-5xl xl:text-6xl 3xl:text-8xl">
 						Rodrigo Carvalho
 					</h1>
-					<h2 className="mt-2 lg:mt-4 text-2xl sm:text-3xl lg:text-4xl xl:text-5xl 2xl:text-6xl 3xl:text-7xl">
+					<h2 className="mt-2 lg:mt-4 text-2xl sm:text-3xl lg:text-4xl xl:text-5xl 3xl:text-7xl">
 						Desenvolvedor Full Stack
 					</h2>
 				</div>
 				<div className="avatar">
-					<div className="w-32 rounded-2xl lg:w-40  3xl:w-60">
+					<div className="w-28 h-40 rounded-2xl lg:w-40 3xl:w-60">
 						<img src="src/assets/pics/componentPics/fotoperfil.png" />
 					</div>
 				</div>
 			</div>
 
 			<div className="divider w-9/12 self-center mt-10">
-				<FaCode className="w-20" />
+				<FaCode className="text-7xl" />
 			</div>
 
 			<div className="texto flex justify-center text-justify mt-6 mx-7 lg:mx-16 2xl:mx-32">
 				<div>
-					<p className="flex justify-center text-lg sm:text-xl xl:text-3xl 2xl:text-4xl 3xl:text-5xl text-center">
+					<p className="flex justify-center text-lg sm:text-xl xl:text-3xl 3xl:text-5xl text-center">
 						Olá! Me chamo Rodrigo Carvalho 😁, sou de Brasília, Distrito Federal.
 					</p>
 					<br />
-					<div className="text-lg xl:text-2xl 2xl:text-3xl 3xl:text-4xl indent-10 mt-4 sm:mt-2 sm:mx-4 leading-8 sm:leading-9 md:leading-8 lg:leading-10 2xl:leading-loose 3xl:leading-loose 2xl:mt-10 3xl:mt-20">
+					<div className="text-lg xl:text-2xl 3xl:text-4xl indent-10 mt-4 sm:mt-2 sm:mx-4 leading-8 sm:leading-9 md:leading-8 lg:leading-10 2xl:leading-9 3xl:leading-loose 2xl:mt-10 3xl:mt-20">
 						<p>
 							Sou um amante da tecnologia e de todo seu imenso potencial e, no ano de 2023, decidi
 							profissionalizar essa paixão. Sou bacharel em direito pela Universidade de Brasília e
@@ -74,7 +74,7 @@ function About() {
 			</div>
 			<div className="flex flex-col items-center mt-7 xl:mt-8 w-full">
 				<div className="buttons w-8/12 max-w-72 md:max-w-full lg:max-w-full xl:max-w-full md:w-4/6 lg:w-7/12 xl:w-6/12 flex flex-col md:flex-row md:justify-center md:gap-16 gap-5 py-2">
-					<button className="botaoCurriculo btn btn-active btn-neutral text-lg md:text-xl lg:text-2xl 2xl:text-3xl 3xl:text-4xl md:w-2/5 lg:w-3/5 lg:h-full flex items-center">
+					<button className="botaoCurriculo btn btn-active btn-neutral text-lg md:text-xl lg:text-2xl 2xl:text-3xl 3xl:text-4xl md:w-2/5 lg:w-3/5 lg:h-full flex items-center 2xl:rounded-2xl">
 						<a onClick={() => document.getElementById("my_modal_1").showModal()}>
 							Veja meu currículo
 						</a>
@@ -97,7 +97,7 @@ function About() {
 						</div>
 					</dialog>
 
-					<button className="botaoContato btn btn-active btn-neutral text-lg md:text-xl lg:text-2xl 2xl:text-3xl 3xl:text-4xl md:w-2/5 lg:w-3/5 lg:h-full flex items-center">
+					<button className="botaoContato btn btn-active btn-neutral text-lg md:text-xl lg:text-2xl 2xl:text-3xl 3xl:text-4xl md:w-2/5 lg:w-3/5 lg:h-full flex items-center 2xl:rounded-2xl">
 						<Link to="/findme" className="">
 							Entre em contato
 						</Link>
