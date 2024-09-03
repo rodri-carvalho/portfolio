@@ -4,7 +4,7 @@ import PropTypes from "prop-types";
 
 function MoreProjectsCard({ id, title, projectURL, projectPic, description }) {
 	return (
-		<div className="card card-compact bg-base-100 w-96 shadow-xl max-w-full w-full w-4/5">
+		<div className="card card-compact !text-base-100 bg-base-100 shadow-xl max-w-full w-96 w-full w-4/5">
 			<figure>
 				<img src={projectPic} alt="Imagem do projeto" className="h-full max-h-" />
 			</figure>
@@ -13,7 +13,7 @@ function MoreProjectsCard({ id, title, projectURL, projectPic, description }) {
 					{title}
 				</h2>
 				<div className="flex items-center justify-center h-full">
-					<p className="justify-center items-center text-center text-pretty 4xl:mx-2 text-lg md:text-xl lg:text-2xl 2xl:text-3xl 2xl:text-4xl 4xl:text-5xl 2xl:m-3 3xl:mt-6 md:leading-snug 4xl:leading-normal">
+					<p className="justify-center items-center text-center text-pretty 4xl:mx-2 text-lg md:text-xl lg:text-2xl 2xl:text-3xl 3qxl:text-4xl 4xl:text-5xl 2xl:m-3 3xl:mt-6 md:leading-snug 4xl:leading-normal">
 						{description}
 					</p>
 				</div>
@@ -21,7 +21,7 @@ function MoreProjectsCard({ id, title, projectURL, projectPic, description }) {
 					<Link
 						to={projectURL}
 						target="_blank"
-						className="btn w-7/12 text-lg md:text-xl lg:text-2xl 2xl:text-3xl 3xl:text-4xl 4xl:text-5xl 3xl:min-h-20 4xl:min-h-28 3xl:mb-4 4xl:mb-6">
+						className="btn w-7/12 text-lg md:text-xl lg:text-2xl 2xl:text-3xl 3xl:text-4xl 4xl:text-5xl 3xl:min-h-20 4xl:min-h-28 3xl:mb-4 4xl:mb-6 !text-base-100">
 						Visitar Projeto
 					</Link>
 				</div>

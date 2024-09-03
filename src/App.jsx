@@ -12,10 +12,10 @@ import FindMe from "./pages/FindMe";
 function App() {
 	return (
 		<Router>
-			<div className="flex flex-col w-full min-h-screen overflow-x-hidden">
+			<div className="flex flex-col w-full min-h-screen overflow-x-hidden bg-primary">
 				<Navbar />
 
-				<main className="w-full pb-8 h-full flex flex-grow justify-center mt-4">
+				<main className="w-full bg-primary pb-8 h-full flex flex-grow justify-center mt-4">
 					<Routes>
 						<Route path="/" element={<Home />} />
 						<Route path="/about" element={<About />} />

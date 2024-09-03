@@ -116,6 +116,23 @@ button:focus-visible {
 	@apply 3xl:hidden;
 }
 
+.outline-hidden {
+	outline: thin !important;
+}
+
+.botao:hover {
+	color: #ebf3ff;
+	transition: ease-in-out 0.3s !important;
+}
+
+.botaoIcon:hover {
+	color: #ebf3ff;
+	transition: ease-in-out 0.3s !important;
+	background-color: transparent;
+	outline: none !important;
+	box-shadow: none;
+}
+
 @-webkit-keyframes downarrow {
 	0% {
 		-webkit-transform: translateY(0);

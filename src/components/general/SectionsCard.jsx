@@ -38,7 +38,7 @@ function SectionsCard({ page, description, iconId, isOpen, query }) {
 	}, []);
 
 	return (
-		<div className="collapse collapse-arrow bg-base-200 mb-4 w-10/12 sm:w-3/5 md:w-3/5 xl:w-2/5 2xl:w-2/6 3xl:w-1/4">
+		<div className="collapse collapse-arrow mb-4 w-10/12 sm:w-3/5 md:w-3/5 xl:w-2/5 2xl:w-2/6 3xl:w-1/4 bg-accent">
 			<input
 				type="radio"
 				name="my-accordion"
@@ -46,7 +46,7 @@ function SectionsCard({ page, description, iconId, isOpen, query }) {
 				className="collapse-input"
 				defaultChecked={isOpen}
 			/>
-			<div className="collapse-title text-xl font-medium">
+			<div className="collapse-title text-xl font-medium text-base-100">
 				<label
 					htmlFor={`accordion-${iconId}`}
 					className="flex items-center cursor-pointer 2xl:text-2xl 3xl:text-3xl">
@@ -54,10 +54,10 @@ function SectionsCard({ page, description, iconId, isOpen, query }) {
 					<div className="ml-4 xs:text-2xl 2xl:text-3xl 3xl:text-4xl 2xl:pl-4">{page}</div>
 				</label>
 			</div>
-			<div className="collapse-content flex flex-col items-center">
+			<div className="collapse-content flex flex-col items-center text-base-100">
 				<p className="text-center text-lg xs:text-xl">{description}</p>
-				<button className="btn-ghost btn btn-active mt-4">
-					<Link to={`/${query}`} className="text-lg xs:text-xl">
+				<button className="botao btn-ghost btn btn-active mt-4 !bg-neutral">
+					<Link to={`/${query}`} className="botao text-lg xs:text-xl text-base-100">
 						Ir para a seção
 					</Link>
 				</button>

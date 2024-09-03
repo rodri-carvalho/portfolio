@@ -73,15 +73,15 @@ function ContactCard({ title, numberOrId, iconId, href }) {
 	};
 
 	return (
-		<div className="card bg-base-100 shadow-xl w-11/12 lg:w-11/12 2xl:w-5/12 3xl:w-5/12 4xl:w-1/2 max-w-full px-1 overflow-hidden 2xl:place-self-center">
+		<div className="card bg-accent shadow-xl w-11/12 lg:w-11/12 2xl:w-5/12 3xl:w-5/12 4xl:w-1/2 max-w-full px-1 overflow-hidden 2xl:place-self-center">
 			<div className="flex justify-center items-center mt-2 xxs:mt-3 xs:mt-4 md:mt-5 xxs:mb-1">
 				<h2 className="card-title text-lg xs:text-xl md:text-3xl lg:text-3xl 4xl:text-6xl 4xl:pt-1 pb-1 lg:pb-2">
 					<a
 						href={href}
 						target="_blank"
 						rel="noopener noreferrer"
-						className="flex items-center gap-2 md:gap-3 lg:gap-4">
-						<IconComponent className="w-6 h-6 xs:w-7 xs:h-7 md:w-9 md:h-9 3xl:w-10 3xl:h-10 4xl:w-20 4xl:h-20" />
+						className="flex items-center gap-2 md:gap-3 lg:gap-4 text-base-100">
+						<IconComponent className="w-6 h-6 xs:w-7 xs:h-7 md:w-9 md:h-9 3xl:w-10 3xl:h-10 4xl:w-20 4xl:h-20 " />
 						<div className="">{title}</div>
 					</a>
 				</h2>
@@ -90,7 +90,7 @@ function ContactCard({ title, numberOrId, iconId, href }) {
 				<div className="divider self-center w-9/12 pr-2 3xl:w-10/12 m-0 lg:mr-10"></div>
 			</div>
 			<div className="contactInfo flex items-center h-full justify-between gap-2 ml-4 max-w-full w-11/12 pb-2 xxs:pt-1 xxs:pb-3 xs:pt-3 xs:pb-6  2xl:pt-0 2xl:pb-2 3xl:5 3xl:pb-8 4xl:pt-7 4xl:pb-10">
-				<div className="flex flex-col items-center justify-center w-full sm:pl-24 md:pl-6 lg:pl-16 2xl:pl-14 4xl:pl-40">
+				<div className="flex flex-col items-center justify-center w-full sm:pl-24 md:pl-6 lg:pl-16 2xl:pl-14 4xl:pl-40 text-base-100">
 					<p
 						id={`numberOrID-${title}`}
 						ref={textRef}
@@ -112,9 +112,9 @@ function ContactCard({ title, numberOrId, iconId, href }) {
 				<div className="flex justify-end">
 					<div className="card-actions justify-end pt-1 xxs:pt-2">
 						<button
-							className="btn w-8 h-8 md:w-11 md:h-11 lg:w-14 lg:h-14 4xl:h-20 4xl:w-20 min-h-0 p-0"
+							className="btn w-8 h-8 md:w-11 md:h-11 lg:w-14 lg:h-14 4xl:h-20 4xl:w-20 min-h-0 p-0 bg-neutral border-secondary"
 							onClick={copyToClipboard}>
-							<FaCopy className="w-4 h-4 md:w-6 md:h-6 lg:w-8 lg:h-8 4xl:h-12 4xl:w-12 m-0" />
+							<FaCopy className="w-4 h-4 md:w-6 md:h-6 lg:w-8 lg:h-8 4xl:h-12 4xl:w-12 m-0 text-base-100" />
 						</button>
 					</div>
 				</div>

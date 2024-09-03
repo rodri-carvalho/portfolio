@@ -37,11 +37,11 @@ function ProjectsBrowserMockUp({ id, title, projectURL, projectPic, description 
 
 	return (
 		<>
-			<button onClick={openModal} className="p-0 rounded-2xl">
-				<div className="mockup-browser bg-base-300 border">
-					<div className="mockup-browser-toolbar gap-2 lg:gap-4 2xl:gap-6 3xl:gap-8 4xl:gap-10">
+			<button onClick={openModal} className="p-0 rounded-2xl ">
+				<div className="mockup-browser bg-accent border ">
+					<div className="mockup-browser-toolbar gap-2 lg:gap-4 2xl:gap-6 3xl:gap-8 4xl:gap-10 text-base-100">
 						<div className="campo flex justify-start w-3/4 md:w-full 3xl:ml-12 4xl:ml-16">
-							<div className="input !flex !m-0 2xl:py-6 3xl:py-8 4xl:py-14 items-center md:!w-8/12 xl:!w-7/12 4xl:!w-4/12 text-xs md:text-base lg:text-lg 2xl:text-2xl 3xl:text-4xl 4xl:text-5xl">
+							<div className="input !bg-neutral !flex !m-0 2xl:py-6 3xl:py-8 4xl:py-14 items-center md:!w-8/12 xl:!w-7/12 4xl:!w-4/12 text-xs md:text-base lg:text-lg 2xl:text-2xl 3xl:text-4xl 4xl:text-5xl">
 								{projectURL}
 							</div>
 						</div>
@@ -66,7 +66,7 @@ function ProjectsBrowserMockUp({ id, title, projectURL, projectPic, description 
 							description.map((paragraph, index) => (
 								<p
 									key={index}
-									className="text-justify md:text-xl md:text-2xl 2xl:text-4xl 3xl:text-5xl 4xl:text-6xl indent-7 lg:indent-9 2xl:indent-12 3xl:indent-20 4xl:indent-28 md:leading-relaxed 2xl:leading-normal 3xl:leading-normal 4xl:leading-normal">
+									className="text-justify md:text-xl lg:text-2xl 2xl:text-4xl 3xl:text-5xl 4xl:text-6xl indent-7 lg:indent-9 2xl:indent-12 3xl:indent-20 4xl:indent-28 md:leading-relaxed 2xl:leading-normal 3xl:leading-normal 4xl:leading-normal">
 									{paragraph}
 									<br />
 									<br />

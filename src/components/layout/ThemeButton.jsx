@@ -20,7 +20,7 @@ function ThemeToggleButton() {
 
 	return (
 		<button
-			className="btn-ghost lg:rounded-2xl 3xl:rounded-3xl theme-toggle-button"
+			className="btn-ghost botao outline-hidden lg:rounded-2xl 3xl:rounded-3xl theme-toggle-button"
 			onClick={toggleTheme}>
 			{theme === "light" ? (
 				<PiMoonStarsFill className="lg:h-6 lg:w-6 xl:h-8 xl:w-8 2xl:h-8 2xl:w-8 25xl:h-12 25xl:w-12 3xl:h-14 3xl:w-14 4xl:h-20 4xl:w-20" />

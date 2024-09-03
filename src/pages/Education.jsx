@@ -43,14 +43,14 @@ function Education() {
 			<div className="flex flex-col w-full justify-evenly items-center mx-4 lg:mx-7 xl:mx-9">
 				<div
 					ref={formacaoAcademicaRef}
-					className={`collapse collapse-plus border-base-300 bg-base-200 border pr-1 xl:pr-4 2xl:w-11/12 4xl:w-10/12 3xl:pr-8 ${
+					className={`collapse collapse-plus bg-accent pr-1 xl:pr-4 2xl:w-11/12 4xl:w-10/12 3xl:pr-8 ${
 						isFormacaoAcademicaOpen ? "collapse-open" : ""
 					}`}>
 					<div
 						className={` ${
 							isFormacaoAcademicaOpen
-								? "collapse-title flex justify-center text-xl sm:text-2xl md:text-3xl lg:text-4xl 2xl:text-4xl 3xl:text-6xl pl-12 3xl:pt-10"
-								: "collapse-title flex justify-center text-xl sm:text-2xl md:text-3xl lg:text-4xl 2xl:text-4xl 3xl:text-6xl pl-12"
+								? "collapse-title flex justify-center text-xl sm:text-2xl md:text-3xl lg:text-4xl 2xl:text-4xl 3xl:text-6xl pl-12 text-base-100 3xl:pt-10"
+								: "collapse-title flex justify-center text-xl sm:text-2xl md:text-3xl lg:text-4xl 2xl:text-4xl 3xl:text-6xl pl-12 text-base-100"
 						}`}
 						onClick={() => setIsFormacaoAcademicaOpen(!isFormacaoAcademicaOpen)}>
 						Formação Acadêmica
@@ -76,18 +76,18 @@ function Education() {
 					</div>
 				</div>
 				<div className="w-full flex justify-center">
-					<div className="divider w-10/12 2xl:w-9/12 2xl:h-10 self-center">
+					<div className="divider w-10/12 2xl:w-9/12 2xl:h-10 self-center text-base-100">
 						<FaCode className="w-20 2xl:w-20 2xl:h-20 2xl:mx-8" />
 					</div>
 				</div>
 
 				<div
 					ref={formacaoTecnicaRef}
-					className={`collapse collapse-plus border-base-300 bg-base-200 border pr-1 xl:pr-4 2xl:w-11/12 4xl:w-10/12 3xl:pr-10 ${
+					className={`collapse collapse-plus bg-accent pr-1 xl:pr-4 2xl:w-11/12 4xl:w-10/12 3xl:pr-10  ${
 						isFormacaoTecnicaOpen ? "collapse-open" : ""
 					}`}>
 					<div
-						className="collapse-title flex justify-center text-xl sm:text-2xl md:text-3xl lg:text-4xl 2xl:text-4xl 3xl:text-6xl pl-12"
+						className="collapse-title flex justify-center text-xl sm:text-2xl md:text-3xl lg:text-4xl 2xl:text-4xl 3xl:text-6xl pl-12 text-base-100"
 						onClick={() => setIsFormacaoTecnicaOpen(!isFormacaoTecnicaOpen)}>
 						Formação Técnica
 					</div>

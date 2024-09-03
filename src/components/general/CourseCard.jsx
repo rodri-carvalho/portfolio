@@ -20,18 +20,18 @@ function CourseCard({
 
 	return (
 		<>
-			<div className="card w-fit max-w-full flex justify-center mx-auto bg-base-100 image-full shadow-xl">
+			<div className="card w-fit max-w-full flex justify-center mx-auto image-full shadow-xl">
 				<figure>
 					<img src={pic} alt={`logo ${title}`} className="w-full opacity-50" />
 					{inProgress && (
 						<div className="emAndamento flex absolute -top-1 md:-top-2 -right-1 z-10">
-							<div className="badge badge-accent md:text-lg 2xl:text-xl 4xl:text-3xl h-fit w-fit px-3 py-1">
+							<div className="badge badge-accent md:text-lg 2xl:text-xl 4xl:text-3xl h-fit w-fit px-3 py-1 text-base-100">
 								Em andamento
 							</div>
 						</div>
 					)}
 				</figure>
-				<div className="card-body w-full h-full px-3 py-4 gap-y-5 25xl:flex 25xl:justify-center">
+				<div className="card-body w-full h-full px-3 py-4 gap-y-5 25xl:flex 25xl:justify-center !text-base-100">
 					<h2 className="card-title text-2xl px-2 pt-2 md:pt-3 2xl:text-3xl 3xl:text-4xl 4xl:text-5xl 4xl:pt-10">
 						{title}
 					</h2>

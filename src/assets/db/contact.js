@@ -3,8 +3,8 @@ const contactInfo = [
 		id: 0,
 		iconId: 0,
 		title: "Email",
-		numberOrId: "rodrigo010carvalho@gmail.com",
-		href: "mailto:rodrigo010carvalho@gmail.com",
+		numberOrId: "rodricarvalhom@gmail.com",
+		href: "mailto:rodricarvalhom@gmail.com",
 	},
 	{
 		id: 1,

@@ -29,47 +29,47 @@ function Navbar({ title = "Meu Portfólio" }) {
 	};
 
 	return (
-		<nav className="navbar shadow-lg bg-neutral text-neutral-content w-full">
+		<nav className="navbar shadow-lg text-neutral-content w-full bg-secondary">
 			<div className="w-full ml-4 2xl:ml-8 3xl:ml-12 4xl:ml-16 flex mr-3 2xl:py-2 25xl:py-6">
 				<div className="flex-none px-3">
 					<Link
 						to="/"
-						className="text-2xl md:text-3xl lg:text-3xl 25xl:text-5xl 4xl:text-7xl font-bold align-middle">
+						className="botao text-2xl md:text-3xl lg:text-3xl 25xl:text-5xl 4xl:text-7xl font-bold align-middle text-base-100">
 						{title}
 					</Link>
 				</div>
 
 				{windowWidth > 1100 ? (
 					<div className=" flex-1 right-0 xl:mr-6 2xl:mr-10 3xl:mr-14 4xl:mr-20 pt-1 align-middle">
-						<div className="flex justify-end items-center 25xl:gap-2 3xl:gap-5 4xl:gap-8">
+						<div className="flex justify-end items-center 2xl:gap-2 3xl:gap-5 4xl:gap-8 text-base-100">
 							<Link
 								to="/"
-								className="btn-ghost btn-sm rounded-btn text-xl lg:text-2xl 25xl:text-4xl 4xl:text-6xl flex items-center p-2">
+								className="botao btn btn-ghost rounded-btn text-xl lg:text-2xl 25xl:text-4xl 4xl:text-6xl flex items-center p-2">
 								Início
 							</Link>
 							<Link
 								to="/about"
-								className="btn-ghost btn-sm rounded-btn text-xl lg:text-2xl 25xl:text-4xl 4xl:text-6xl flex items-center p-2">
+								className="botao btn btn-ghost rounded-btn text-xl lg:text-2xl 25xl:text-4xl 4xl:text-6xl flex items-center p-2">
 								Sobre
 							</Link>
 							<Link
 								to="/knowledge"
-								className="btn-ghost btn-sm rounded-btn text-xl lg:text-2xl 25xl:text-4xl 4xl:text-6xl flex items-cente p-2r">
+								className="botao btn btn-ghost rounded-btn text-xl lg:text-2xl 25xl:text-4xl 4xl:text-6xl flex items-center p-2">
 								Habilidades
 							</Link>
 							<Link
 								to="/education"
-								className="btn-ghost btn-sm rounded-btn text-xl lg:text-2xl 25xl:text-4xl 4xl:text-6xl flex items-center p-2">
+								className="botao btn btn-ghost rounded-btn text-xl lg:text-2xl 25xl:text-4xl 4xl:text-6xl flex items-center p-2">
 								Formação
 							</Link>
 							<Link
 								to="/projects"
-								className="btn-ghost btn-sm rounded-btn text-xl lg:text-2xl 25xl:text-4xl 4xl:text-6xl flex items-center p-2">
+								className="botao btn btn-ghost rounded-btn text-xl lg:text-2xl 25xl:text-4xl 4xl:text-6xl flex items-center p-2">
 								Projetos
 							</Link>
 							<Link
 								to="/findme"
-								className="btn-ghost btn-sm rounded-btn text-xl lg:text-2xl 25xl:text-4xl 4xl:text-6xl flex items-cente p-2r">
+								className="botao btn btn-ghost rounded-btn text-xl lg:text-2xl 25xl:text-4xl 4xl:text-6xl flex items-center p-2">
 								Contato
 							</Link>
 							<ThemeToggleButton />
@@ -78,12 +78,12 @@ function Navbar({ title = "Meu Portfólio" }) {
 				) : (
 					<div className="dropdown dropdown-end absolute right-8">
 						<div tabIndex={0} role="button" onClick={toggleDropdown}>
-							<IoMenu className="w-12 h-12" />
+							<IoMenu className="w-12 h-12 text-base-100" />
 						</div>
 						{isDropdownOpen && (
 							<ul
 								tabIndex={0}
-								className="dropdown-content menu bg-base-100 rounded-box z-50 w-52 p-2 shadow gap-4">
+								className="dropdown-content menu bg-text rounded-box z-50 w-52 p-2 shadow gap-4">
 								<li onClick={closeDropdown}>
 									<Link to="/" className="btn btn-ghost btn-sm rounded-btn text-xl">
 										Início
