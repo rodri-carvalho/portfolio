@@ -1,10 +1,14 @@
-import React from "react";
+import React, { useEffect } from "react";
 import { Link } from "react-router-dom";
 import { FaCode } from "react-icons/fa6";
 
 function About() {
+	useEffect(() => {
+		window.scrollTo(0, 0);
+	}, []);
+
 	return (
-		<div className="flex items-center justify-center py-6 px-12 bg-gray-500 w-11/12 rounded-xl shadow-2xl">
+		<div className="flex items-center justify-center py-6 px-14 bg-gray-500 w-11/12 rounded-xl shadow-2xl">
 			<div className="flex flex-col items-center w-full 2xl:gap-7 2xl:mt-5 text-base-100">
 				<div className="info flex sm:gap-6 lg:gap-12 xl:gap-16 items-center mx-2">
 					<div className="titulo-nome text-center flex flex-col items-center mx-4 xl:gap-3 3xl:gap-6">
@@ -81,7 +85,7 @@ function About() {
 				</div>
 				<div className="flex flex-col items-center mt-3 25xl:mt-6 w-full ">
 					<div className="buttons w-8/12 max-w-72 md:max-w-full lg:max-w-full xl:max-w-full md:w-4/6 lg:w-7/12 xl:w-6/12 flex flex-col md:flex-row md:justify-center md:gap-16 gap-5 py-2">
-						<button className="botaoCurriculo btn btn-active btn-neutral text-lg md:text-xl lg:text-2xl 3xl:text-4xl md:w-2/5 lg:w-3/5 2xl:w-2/5 lg:h-full flex items-center 2xl:rounded-2xl bg-accent">
+						<button className="btn btn-active btn-neutral text-lg md:text-xl lg:text-2xl 3xl:text-4xl md:w-2/5 lg:w-3/5 2xl:w-2/5 lg:h-full flex items-center 2xl:rounded-2xl bg-accent outline-hidden">
 							<a
 								className="text-base-100"
 								onClick={() => document.getElementById("my_modal_1").showModal()}>
@@ -93,10 +97,10 @@ function About() {
 							<div className="mt-10 w-11/12 h-5/6 bg-zinc-700 flex flex-col items-center rounded-2xl">
 								<iframe
 									src="src/assets/docs/curriculo.pdf"
-									className="border rounded-xl h-full w-11/12 mt-5"></iframe>
+									className="curriculo border rounded-xl h-full w-11/12 mt-5"></iframe>
 								<div className="flex mt-4">
 									<button
-										className="botaoCurriculo btn btn-active btn-neutral text-lg md:text-2xl md:h-full"
+										className="botaoCurriculo botao btn btn-active btn-neutral text-lg md:text-2xl md:h-full text-base-100 bg-accent outline-hidden"
 										onClick={() => document.getElementById("my_modal_1").close()}>
 										Fechar
 									</button>
@@ -106,8 +110,8 @@ function About() {
 							</div>
 						</dialog>
 
-						<button className="botaoContato btn btn-active btn-neutral text-lg md:text-xl lg:text-2xl 3xl:text-4xl md:w-2/5 lg:w-3/5 2xl:w-2/5 lg:h-full flex items-center 2xl:rounded-2xl bg-accent">
-							<Link to="/findme" className="text-base-100">
+						<button className="botaoContato btn btn-active btn-neutral text-lg md:text-xl lg:text-2xl 3xl:text-4xl md:w-2/5 lg:w-3/5 2xl:w-2/5 lg:h-full flex items-center 2xl:rounded-2xl bg-accent outline-hidden">
+							<Link to="/findme" className="text-base-100 botao">
 								Entre em contato
 							</Link>
 						</button>

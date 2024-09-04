@@ -12,6 +12,10 @@ function Projects() {
 	const moreProjectsRef = useRef(null);
 
 	useEffect(() => {
+		window.scrollTo(0, 0);
+	}, []);
+
+	useEffect(() => {
 		const handleClickOutside = (event) => {
 			const scrollbarWidth = window.innerWidth - document.documentElement.clientWidth;
 			const isClickOnScrollbar = event.clientX >= document.documentElement.clientWidth;
@@ -87,7 +91,7 @@ function Projects() {
 						<div className="flex items-center justify-center mt-4">
 							<button
 								onClick={loadMoreProjects}
-								className="btn-ghost flex flex-col items-center w-9/12 md:w-1/2 lg:w-5/12 2xl:w-3/12 4xl:w-2/12 text-2xl lg:text-3xl 2xl:text-4xl 3xl:text-5xl 4xl:text-6xl md:mt-3 2xl:mt-5 3xl:mt-6 4xl:mt-8   md:rounded-xl 2xl:rounded-3xl 3xl:rounded-3xl text-base-100">
+								className="btn-ghost flex flex-col items-center w-9/12 md:w-1/2 lg:w-5/12 2xl:w-3/12 4xl:w-2/12 text-2xl lg:text-3xl 2xl:text-4xl 3xl:text-5xl 4xl:text-6xl md:mt-3 2xl:mt-5 3xl:mt-6 4xl:mt-8   md:rounded-xl 2xl:rounded-3xl 3xl:rounded-3xl text-base-100 outline-hidden">
 								Carregar mais
 								<FaArrowDown className="mt-3 2xl:mt-5 3xl:mt-7 4xl:mt-10 w-6 h-8 lg:w-7 lg:h-10 2xl:w-9 2xl:h-12 3xl:w-12 3xl:h-16 4xl:w-14 4xl:h-24" />
 							</button>

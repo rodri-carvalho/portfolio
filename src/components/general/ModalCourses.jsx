@@ -20,7 +20,7 @@ function ModalCourses({
 	return (
 		<>
 			<button
-				className={`btn w-full text-base h-fit 2xl:text-xl 3xl:text-2xl 4xl:text-3xl text-base-100 bg-secondary ${
+				className={`btn botao w-full text-base h-fit 2xl:text-xl 3xl:text-2xl 4xl:text-3xl text-base-100 bg-accent ${
 					inactive ? "disabledBtn" : ""
 				}`}
 				onClick={!inactive ? openModal : null}
@@ -60,7 +60,7 @@ function ModalCourses({
 					)}
 					<div className="modal-action w-full mt-0">
 						<form method="dialog" className="w-full flex justify-center">
-							<button className="btn flex justify-center items-center py-0 px-4 mt-3 md:mt-4 2xl:mt-0 text-lg lg:text-xl 2xl:text-3xl 25xl:text-4xl 4xl:text-5xl min-h-10 2xl:min-h-16 25xl:min-h-18 25xl:px-10 3xl:min-h-20 3xl:px-12 4xl:min-h-28 4xl:px-14 text-base-100 bg-accent">
+							<button className="btn botao flex justify-center items-center py-0 px-4 mt-3 md:mt-4 2xl:mt-0 text-lg lg:text-xl 2xl:text-3xl 25xl:text-4xl 4xl:text-5xl min-h-10 2xl:min-h-16 25xl:min-h-18 25xl:px-10 3xl:min-h-20 3xl:px-12 4xl:min-h-28 4xl:px-14 text-base-100 bg-accent">
 								<div className="">Fechar</div>
 							</button>
 						</form>

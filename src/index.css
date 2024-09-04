@@ -120,17 +120,26 @@ button:focus-visible {
 	outline: thin !important;
 }
 
+.botao {
+	border: 0 !important;
+	outline: thin !important;
+}
+
 .botao:hover {
-	color: #ebf3ff;
+	background-color: #434f5c;
 	transition: ease-in-out 0.3s !important;
 }
 
 .botaoIcon:hover {
 	color: #ebf3ff;
-	transition: ease-in-out 0.3s !important;
+	transition: ease-in-out 0.4s !important;
 	background-color: transparent;
-	outline: none !important;
+	outline: thin !important;
 	box-shadow: none;
+}
+
+.collapse-arrow > .collapse-title:after {
+	@apply 2xl:mt-1 2xl:h-3 2xl:w-3 25xl:static 25xl:h-4 25xl:w-4 25xl:mt-6 3xl:static 3xl:h-4 3xl:w-4 3xl:mt-6 4xl:static 4xl:h-6 4xl:w-6 4xl:mt-10;
 }
 
 @-webkit-keyframes downarrow {

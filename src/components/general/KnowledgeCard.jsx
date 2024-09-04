@@ -52,7 +52,7 @@ function KnowledgeCard({ iconId, techId, inProgress, techList }) {
 					</ul>
 					<div className="modal-action w-full mt-5 md:mt-10 md:mb-3">
 						<form method="dialog" className="w-full flex justify-center items-center">
-							<button className="btn p-1 w-2/6 text-base md:text-2xl 2xl:text-3xl 25xl:text-4xl 4xl:text-6xl 4xl:h-24 4xl:rounded-2xl text-base-100">
+							<button className="btn p-1 w-2/6 text-base md:text-2xl 2xl:text-3xl 25xl:text-4xl 4xl:text-6xl 4xl:h-24 4xl:rounded-2xl text-base-100 bg-accent outline-hidden border-0">
 								Fechar
 							</button>
 						</form>

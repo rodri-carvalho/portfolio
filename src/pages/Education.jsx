@@ -13,6 +13,10 @@ function Education() {
 	const formacaoTecnicaRef = useRef(null);
 
 	useEffect(() => {
+		window.scrollTo(0, 0);
+	}, []);
+
+	useEffect(() => {
 		const handleClickOutside = (event) => {
 			const scrollbarWidth = window.innerWidth - document.documentElement.clientWidth;
 			const isClickOnScrollbar = event.clientX >= document.documentElement.clientWidth;
@@ -87,7 +91,7 @@ function Education() {
 						isFormacaoTecnicaOpen ? "collapse-open" : ""
 					}`}>
 					<div
-						className="collapse-title flex justify-center text-xl sm:text-2xl md:text-3xl lg:text-4xl 2xl:text-4xl 3xl:text-6xl pl-12 text-base-100"
+						className="collapse-title flex justify-center text-xl sm:text-2xl md:text-3xl lg:text-4xl 2xl:text-4xl 3xl:text-6xl pl-12"
 						onClick={() => setIsFormacaoTecnicaOpen(!isFormacaoTecnicaOpen)}>
 						Formação Técnica
 					</div>

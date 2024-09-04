@@ -73,9 +73,9 @@ function ContactCard({ title, numberOrId, iconId, href }) {
 	};
 
 	return (
-		<div className="card bg-accent shadow-xl w-11/12 lg:w-11/12 2xl:w-5/12 3xl:w-5/12 4xl:w-1/2 max-w-full px-1 overflow-hidden 2xl:place-self-center">
+		<div className="card bg-neutral shadow-xl w-11/12 lg:w-11/12 2xl:w-5/12 3xl:w-5/12 4xl:w-1/2 max-w-full px-1 overflow-hidden 2xl:place-self-center">
 			<div className="flex justify-center items-center mt-2 xxs:mt-3 xs:mt-4 md:mt-5 xxs:mb-1">
-				<h2 className="card-title text-lg xs:text-xl md:text-3xl lg:text-3xl 4xl:text-6xl 4xl:pt-1 pb-1 lg:pb-2">
+				<h2 className="card-title botaoIcon text-lg xs:text-xl md:text-3xl lg:text-3xl 4xl:text-6xl 4xl:pt-1 pb-1 lg:pb-2">
 					<a
 						href={href}
 						target="_blank"
@@ -112,7 +112,7 @@ function ContactCard({ title, numberOrId, iconId, href }) {
 				<div className="flex justify-end">
 					<div className="card-actions justify-end pt-1 xxs:pt-2">
 						<button
-							className="btn w-8 h-8 md:w-11 md:h-11 lg:w-14 lg:h-14 4xl:h-20 4xl:w-20 min-h-0 p-0 bg-neutral border-secondary"
+							className="btn botao w-8 h-8 md:w-11 md:h-11 lg:w-14 lg:h-14 4xl:h-20 4xl:w-20 min-h-0 p-0 bg-accent border-secondary"
 							onClick={copyToClipboard}>
 							<FaCopy className="w-4 h-4 md:w-6 md:h-6 lg:w-8 lg:h-8 4xl:h-12 4xl:w-12 m-0 text-base-100" />
 						</button>

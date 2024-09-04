@@ -17,7 +17,7 @@ const techItems = [
 		title: "Javascript",
 		inProgress: false,
 		techList:
-			"Funções e Callback Functions; Objetos, Prototipagem e Herança; Arrays e seus Métodos (map, filter, reduce, etc.); Manipulação do DOM e Eventos; Promises e Async/Await; High Order Functions e Closure; Classes e Objetos; JSON; Manipulação de Erros (try...catch); Estruturas de Dados (stack, filas, mapas, conjuntos); Features do ES6+ (let, const, arrow functions, destructuring, operadores spread e rest); Módulos (CommonJS, ES Modules); API Fetch e Local Storage e Session Storage; Regex; Testes Unitários; Contexto de Execução e Escopo;",
+			"Funções e Callback Functions; Objetos, Prototipagem e Herança; Arrays e seus Métodos (map, filter, reduce, etc.); Manipulação do DOM e Eventos; Promises e Async/Await; High Order Functions e Closure; Classes e Objetos; JSON; Manipulação de Erros (try...catch); Estruturas de Dados (stack, filas, mapas, conjuntos); Features ES6+ (destructuring, operadores spread e rest); Let, Const, Arrow Functions; Módulos (CommonJS, ES Modules); API Fetch e Local Storage e Session Storage; Regex; Testes Unitários; Contexto de Execução e Escopo;",
 	},
 	{
 		iconId: 2,
