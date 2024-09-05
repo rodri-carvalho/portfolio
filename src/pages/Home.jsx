@@ -69,13 +69,13 @@ function Home() {
 
 				<div className="w-full flex justify-center">
 					<div className="divider w-10/12 2xl:w-8/12 self-center mt-12">
-						<FaCode className="text-base-100 2xl:!text-7xl" />
+						<FaCode className="text-base-100 text-6xl lg:text-7xl" />
 					</div>
 				</div>
 
 				<div className="flex flex-col xxs:mt-1">
 					<div className="flex items-center justify-center">
-						<h3 className="flex text-2xl text-center justify-center ml-4 xs:text-2xl xl:text-3xl 3xl:text-5xl text-base-100">
+						<h3 className="flex text-2xl text-center justify-center ml-4 xs:text-2xl lg:text-3xl 3xl:text-5xl text-base-100">
 							Navegue pelas seções
 						</h3>
 						<PiArrowBendRightDown className="mt-8 h-12 md:h-10 md:pl-2 w-12 rotate-45 translate-y-4 md:translate-y-3 -translate-x-2 md:mx-2 xl:text-3xl 2xl:text-4xl 3xl:h-16 3xl:w-16 3xl:rotate-45 3xl:translate-y-6 text-base-100" />
