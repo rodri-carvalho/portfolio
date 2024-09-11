@@ -73,28 +73,35 @@ function ContactCard({ title, numberOrId, iconId, href }) {
 	};
 
 	return (
-		<div className="card bg-neutral shadow-xl w-11/12 lg:w-11/12 2xl:w-5/12 3xl:w-5/12 4xl:w-1/2 max-w-full px-1 overflow-hidden 2xl:place-self-center">
-			<div className="flex justify-center items-center mt-2 xxs:mt-3 xs:mt-4 md:mt-5 xxs:mb-1">
-				<h2 className="card-title botaoIcon text-lg xs:text-xl md:text-3xl lg:text-3xl 4xl:text-6xl 4xl:pt-1 pb-1 lg:pb-2">
+		<div className="card bg-accent shadow-2xl w-10/12 2xs:w-9/12 xs:w-8/12 sm:w-7/12 md:w-full max-w-full px-1 overflow-hidden">
+			<div className="flex justify-center items-center mt-2 2xs:mt-5 2xs:mb-2 md:mt-6 lg:mt-10 lg:mb-5 xs:mb-1">
+				<h2 className="card-title botaoIcon">
 					<a
 						href={href}
 						target="_blank"
 						rel="noopener noreferrer"
-						className="flex items-center gap-2 md:gap-3 lg:gap-4 text-base-100">
-						<IconComponent className="w-6 h-6 xs:w-7 xs:h-7 md:w-9 md:h-9 3xl:w-10 3xl:h-10 4xl:w-20 4xl:h-20 " />
-						<div className="">{title}</div>
+						className="botaoIcone flex items-center gap-2 2xs:gap-3 sm:gap-4 text-base-100">
+						<IconComponent className="text-3xl 3xs:text-4xl 2xs:text-5xl md:text-3xl lg:text-5xl" />
+						<div className="text-xl 3xs:text-2xl 2xs:text-2xl sm:text-3xl lg:text-4xl">{title}</div>
 					</a>
 				</h2>
+				<div className="absolute right-3 3xs:right-4 2xs:right-5 xs:right-6 lg:right-8">
+					<div className="card-actions">
+						<button className="botao !p-0" onClick={copyToClipboard}>
+							<FaCopy className="text-lg 6xs:text-xl 3xs:text-2xl 2xs:text-3xl md:text-xl lg:text-3xl" />
+						</button>
+					</div>
+				</div>
 			</div>
 			<div className="w-full max-w-full flex flex-col items-center justify-center">
-				<div className="divider self-center w-9/12 pr-2 3xl:w-10/12 m-0 lg:mr-10"></div>
+				<div className="divider self-center w-10/12 xs:w-9/12 3xl:w-10/12 m-0 lg:mr-10"></div>
 			</div>
-			<div className="contactInfo flex items-center h-full justify-between gap-2 ml-4 max-w-full w-11/12 pb-2 xxs:pt-1 xxs:pb-3 xs:pt-3 xs:pb-6  2xl:pt-0 2xl:pb-2 3xl:5 3xl:pb-8 4xl:pt-7 4xl:pb-10">
-				<div className="flex flex-col items-center justify-center w-full sm:pl-24 md:pl-6 lg:pl-16 2xl:pl-14 4xl:pl-40 text-base-100">
+			<div className="contactInfo flex items-center h-full pb-3 3xs:pb-5 3xs:pt-2 2xs:pb-7 2xs:pt-4 md:pb-6 md:pt-3 lg:pt-6 lg:pb-10">
+				<div className="flex flex-col items-center justify-center w-full text-base-100">
 					<p
 						id={`numberOrID-${title}`}
 						ref={textRef}
-						className="w-full text-center break-words pt-1 xxs:text-lg xs:text-xl md:text-2xl 3xl:text-4xl 4xl:text-6xl"
+						className="w-full text-center break-words text-xl 3xs:text-2xl 2xs:text-3xl md:text-2xl lg:text-4xl"
 						style={{ wordBreak: "break-word", whiteSpace: "normal" }}>
 						{shouldBreak && remainingLink ? (
 							<>
@@ -105,18 +112,6 @@ function ContactCard({ title, numberOrId, iconId, href }) {
 							numberOrId
 						)}
 					</p>
-				</div>
-				<div className="rotate-90 max-w-full">
-					<div className="divider w-12 4xl:w-20 hidden sm:flex"></div>
-				</div>
-				<div className="flex justify-end">
-					<div className="card-actions justify-end pt-1 xxs:pt-2">
-						<button
-							className="btn botao w-8 h-8 md:w-11 md:h-11 lg:w-14 lg:h-14 4xl:h-20 4xl:w-20 min-h-0 p-0 bg-accent border-secondary"
-							onClick={copyToClipboard}>
-							<FaCopy className="w-4 h-4 md:w-6 md:h-6 lg:w-8 lg:h-8 4xl:h-12 4xl:w-12 m-0 text-base-100" />
-						</button>
-					</div>
 				</div>
 			</div>
 		</div>

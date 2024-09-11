@@ -7,8 +7,15 @@ function About() {
 		window.scrollTo(0, 0);
 	}, []);
 
+	const handleOutsideClick = (e) => {
+		const modal = document.getElementById("my_modal_1");
+		if (e.target === modal) {
+			modal.close();
+		}
+	};
+
 	return (
-		<div className="flex items-center justify-center py-6 px-14 bg-gray-500 w-11/12 rounded-xl shadow-2xl">
+		<div className="flex items-center justify-center py-6 px-14 bg-accent w-11/12 rounded-xl shadow-2xl">
 			<div className="flex flex-col items-center w-full 2xl:gap-7 2xl:mt-5 text-base-100">
 				<div className="info flex sm:gap-6 lg:gap-12 xl:gap-16 items-center mx-2">
 					<div className="titulo-nome text-center flex flex-col items-center mx-4 xl:gap-3 3xl:gap-6">
@@ -83,17 +90,15 @@ function About() {
 						</div>
 					</div>
 				</div>
-				<div className="flex flex-col items-center mt-3 25xl:mt-6 w-full ">
+				<div className="flex flex-col items-center mt-3 xl:mt-6 w-full ">
 					<div className="buttons w-8/12 max-w-72 md:max-w-full lg:max-w-full xl:max-w-full md:w-4/6 lg:w-7/12 xl:w-6/12 flex flex-col md:flex-row md:justify-center md:gap-16 gap-5 py-2">
-						<button className="btn btn-active btn-neutral text-lg md:text-xl lg:text-2xl 3xl:text-4xl md:w-2/5 lg:w-3/5 2xl:w-2/5 lg:h-full flex items-center 2xl:rounded-2xl bg-accent outline-hidden">
-							<a
-								className="text-base-100"
-								onClick={() => document.getElementById("my_modal_1").showModal()}>
+						<button className="botao !bg-neutral text-lg md:text-xl lg:text-2xl 3xl:text-4xl md:w-2/5 lg:w-3/5 2xl:w-2/5 lg:h-full flex items-center justify-center 2xl:rounded-2xl outline-hidden px-1 py-4">
+							<a onClick={() => document.getElementById("my_modal_1").showModal()}>
 								Veja meu currículo
 							</a>
 						</button>
 
-						<dialog id="my_modal_1" className="modal">
+						<dialog id="my_modal_1" className="modal" onClick={handleOutsideClick}>
 							<div className="mt-10 w-11/12 h-5/6 bg-zinc-700 flex flex-col items-center rounded-2xl">
 								<iframe
 									src="src/assets/docs/curriculo.pdf"
@@ -110,10 +115,8 @@ function About() {
 							</div>
 						</dialog>
 
-						<button className="botaoContato btn btn-active btn-neutral text-lg md:text-xl lg:text-2xl 3xl:text-4xl md:w-2/5 lg:w-3/5 2xl:w-2/5 lg:h-full flex items-center 2xl:rounded-2xl bg-accent outline-hidden">
-							<Link to="/findme" className="text-base-100 botao">
-								Entre em contato
-							</Link>
+						<button className="botao !bg-neutral text-lg md:text-xl lg:text-2xl 3xl:text-4xl md:w-2/5 lg:w-3/5 2xl:w-2/5 lg:h-full flex items-center justify-center 2xl:rounded-2xl outline-hidden px-1 py-4">
+							<Link to="/findme">Entre em contato</Link>
 						</button>
 					</div>
 				</div>

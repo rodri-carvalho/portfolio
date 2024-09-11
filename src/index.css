@@ -121,25 +121,47 @@ button:focus-visible {
 }
 
 .botao {
+	color: #e7e5e4;
 	border: 0 !important;
-	outline: thin !important;
-}
-
-.botao:hover {
-	background-color: #434f5c;
-	transition: ease-in-out 0.3s !important;
-}
-
-.botaoIcon:hover {
-	color: #ebf3ff;
 	transition: ease-in-out 0.4s !important;
 	background-color: transparent;
 	outline: thin !important;
 	box-shadow: none;
 }
 
+.botao:hover {
+	color: #e3e5c7 !important;
+	transform: scale(1.05);
+	transition: transform 0.3s ease;
+	transition: ease-in-out 0.3s !important;
+}
+
+.botaoIcone {
+	color: #e7e5e4;
+	border: 0 !important;
+	transition: ease-in-out 0.4s !important;
+	background-color: transparent !important;
+	outline: thin !important;
+	box-shadow: none;
+}
+
+.botaoIcone:hover {
+	color: #e3e5c7 !important;
+	transform: scale(1.13);
+	transition: transform 0.3s ease;
+	transition: ease-in-out 0.3s !important;
+}
+
+/* .botaoIcon:hover {
+	color: #ebf3ff !important;
+	transition: ease-in-out 0.4s !important;
+	background-color: transparent;
+	outline: thin !important;
+	box-shadow: none;
+} */
+
 .collapse-arrow > .collapse-title:after {
-	@apply 2xl:mt-1 2xl:h-3 2xl:w-3 25xl:static 25xl:h-4 25xl:w-4 25xl:mt-6 3xl:static 3xl:h-4 3xl:w-4 3xl:mt-6 4xl:static 4xl:h-6 4xl:w-6 4xl:mt-10;
+	@apply 2xl:mt-1 2xl:h-3 2xl:w-3 3xl:static 3xl:h-4 3xl:w-4 3xl:mt-6;
 }
 
 @-webkit-keyframes downarrow {

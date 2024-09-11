@@ -5,7 +5,8 @@ import { IoSunny } from "react-icons/io5";
 function ThemeToggleButton() {
 	const [theme, setTheme] = useState(() => {
 		const storedTheme = localStorage.getItem("theme");
-		return storedTheme ? storedTheme : "light";
+		// Set dark as the default theme if none is set in localStorage
+		return storedTheme ? storedTheme : "dark";
 	});
 
 	useEffect(() => {
@@ -20,12 +21,12 @@ function ThemeToggleButton() {
 
 	return (
 		<button
-			className="botao btn btn-ghost outline-hidden !m-0 !p-0 lg:!px-2 25xl:!px-3 lg:rounded-2xl 3xl:rounded-3xl theme-toggle-button 25xl:!min-h-20 4xl:translate-y-1"
+			className="botaoIcone bg-secondary outline-hidden !m-0 !p-0 lg:!px-2 2xl:!px-3 lg:rounded-2xl 3xl:rounded-3xl theme-toggle-button 2xl:!min-h-20"
 			onClick={toggleTheme}>
 			{theme === "light" ? (
-				<PiMoonStarsFill className="text-3xl 25xl:text-4xl 4xl:text-6xl" />
+				<PiMoonStarsFill className="text-3xl 2xl:text-4xl" />
 			) : (
-				<IoSunny className="text-3xl 25xl:text-4xl 4xl:text-6xl" />
+				<IoSunny className="text-3xl 2xl:text-4xl" />
 			)}
 		</button>
 	);

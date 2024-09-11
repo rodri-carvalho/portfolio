@@ -43,7 +43,7 @@ function Projects() {
 	};
 
 	return (
-		<div className="flex flex-col w-full px-5 sm:px-9 md:px-10 lg:px-14 2xl:px-60 3xl:px-72 4xl:px-80 3xl:py-8 gap-3 sm:gap-6 md:gap-7 lg:gap-8 xl:gap-9 2xl:gap-10 25xl:gap-12 3xl:gap-16 4xl:gap-20 ">
+		<div className="flex flex-col w-full px-5 sm:px-9 md:px-10 lg:px-14 2xl:px-60 3xl:px-72 3xl:py-8 gap-3 sm:gap-6 md:gap-7 lg:gap-8 xl:gap-9 2xl:gap-10 3xl:gap-16">
 			{projects.map((project, index) => (
 				<ProjectsBrowserMockUp
 					key={project.id}
@@ -63,8 +63,8 @@ function Projects() {
 				<div
 					className={`${
 						isMoreProjects
-							? "collapse-title max-w-full w-full xl:w-11/12 flex text-xl sm:text-2xl md:text-3xl lg:text-4xl 2xl:text-4xl 3xl:text-6xl pr-4 xxs:ml-2 xs:ml-0 2xl:ml-16 3xl:ml-24 4xl:ml-32 lg:mt-4 2xl:mt-6 3xl:mt-8 4xl:mt-10 md:mb-2 lg:mb-8 text-base-100"
-							: "collapse-title max-w-full w-full xl:w-11/12 flex text-xl sm:text-2xl md:text-3xl lg:text-3xl 3xl:text-6xl pr-4 xxs:ml-2 xs:ml-0 2xl:ml-16 3xl:ml-24 4xl:ml-32 lg:my-4 2xl:my-6 3xl:my-8 4xl:my-10 text-base-100"
+							? "collapse-title max-w-full w-full xl:w-11/12 flex text-xl sm:text-2xl md:text-3xl lg:text-4xl 2xl:text-4xl 3xl:text-6xl pr-4 2xl:ml-16 3xl:ml-24 lg:mt-4 2xl:mt-6 3xl:mt-8 md:mb-2 lg:mb-8 text-base-100"
+							: "collapse-title max-w-full w-full xl:w-11/12 flex text-xl sm:text-2xl md:text-3xl lg:text-3xl 3xl:text-6xl pr-4 2xl:ml-16 3xl:ml-24 lg:my-4 2xl:my-6 3xl:my-8 text-base-100"
 					}`}
 					onClick={() => setIsMoreProjects(!isMoreProjects)}>
 					Outros Projetos
@@ -91,9 +91,9 @@ function Projects() {
 						<div className="flex items-center justify-center mt-4">
 							<button
 								onClick={loadMoreProjects}
-								className="btn-ghost flex flex-col items-center w-9/12 md:w-1/2 lg:w-5/12 2xl:w-3/12 4xl:w-2/12 text-2xl lg:text-3xl 2xl:text-4xl 3xl:text-5xl 4xl:text-6xl md:mt-3 2xl:mt-5 3xl:mt-6 4xl:mt-8   md:rounded-xl 2xl:rounded-3xl 3xl:rounded-3xl text-base-100 outline-hidden">
+								className="btn-ghost flex flex-col items-center w-9/12 md:w-1/2 lg:w-5/12 2xl:w-3/12 text-2xl lg:text-3xl 2xl:text-4xl 3xl:text-5xl md:mt-3 2xl:mt-5 3xl:mt-6 md:rounded-xl 2xl:rounded-3xl 3xl:rounded-3xl text-base-100 outline-hidden">
 								Carregar mais
-								<FaArrowDown className="mt-3 2xl:mt-5 3xl:mt-7 4xl:mt-10 w-6 h-8 lg:w-7 lg:h-10 2xl:w-9 2xl:h-12 3xl:w-12 3xl:h-16 4xl:w-14 4xl:h-24" />
+								<FaArrowDown className="mt-3 2xl:mt-5 3xl:mt-7 w-6 h-8 lg:w-7 lg:h-10 2xl:w-9 2xl:h-12 3xl:w-12 3xl:h-16" />
 							</button>
 						</div>
 					)}

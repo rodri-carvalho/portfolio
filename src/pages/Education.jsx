@@ -47,7 +47,7 @@ function Education() {
 			<div className="flex flex-col w-full justify-evenly items-center mx-4 lg:mx-7 xl:mx-9">
 				<div
 					ref={formacaoAcademicaRef}
-					className={`collapse collapse-plus bg-accent pr-1 xl:pr-4 2xl:w-11/12 4xl:w-10/12 3xl:pr-8 ${
+					className={`collapse collapse-plus bg-accent pr-1 xl:pr-4 2xl:w-11/12 3xl:pr-8 ${
 						isFormacaoAcademicaOpen ? "collapse-open" : ""
 					}`}>
 					<div
@@ -87,7 +87,7 @@ function Education() {
 
 				<div
 					ref={formacaoTecnicaRef}
-					className={`collapse collapse-plus bg-accent pr-1 xl:pr-4 2xl:w-11/12 4xl:w-10/12 3xl:pr-10  ${
+					className={`collapse collapse-plus bg-accent pr-1 xl:pr-4 2xl:w-11/12 3xl:pr-10  ${
 						isFormacaoTecnicaOpen ? "collapse-open" : ""
 					}`}>
 					<div
@@ -99,7 +99,7 @@ function Education() {
 						className={`collapse-content ${
 							isFormacaoTecnicaOpen ? "collapse-open 2xl:mt-7 3xl:mt-10" : ""
 						}`}>
-						<div className="w-full grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 3xl:grid-cols-3 gap-4 sm:gap-6 4xl:max-w-full 4xl:gap-y-10">
+						<div className="w-full grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 3xl:grid-cols-3 gap-4 sm:gap-6">
 							{courses.map((course) => (
 								<CourseCard
 									key={course.id}

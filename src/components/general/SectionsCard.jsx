@@ -43,27 +43,27 @@ function SectionsCard({ page, description, iconId, isOpen, query }) {
 				type="radio"
 				name="my-accordion"
 				id={`accordion-${iconId}`}
-				className="collapse-input 4xl:!text-8xl"
+				className="collapse-input"
 				defaultChecked={isOpen}
 			/>
-			<div className="collapse-title custom-collapse flex justify-between items-center 2xl:w-11/12 3xl:w-full 4xl:w-11/12 font-medium text-base-100 2xl:my-3 25xl:my-2 2xl:ml-6 25xl:ml-10 3xl:ml-3 3xl:my-3 4xl:my-6 4xl:ml-14">
+			<div className="collapse-title custom-collapse flex justify-between items-center 2xl:w-11/12 3xl:w-full font-medium text-base-100 2xl:my-3 2xl:ml-6 3xl:ml-3 3xl:my-3">
 				<label
 					htmlFor={`accordion-${iconId}`}
-					className="flex items-center cursor-pointer lg:text-2xl 25xl:text-4xl 4xl:text-6xl">
+					className="flex items-center cursor-pointer lg:text-2xl 2xl:text-4xl">
 					<IconComponent />
-					<div className="ml-2 2xl:ml-0 25xl:ml-2 xs:text-2xl lg:text-3xl 25xl:text-5xl 4xl:text-6xl 2xl:pl-4">
+					<div className="ml-2 2xl:ml-0 xs:text-2xl lg:text-3xl 2xl:text-5xl 2xl:pl-4">
 						{page}
 					</div>
 				</label>
 			</div>
 			<div className="collapse-content flex flex-col items-center text-base-100">
-				<p className="text-center text-lg xs:text-xl lg:text-3xl 25xl:text-4xl 4xl:text-5xl 4xl:px-14 3xl:py-6 4xl:leading-normal">
+				<p className="text-center text-lg xs:text-xl lg:text-3xl 2xl:text-4xl 3xl:py-6">
 					{description}
 				</p>
-				<button className="botao btn-ghost mt-4 lg:mt-6 lg:my-3 2xl:my-3 25xl:mt-10 25xl:mb-7 4xl:mt-6 4xl:mb-9 !bg-neutral">
+				<button className="botao mt-4 lg:mt-6 lg:my-3 2xl:my-3 2xl:mt-10 2xl:mb-7 !bg-neutral">
 					<Link
 						to={`/${query}`}
-						className="botao p-0 text-lg xs:text-xl lg:text-3xl 25xl:text-4xl 4xl:text-5xl text-base-100">
+						className="p-0 text-lg xs:text-xl lg:text-3xl 2xl:text-4xl !bg-neutral">
 						Ir para a seção
 					</Link>
 				</button>

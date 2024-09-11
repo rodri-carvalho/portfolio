@@ -30,46 +30,46 @@ function Navbar({ title = "Meu Portfólio" }) {
 
 	return (
 		<nav className="navbar shadow-lg text-neutral-content w-full bg-secondary 2xl:py-0">
-			<div className="w-full 2xl:ml-8 3xl:ml-12 4xl:ml-24 flex mr-3 2xl:py-0 25xl:py-3 35xl:py-4 4xl:py-10">
+			<div className="w-full 2xl:ml-8 3xl:ml-12 flex mr-3 2xl:py-0 3xl:py-4">
 				<div className="flex-none px-3">
 					<Link
 						to="/"
-						className="botao text-2xl md:text-3xl lg:text-4xl 3xl:text-5xl 4xl:text-8xl font-bold align-middle text-base-100 p-2 rounded-xl">
+						className="botaoIcone text-2xl md:text-3xl lg:text-4xl 3xl:text-5xl font-bold align-middle text-base-100 p-2 rounded-xl">
 						{title}
 					</Link>
 				</div>
 
 				{windowWidth > 1100 ? (
-					<div className=" flex-1 right-0 xl:mr-6 2xl:mr-10 3xl:mr-14 4xl:mr-20 pt-1">
-						<div className="flex justify-end items-center 2xl:gap-1 25xl:gap-1 3xl:gap-0 35xl:gap-1 4xl:gap-6 text-base-100">
+					<div className="flex-1 right-0 xl:mr-6 2xl:mr-10 3xl:mr-14 pt-1">
+						<div className="flex justify-end items-center 2xl:gap-1 3xl:gap-0 text-base-100">
 							<Link
 								to="/"
-								className="botao btn !py-0 2xl:!px-2 25xl:!px-2 3xl:!px-3 4xl:!px-2 btn-ghost rounded-btn text-xl lg:text-2xl 25xl:text-3xl 35xl:text-4xl 4xl:text-6xl flex items-center 25xl:!min-h-14 3xl:!min-h-16 4xl:!min-h-24 25xl:rounded-2xl 3xl:rounded-3xl">
+								className="botao bg-accent !py-0 3xl:!px-3 rounded-btn text-xl lg:text-2xl 2xl:text-3xl 3xl:text-4xl flex items-center 2xl:!min-h-14 3xl:!min-h-16 2xl:rounded-2xl 3xl:rounded-3xl">
 								Início
 							</Link>
 							<Link
 								to="/about"
-								className="botao btn !py-0 2xl:!px-2 25xl:!px-2 3xl:!px-3 4xl:!px-2 btn-ghost rounded-btn text-xl lg:text-2xl 25xl:text-3xl 35xl:text-4xl 4xl:text-6xl flex items-center 25xl:!min-h-14 3xl:!min-h-16 4xl:!min-h-24 25xl:rounded-2xl 3xl:rounded-3xl">
+								className="botao bg-accent !py-0 3xl:!px-3 rounded-btn text-xl lg:text-2xl 2xl:text-3xl 3xl:text-4xl flex items-center 2xl:!min-h-14 3xl:!min-h-16 2xl:rounded-2xl 3xl:rounded-3xl">
 								Sobre
 							</Link>
 							<Link
 								to="/knowledge"
-								className="botao btn !py-0 2xl:!px-2 25xl:!px-2 3xl:!px-3 4xl:!px-2 btn-ghost rounded-btn text-xl lg:text-2xl 25xl:text-3xl 35xl:text-4xl 4xl:text-6xl flex items-center 25xl:!min-h-14 3xl:!min-h-16 4xl:!min-h-24 25xl:rounded-2xl 3xl:rounded-3xl">
+								className="botao bg-accent !py-0 3xl:!px-3 rounded-btn text-xl lg:text-2xl 2xl:text-3xl 3xl:text-4xl flex items-center 2xl:!min-h-14 3xl:!min-h-16 2xl:rounded-2xl 3xl:rounded-3xl">
 								Habilidades
 							</Link>
 							<Link
 								to="/education"
-								className="botao btn !py-0 2xl:!px-2 25xl:!px-2 3xl:!px-3 4xl:!px-2 btn-ghost rounded-btn text-xl lg:text-2xl 25xl:text-3xl 35xl:text-4xl 4xl:text-6xl flex items-center 25xl:!min-h-14 3xl:!min-h-16 4xl:!min-h-24 25xl:rounded-2xl 3xl:rounded-3xl">
+								className="botao bg-accent !py-0 3xl:!px-3 rounded-btn text-xl lg:text-2xl 2xl:text-3xl 3xl:text-4xl flex items-center 2xl:!min-h-14 3xl:!min-h-16 2xl:rounded-2xl 3xl:rounded-3xl">
 								Formação
 							</Link>
 							<Link
 								to="/projects"
-								className="botao btn !py-0 2xl:!px-2 25xl:!px-2 3xl:!px-3 4xl:!px-2 btn-ghost rounded-btn text-xl lg:text-2xl 25xl:text-3xl 35xl:text-4xl 4xl:text-6xl flex items-center 25xl:!min-h-14 3xl:!min-h-16 4xl:!min-h-24 25xl:rounded-2xl 3xl:rounded-3xl">
+								className="botao bg-accent !py-0 3xl:!px-3 rounded-btn text-xl lg:text-2xl 2xl:text-3xl 3xl:text-4xl flex items-center 2xl:!min-h-14 3xl:!min-h-16 2xl:rounded-2xl 3xl:rounded-3xl">
 								Projetos
 							</Link>
 							<Link
 								to="/findme"
-								className="botao btn !py-0 2xl:!px-2 25xl:!px-2 3xl:!px-3 4xl:!px-2 btn-ghost rounded-btn text-xl lg:text-2xl 25xl:text-3xl 35xl:text-4xl 4xl:text-6xl flex items-center 25xl:!min-h-14 3xl:!min-h-16 4xl:!min-h-24 25xl:rounded-2xl 3xl:rounded-3xl">
+								className="botao bg-accent !py-0 3xl:!px-3 rounded-btn text-xl lg:text-2xl 2xl:text-3xl 3xl:text-4xl flex items-center 2xl:!min-h-14 3xl:!min-h-16 2xl:rounded-2xl 3xl:rounded-3xl">
 								Contato
 							</Link>
 							<ThemeToggleButton />

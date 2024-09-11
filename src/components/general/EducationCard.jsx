@@ -4,6 +4,14 @@ import PropTypes from "prop-types";
 function EducationCard({ institution, title, pic, certificate, index, content = "" }) {
 	const modalId = `modal-${index}`;
 
+	// Função para fechar o modal ao clicar fora dele
+	const handleOutsideClick = (e) => {
+		const modal = document.getElementById(modalId);
+		if (e.target === modal) {
+			modal.close();
+		}
+	};
+
 	return (
 		<>
 			<div className="card image-full w-fit 2xl:w-full lg:96 md:h-auto shadow-xl flex flex-col justify-between 3xl:mx-10">
@@ -37,16 +45,17 @@ function EducationCard({ institution, title, pic, certificate, index, content = 
 
 						<dialog
 							id={modalId}
-							className="modal max-w-full w-full modal-bottom sm:modal-middle md:flex md:justify-center">
+							className="modal max-w-full w-full modal-bottom sm:modal-middle md:flex md:justify-center"
+							onClick={handleOutsideClick}>
 							<div className="modal-box !bg-neutral 2xl:rounded-3xl md:!max-w-full md:w-10/12 2xl:w-7/12 md:h-fit">
 								<img
 									src={certificate}
 									alt={`Diploma do curso de ${title}`}
-									className="h-full 2xl:p-6 3xl:p-8 4xl:p-10"
+									className="h-full 2xl:p-6 3xl:p-8"
 								/>
 								<div className="modal-action justify-center 2xl:mt-0">
 									<form method="dialog" className=" w-full flex justify-center">
-										<button className="btn botao btn-ghost 2xl:rounded-xl !p-0 !min-w-fit w-1/5 text-base md:text-2xl lg:text-2xl xl:text-3xl 3xl:text-4xl 4xl:text-6xl 3xl:min-h-14 4xl:min-h-24 text-base-100 bg-accent">
+										<button className="btn botao btn-ghost 2xl:rounded-xl !p-0 !min-w-fit w-1/5 text-base md:text-2xl lg:text-2xl xl:text-3xl 3xl:text-4xl 3xl:min-h-14 text-base-100 bg-accent">
 											Fechar
 										</button>
 									</form>

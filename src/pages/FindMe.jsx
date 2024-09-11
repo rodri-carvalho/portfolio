@@ -8,7 +8,7 @@ function FindMe() {
 	}, []);
 
 	return (
-		<div className="flex flex-col gap-4 w-full items-center justify-center 4xl:my-8 lg:grid lg:grid-cols-2 place-items-center lg:gap-1">
+		<div className="flex flex-col gap-4 md:gap-x-10 md:gap-y-1 lg:gap-y-10 w-full items-center justify-center md:grid md:grid-cols-3 lg:grid-cols-3 md:place-items-center md:mx-16 lg:my-32">
 			{contactInfo.map((contact, index) => (
 				<ContactCard
 					key={contact.id}
