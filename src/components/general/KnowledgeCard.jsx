@@ -23,7 +23,7 @@ function KnowledgeCard({ iconId, techId, inProgress, techList }) {
 	return (
 		<>
 			<button
-				className={`card bg-accent shadow-xl p-1 flex justify-center items-center max-h-fit 3xl:m-3 ${
+				className={`card botao !bg-accent !shadow-2xl p-1 flex justify-center items-center max-h-fit ${
 					inProgress ? "disabled-button" : ""
 				}`}
 				disabled={inProgress}
@@ -36,7 +36,7 @@ function KnowledgeCard({ iconId, techId, inProgress, techList }) {
 						</span>
 					</div>
 				)}
-				<div className="flex items-center botao">
+				<div className="flex items-center !w-full !h-full">
 					<div className="card-body flex items-center p-1 gap-3 lg:h-full lg:justify-around">
 						<label htmlFor={`tech-${iconId}`} className="flex items-center cursor-pointer pt-3">
 							<IconComponent className="text-6xl lg:text-7xl xl:text-6xl 2xl:text-9xl" />

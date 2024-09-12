@@ -77,9 +77,6 @@ button:focus-visible {
 .arrow {
 	content: url("../src/assets/pics/componentPics/white-arrow.png");
 	position: static;
-	height: 85px;
-	width: 120px;
-	bottom: 40px;
 	animation: downarrow 1.1s infinite alternate ease-in-out;
 }
 
@@ -120,6 +117,10 @@ button:focus-visible {
 	outline: thin !important;
 }
 
+.collapse-title:after {
+	@apply md:!w-3 md:!h-3 md:!mt-2 md:!mr-3 lg:!w-4 lg:!h-4 lg:!mt-2 lg:mr-2 xl:!w-4 xl:!h-4 xl:!mt-3 xl:mr-4 2xl:!w-6 2xl:!h-6 2xl:!mt-3 3xl:!w-8 3xl:!h-8 3xl:!mt-10 3xl:!mr-10;
+}
+
 .botao {
 	color: #e7e5e4;
 	border: 0 !important;
@@ -137,7 +138,7 @@ button:focus-visible {
 }
 
 .botaoIcone {
-	color: #e7e5e4;
+	color: #e7e5e4 !important;
 	border: 0 !important;
 	transition: ease-in-out 0.4s !important;
 	background-color: transparent !important;

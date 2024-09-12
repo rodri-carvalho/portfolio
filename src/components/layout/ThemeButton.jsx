@@ -21,12 +21,12 @@ function ThemeToggleButton() {
 
 	return (
 		<button
-			className="botaoIcone bg-secondary outline-hidden !m-0 !p-0 lg:!px-2 2xl:!px-3 lg:rounded-2xl 3xl:rounded-3xl theme-toggle-button 2xl:!min-h-20"
+			className="botaoIcone place-self-center outline-hidden !m-0 !p-0 lg:!pt-1"
 			onClick={toggleTheme}>
 			{theme === "light" ? (
-				<PiMoonStarsFill className="text-3xl 2xl:text-4xl" />
+				<PiMoonStarsFill className="text-3xl 5xs:text-4xl md:text-3xl lg:text-5xl 2xl:text-6xl 3xl:text-7xl 5xs:mb-2 md:mb-0" />
 			) : (
-				<IoSunny className="text-3xl 2xl:text-4xl" />
+				<IoSunny className="text-3xl 5xs:text-4xl md:text-3xl lg:text-5xl 2xl:text-6xl 3xl:text-7xl 5xs:mb-2 md:mb-0" />
 			)}
 		</button>
 	);

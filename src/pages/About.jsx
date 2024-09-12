@@ -15,35 +15,36 @@ function About() {
 	};
 
 	return (
-		<div className="flex items-center justify-center py-6 px-14 bg-accent w-11/12 rounded-xl shadow-2xl">
-			<div className="flex flex-col items-center w-full 2xl:gap-7 2xl:mt-5 text-base-100">
-				<div className="info flex sm:gap-6 lg:gap-12 xl:gap-16 items-center mx-2">
-					<div className="titulo-nome text-center flex flex-col items-center mx-4 xl:gap-3 3xl:gap-6">
-						<h1 className="text-3xl sm:text-4xl lg:text-5xl xl:text-6xl 3xl:text-8xl">
+		<div className="flex items-center justify-center py-6 px-3 2xs:px-5 xs:px-6 sm:px-8 md:px-10 lg:px-12 xl:px-16 2xl:px-20 bg-accent w-11/12 lg:w-10/12 rounded-xl shadow-2xl sm:mt-3 2xl:mt-8 3xl:mt-10 mb-5 sm:mb-7">
+			<div className="flex flex-col items-center w-full md:mt-4 lg:mt-6 xl:mt-8 2xl:mt-12 3xl:mt-16 text-base-100">
+				<div className="info flex 2xs:gap-8 sm:gap-12 md:gap-20 xl:gap-24 2xl:gap-28 3xl:gap-40 items-center mx-2">
+					<div className="titulo-nome text-center flex flex-col items-center mx-4 2xs:gap-2 sm:gap-3 md:gap-4 2xl:gap-6 3xl:gap-8">
+						<h1 className="text-3xl 4xs:text-4xl sm:text-5xl md:text-6xl lg:text-7xl 2xl:text-8xl 3xl:text-9xl">
 							Rodrigo Carvalho
 						</h1>
-						<h2 className="mt-2 lg:mt-4 text-2xl sm:text-3xl lg:text-4xl xl:text-5xl 3xl:text-7xl">
+						<h2 className="mt-2 lg:mt-4 text-2xl 4xs:text-3xl sm:text-4xl md:text-5xl lg:text-6xl 2xl:text-7xl 3xl:text-8xl">
 							Desenvolvedor Full Stack
 						</h2>
 					</div>
+
 					<div className="avatar">
-						<div className="w-28 h-40 rounded-2xl lg:w-40 3xl:w-60">
+						<div className="rounded-2xl w-28 h-32 4xs:w-32 4xs:h-36 sm:w-36 sm:h-40 md:w-40 md:h-44 lg:w-48 lg:h-52 xl:w-56 xl:h-60 2xl:w-64 2xl:h-72 3xl:w-80 3xl:h-96">
 							<img src="src/assets/pics/componentPics/fotoperfil.png" />
 						</div>
 					</div>
 				</div>
 
-				<div className="divider w-9/12 self-center mt-10">
-					<FaCode className="text-7xl" />
+				<div className="divider w-10/12 xs:w-9/12 2xl:w-8/12 self-center my-7 sm:my-9 md:my-12 lg:my-14 2xl:my-20 3xl:my-24">
+					<FaCode className="text-6xl lg:text-7xl 2xl:text-8xl 3xl:text-9xl" />
 				</div>
 
-				<div className="texto flex justify-center text-justify">
+				<div className="texto flex justify-center text-justify text-lg 3xs:text-xl sm:text-2xl lg:text-3xl xl:text-4xl 2xl:text-5xl 3xl:text-6xl">
 					<div>
-						<p className="flex justify-center text-lg sm:text-xl xl:text-3xl 3xl:text-5xl text-center">
+						<p className="text-center 4xs:leading-relaxed">
 							Olá! Me chamo Rodrigo Carvalho 😁, sou de Brasília, Distrito Federal.
 						</p>
 						<br />
-						<div className="text-lg xl:text-2xl 3xl:text-4xl indent-10 mt-4 sm:mt-2 sm:mx-4 leading-8 sm:leading-9 md:leading-8 lg:leading-10 2xl:leading-9 3xl:leading-loose 2xl:mt-10 3xl:mt-20">
+						<div className="indent-6 leading-normal 4xs:leading-relaxed">
 							<p>
 								Sou um amante da tecnologia e de todo seu imenso potencial e, no ano de 2023, decidi
 								profissionalizar essa paixão. Sou bacharel em direito pela Universidade de Brasília
@@ -90,9 +91,9 @@ function About() {
 						</div>
 					</div>
 				</div>
-				<div className="flex flex-col items-center mt-3 xl:mt-6 w-full ">
-					<div className="buttons w-8/12 max-w-72 md:max-w-full lg:max-w-full xl:max-w-full md:w-4/6 lg:w-7/12 xl:w-6/12 flex flex-col md:flex-row md:justify-center md:gap-16 gap-5 py-2">
-						<button className="botao !bg-neutral text-lg md:text-xl lg:text-2xl 3xl:text-4xl md:w-2/5 lg:w-3/5 2xl:w-2/5 lg:h-full flex items-center justify-center 2xl:rounded-2xl outline-hidden px-1 py-4">
+				<div className="flex flex-col w-full items-center mt-5 sm:mt-8 xl:mt-10 lg:mt-10 2xl:mt-14 3xl:mt-20 md:mb-4 lg:mb-6 xl:mb-8 2xl:mb-10 3xl:mb-16">
+					<div className="buttons  flex flex-col justify-center 2xs:flex-row gap-5 2xs:gap-10 lg:gap-24 2xl:gap-28 py-2 w-8/12 2xs:w-10/12">
+						<button className="botao shadow-2xl !bg-neutral text-xl 3xs:text-2xl sm:text-3xl lg:text-4xl 2xl:text-5xl 3xl:text-6xl md:w-2/5 lg:w-2/5 xl:w-1/3 lg:h-full flex items-center justify-center 2xl:rounded-2xl outline-hidden px-1 2xs:px-4 py-4 2xl:py-6 3xl:py-8">
 							<a onClick={() => document.getElementById("my_modal_1").showModal()}>
 								Veja meu currículo
 							</a>
@@ -115,7 +116,7 @@ function About() {
 							</div>
 						</dialog>
 
-						<button className="botao !bg-neutral text-lg md:text-xl lg:text-2xl 3xl:text-4xl md:w-2/5 lg:w-3/5 2xl:w-2/5 lg:h-full flex items-center justify-center 2xl:rounded-2xl outline-hidden px-1 py-4">
+						<button className="botao shadow-2xl !bg-neutral text-xl 3xs:text-2xl sm:text-3xl lg:text-4xl 2xl:text-5xl 3xl:text-6xl md:w-2/5 lg:w-2/5 xl:w-1/3 lg:h-full flex items-center justify-center 2xl:rounded-2xl outline-hidden px-1 2xs:px-4 py-4 2xl:py-6 3xl:py-8">
 							<Link to="/findme">Entre em contato</Link>
 						</button>
 					</div>
