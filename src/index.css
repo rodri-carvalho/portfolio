@@ -117,8 +117,12 @@ button:focus-visible {
 	outline: thin !important;
 }
 
-.collapse-title:after {
+.collapse-arrow > .collapse-title:after {
 	@apply md:!w-3 md:!h-3 md:!mt-2 md:!mr-3 lg:!w-4 lg:!h-4 lg:!mt-2 lg:mr-2 xl:!w-4 xl:!h-4 xl:!mt-3 xl:mr-4 2xl:!w-6 2xl:!h-6 2xl:!mt-3 3xl:!w-8 3xl:!h-8 3xl:!mt-10 3xl:!mr-10;
+}
+
+.collapse-plus > .collapse-title:after {
+	@apply 3xs:mr-1 2xs:mr-3 xs:mr-4 lg:mr-5 xl:mr-8 2xl:mr-10 3xl:mr-20;
 }
 
 .botao {
@@ -150,6 +154,11 @@ button:focus-visible {
 	color: #e3e5c7 !important;
 	transform: scale(1.13);
 	transition: transform 0.3s ease;
+	transition: ease-in-out 0.3s !important;
+}
+
+.botaoCollapse:hover {
+	color: #e3e5c7 !important;
 	transition: ease-in-out 0.3s !important;
 }
 

@@ -6,7 +6,7 @@ function Footer() {
 	const footerYear = new Date().getFullYear();
 
 	return (
-		<footer className="footer footer-center bg-secondary text-base-content pt-8 2xl:pt-10 3xl:pt-12 gap-3">
+		<footer className="footer footer-center bg-secondary text-base-content pt-8 2xl:pt-10 3xl:pt-12 gap-3 mt-3">
 			<nav className="container mx-auto ">
 				<div className="flex gap-5 6xs:gap-6 4xs:gap-5 2xs:gap-10 sm:gap-12 md:gap-16 2xl:gap-20 3xl:gap-24 pb-1 lg:mb-2">
 					<a

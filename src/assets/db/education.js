@@ -4,7 +4,7 @@ const education = [
 		institution: ["UnB", "Universidade de Brasília"],
 		title: "Bacharel em Direito",
 		date: "Finalizado em 2018",
-		pic: "src/assets/pics/logos/unb.png",
+		pic: "src/assets/pics/logos/unb1.png",
 		certificate: "src/assets/pics/certificates/educ/c-unb.jpg",
 	},
 	{
@@ -12,7 +12,7 @@ const education = [
 		institution: ["Universidade", "Estácio de Sá"],
 		title: "Pós-Graduação em Direito Empresarial",
 		date: "Finalizado em 2020",
-		pic: "src/assets/pics/logos/estacio.jpg",
+		pic: "src/assets/pics/logos/estacio1.jpg",
 		certificate: "src/assets/pics/certificates/educ/c-pos.png",
 	},
 	{

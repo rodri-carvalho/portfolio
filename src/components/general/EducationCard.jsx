@@ -14,12 +14,12 @@ function EducationCard({ institution, title, pic, certificate, index, content = 
 
 	return (
 		<>
-			<div className="card image-full w-fit 2xl:w-full lg:96 md:h-auto shadow-xl flex flex-col justify-between 3xl:mx-10">
+			<div className="card image-full shadow-xl flex flex-col justify-between 2xs:mx-1 md:mx-1 ">
 				<figure className="w-full">
 					<img src={pic} alt={`logo ${institution}`} className="w-full" />
 				</figure>
-				<div className="card-body py-6 px-4 flex flex-col !w-full !text-base-100">
-					<h2 className="card-title flex flex-col items-start gap-1 text-2xl sm:text-3xl lg:text-4xl 2xl:text-5xl 3xl:text-7xl">
+				<div className="card-body py-6 px-4 flex flex-col !w-full !text-base-100 xs:gap-4 lg:gap-7 2xl:gap-8 3xl:gap-10">
+					<h2 className="card-title flex flex-col items-start gap-1 text-2xl 2xs:text-4xl sm:text-5xl md:text-4xl lg:text-5xl 2xl:text-6xl 3xl:text-7xl 2xl:ml-6 2xl:mt-4 3xl:ml-8 3xl:mt-8">
 						{Array.isArray(content) ? (
 							content.map((content, index) => (
 								<p key={index} className="text-justify">
@@ -31,14 +31,14 @@ function EducationCard({ institution, title, pic, certificate, index, content = 
 							<p>{content}</p>
 						)}
 					</h2>
-					<div className="md:pt-4 3xl:pt-10">
-						<p className="text-xl sm:text-2xl lg:text-3xl 2xl:text-4xl 3xl:text-5xl grow-0">
-							{title}
-						</p>
-					</div>
-					<div className="card-actions justify-end h-full mr-4 3xl:h-full 3xl:flex 3xl:items-end">
+
+					<p className="text-xl 2xs:text-3xl sm:text-4xl md:text-3xl lg:text-4xl  2xl:text-5xl 3xl:text-6xl grow-0 2xl:ml-6 3xl:ml-8">
+						{title}
+					</p>
+
+					<div className="card-actions justify-end h-full 3xl:h-full 3xl:flex 3xl:items-end 2xs:mr-6 2xs:mb-2 sm:mr-12 sm:mb-6 md:mr-5 md:mb-1 lg:mr-8 lg:mb-4 2xl:mr-14 2xl:mb-8 3xl:mr-24 3xl:mb-16">
 						<button
-							className="btn botao h-fit flex self-end w-fit px-5 py-2 mt-5 bottom-5 text-base sm:text-2xl 2xl:text-3xl 3xl:text-4xl sm:mr-6 sm:mb-6 md:mr-0 md:mb-0 lg:p-4 2xl:mr-10 3xl:mr-16 3xl:mb-10 2xl:p-3 3xl:p-7 2xl:rounded-2xl !text-base-100 bg-accent outline-hidden border-0"
+							className="botao !bg-accent h-fit flex self-end w-fit px-5 py-2 2xs:py-4 2xs:px-8 2xl:py-6 3xl:py-10 mt-5 bottom-5 text-base 3xs:text-lg 2xs:text-2xl sm:text-3xl md:text-2xl lg:text-3xl 2xl:text-4xl 3xl:text-5xl 2xl:rounded-2xl outline-hidden border-0"
 							onClick={() => document.getElementById(modalId).showModal()}>
 							Diploma
 						</button>
@@ -55,7 +55,7 @@ function EducationCard({ institution, title, pic, certificate, index, content = 
 								/>
 								<div className="modal-action justify-center 2xl:mt-0">
 									<form method="dialog" className=" w-full flex justify-center">
-										<button className="btn botao btn-ghost 2xl:rounded-xl !p-0 !min-w-fit w-1/5 text-base md:text-2xl lg:text-2xl xl:text-3xl 3xl:text-4xl 3xl:min-h-14 text-base-100 bg-accent">
+										<button className="botao 2xl:rounded-xl !p-0 !min-w-fit w-1/5 text-base md:text-2xl lg:text-2xl xl:text-3xl 3xl:text-4xl 3xl:min-h-14 text-base-100 bg-accent">
 											Fechar
 										</button>
 									</form>

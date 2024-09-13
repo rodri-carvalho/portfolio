@@ -27,7 +27,7 @@ function App() {
 			<div className="flex flex-col w-full min-h-screen overflow-x-hidden bg-primary">
 				<Navbar />
 
-				<main className="w-full bg-primary h-full flex flex-grow justify-center mt-4">
+				<main className="w-full bg-primary h-full flex flex-grow justify-center">
 					<Routes>
 						<Route path="/" element={<Home />} />
 						<Route path="/about" element={<About />} />
