@@ -15,7 +15,7 @@ function About() {
 	};
 
 	return (
-		<div className="flex items-center justify-center py-6 px-3 2xs:px-5 xs:px-6 sm:px-8 md:px-10 lg:px-12 xl:px-16 2xl:px-20 bg-accent w-11/12 lg:w-10/12 rounded-xl shadow-2xl sm:mt-3 2xl:mt-8 3xl:mt-10 mb-5 sm:mb-7">
+		<div className="flex items-center justify-center py-6 px-3 2xs:px-5 xs:px-6 sm:px-8 md:px-10 lg:px-12 xl:px-16 2xl:px-20 bg-accent w-11/12 lg:w-10/12 rounded-xl !shadow-2xl sm:mt-3 2xl:mt-8 3xl:mt-10 mb-5 sm:mb-7">
 			<div className="flex flex-col items-center w-full md:mt-4 lg:mt-6 xl:mt-8 2xl:mt-12 3xl:mt-16 text-base-100">
 				<div className="info flex 2xs:gap-8 sm:gap-12 md:gap-20 xl:gap-24 2xl:gap-28 3xl:gap-40 items-center mx-2">
 					<div className="titulo-nome text-center flex flex-col items-center mx-4 2xs:gap-2 sm:gap-3 md:gap-4 2xl:gap-6 3xl:gap-8">
@@ -93,7 +93,7 @@ function About() {
 				</div>
 				<div className="flex flex-col w-full items-center mt-5 sm:mt-8 xl:mt-10 lg:mt-10 2xl:mt-14 3xl:mt-20 md:mb-4 lg:mb-6 xl:mb-8 2xl:mb-10 3xl:mb-16">
 					<div className="buttons  flex flex-col justify-center 2xs:flex-row gap-5 2xs:gap-10 lg:gap-24 2xl:gap-28 py-2 w-8/12 2xs:w-10/12">
-						<button className="botao shadow-2xl !bg-neutral text-xl 3xs:text-2xl sm:text-3xl lg:text-4xl 2xl:text-5xl 3xl:text-6xl md:w-2/5 lg:w-2/5 xl:w-1/3 lg:h-full flex items-center justify-center 2xl:rounded-2xl outline-hidden px-1 2xs:px-4 py-4 2xl:py-6 3xl:py-8">
+						<button className="botao !shadow-2xl !bg-neutral text-xl 3xs:text-2xl sm:text-3xl lg:text-4xl 2xl:text-5xl 3xl:text-6xl md:w-2/5 lg:w-2/5 xl:w-1/3 lg:h-full flex items-center justify-center 2xl:rounded-2xl outline-hidden px-1 2xs:px-4 py-4 2xl:py-6 3xl:py-8">
 							<a onClick={() => document.getElementById("my_modal_1").showModal()}>
 								Veja meu currículo
 							</a>
@@ -116,7 +116,7 @@ function About() {
 							</div>
 						</dialog>
 
-						<button className="botao shadow-2xl !bg-neutral text-xl 3xs:text-2xl sm:text-3xl lg:text-4xl 2xl:text-5xl 3xl:text-6xl md:w-2/5 lg:w-2/5 xl:w-1/3 lg:h-full flex items-center justify-center 2xl:rounded-2xl outline-hidden px-1 2xs:px-4 py-4 2xl:py-6 3xl:py-8">
+						<button className="botao shadow-2xl !bg-neutral text-xl 3xs:text-2xl sm:text-3xl lg:text-4xl 2xl:text-5xl 3xl:text-6xl md:w-2/5 lg:w-2/5 xl:w-1/3 lg:h-full flex items-center justify-center 2xl:rounded-2xl outline-hidden px-1 2xs:px-4 py-4 2xl:py-6 3xl:py-8 !shadow-2xl">
 							<Link to="/findme">Entre em contato</Link>
 						</button>
 					</div>

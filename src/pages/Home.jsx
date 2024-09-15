@@ -37,7 +37,7 @@ function Home() {
 		<>
 			<div className="flex flex-col w-full relative mx-4 xs:mx-5 sm:mx-6 md:mx-10 lg:mx-36 2xl:mx-40 3xl:mx-64 4xs:mt-2 2xs:mt-3 md:mt-5 2xl:mt-7 3xl:mt-10 mb-4 2xs:mb-6 xl:mb-8 3xl:mb-16">
 				<div
-					className="hero h-full rounded-badge"
+					className="hero h-full rounded-badge !shadow-2xl"
 					style={{
 						backgroundImage: `url(${heroBg})`,
 					}}>

@@ -28,7 +28,7 @@ function ModalCourses({
 	return (
 		<>
 			<button
-				className={`botao !bg-accent w-full text-base 4xs:text-lg sm:text-xl lg:text-2xl 2xl:text-3xl h-fit 3xl:text-2xl text-base-100 ${
+				className={`botao !bg-accent w-full text-base 4xs:text-lg sm:text-xl lg:text-2xl 2xl:text-3xl h-fit 3xl:text-2xl text-base-100 !shadow-2xl ${
 					inactive ? "disabledBtn" : ""
 				}`}
 				onClick={!inactive ? openModal : null}

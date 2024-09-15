@@ -67,7 +67,7 @@ function KnowledgeCard({ iconId, techId, inProgress, techList }) {
 						<form
 							method="dialog"
 							className="w-full flex justify-center items-center 2xs:mt-2 xs:mt-3 sm:mt-4 md:mt-1 lg:mt-2 xl:mt-6 2xl:mt-4 3xl:mt-8 xl:mb-3 3xl:mb-5">
-							<button className="botao !bg-neutral p-1 w-2/6 md:w-1/3 text-lg 6xs:text-xl 2xs:text-2xl xs:text-3xl sm:text-4xl md:text-2xl lg:text-4xl xl:text-5xl 3xl:text-6xl text-base-100 border-0 3xs:py-1 2xs:py-2 sm:py-3 md:py-2 lg:py-3 2xl:py-4">
+							<button className="botao !bg-neutral p-1 w-2/6 md:w-1/3 text-lg 6xs:text-xl 2xs:text-2xl xs:text-3xl sm:text-4xl md:text-2xl lg:text-4xl xl:text-5xl 3xl:text-6xl text-base-100 border-0 3xs:py-1 2xs:py-2 sm:py-3 md:py-2 lg:py-3 2xl:py-4 !shadow-2xl">
 								Fechar
 							</button>
 						</form>

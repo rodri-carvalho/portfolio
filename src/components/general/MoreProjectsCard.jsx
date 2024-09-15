@@ -4,8 +4,7 @@ import PropTypes from "prop-types";
 
 function MoreProjectsCard({ id, title, projectURL, projectPic, description }) {
 	return (
-		// TODO:
-		<div className="card card-compact !text-base-100 bg-neutral shadow-xl max-w-full w-96">
+		<div className="card card-compact !text-base-100 bg-neutral max-w-full !shadow-2xl">
 			<figure>
 				<img src={projectPic} alt="Imagem do projeto" className="h-full max-h-" />
 			</figure>
@@ -22,7 +21,7 @@ function MoreProjectsCard({ id, title, projectURL, projectPic, description }) {
 					<Link
 						to={projectURL}
 						target="_blank"
-						className="btn botao w-7/12 text-lg md:text-xl lg:text-2xl 2xl:text-3xl 3xl:text-4xl 3xl:min-h-20 3xl:mb-4 !text-base-100 bg-accent">
+						className="btn botao w-7/12 text-lg md:text-xl lg:text-2xl 2xl:text-3xl 3xl:text-4xl 3xl:min-h-20 3xl:mb-4 !text-base-100 !bg-secondary !shadow-2xl">
 						Visitar Projeto
 					</Link>
 				</div>

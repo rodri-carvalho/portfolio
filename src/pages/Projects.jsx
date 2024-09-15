@@ -57,7 +57,7 @@ function Projects() {
 
 			<div
 				ref={moreProjectsRef}
-				className={`collapse collapse-plus bg-accent mt-5 ${
+				className={`collapse collapse-plus bg-accent mt-5 !shadow-2xl ${
 					isMoreProjects ? "collapse-open" : ""
 				}`}>
 				<div

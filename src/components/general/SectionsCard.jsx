@@ -58,7 +58,7 @@ function SectionsCard({ page, description, iconId, isOpen, query }) {
 				<p className="text-center text-balance text-lg 3xs:text-xl 2xs:text-2xl md:text-3xl xl:text-4xl 2xl:text-5xl 3xl:text-6xl 3xl:py-6 xl:mt-4">
 					{description}
 				</p>
-				<button className="botao mt-4 3xs:mt-5 3xs:mb-2 2xs:mt-7 2xs:mb-4 xs:mt-6 xs:mb-3 lg:mt-7 lg:my-4 xl:mt-8 xl:mb-5 2xl:mt-12 2xl:mb-8 !bg-neutral 2xl:p-4 3xl:p-4">
+				<button className="botao mt-4 3xs:mt-5 3xs:mb-2 2xs:mt-7 2xs:mb-4 xs:mt-6 xs:mb-3 lg:mt-7 lg:my-4 xl:mt-8 xl:mb-5 2xl:mt-12 2xl:mb-8 !bg-neutral 2xl:p-4 3xl:p-4 !shadow-2xl">
 					<Link
 						to={`/${query}`}
 						className="p-0 text-lg 3xs:text-xl 2xs:text-2xl lg:text-3xl xl:text-4xl 2xl:text-5xl 3xl:text-6xl !bg-neutral">

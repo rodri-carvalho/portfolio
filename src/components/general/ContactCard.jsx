@@ -51,21 +51,42 @@ function ContactCard({ title, numberOrId, iconId, href }) {
 			const textToCopy = document.getElementById(`numberOrID-${title}`).innerText;
 			await navigator.clipboard.writeText(textToCopy);
 
+			// Criar o container do alerta
 			const toastContainer = document.createElement("div");
-			toastContainer.className = "toast toast-top toast-center";
+			toastContainer.className =
+				"fixed inset-0 flex top-5 justify-center pointer-events-none max-h-fit";
 
+			// Criar o alerta de sucesso
 			const alertSuccess = document.createElement("div");
-			alertSuccess.className = "alert alert-success";
+			alertSuccess.className =
+				"alert alert-success bg-success text-white shadow-lg max-w-xs w-full p-4 rounded-lg flex items-center justify-center opacity-0 transform scale-90 transition-all duration-500";
+
+			// Criar a mensagem do alerta
 			const alertSuccessSpan = document.createElement("span");
 			alertSuccessSpan.innerText = "Contato copiado com sucesso";
 			alertSuccess.appendChild(alertSuccessSpan);
 
+			// Adicionar o alerta ao container
 			toastContainer.appendChild(alertSuccess);
 
+			// Adicionar o container à página
 			document.body.appendChild(toastContainer);
 
+			// Usar setTimeout para aplicar a transição de aparecimento
 			setTimeout(() => {
-				document.body.removeChild(toastContainer);
+				alertSuccess.classList.add("opacity-100", "scale-100"); // Altera a opacidade e o scale para fazê-lo aparecer suavemente
+				alertSuccess.classList.remove("opacity-0", "scale-90");
+			}, 100); // Pequeno atraso para garantir que a transição funcione
+
+			// Remover o alerta com uma transição suave após 3 segundos
+			setTimeout(() => {
+				alertSuccess.classList.add("opacity-0", "scale-90"); // Suavizar o desaparecimento
+				alertSuccess.classList.remove("opacity-100", "scale-100");
+
+				// Remover o container do DOM após a transição
+				setTimeout(() => {
+					document.body.removeChild(toastContainer);
+				}, 500); // Tempo suficiente para completar a transição
 			}, 3000);
 		} catch (err) {
 			console.error("Erro ao copiar: ", err);

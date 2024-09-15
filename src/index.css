@@ -126,7 +126,7 @@ button:focus-visible {
 }
 
 .botao {
-	color: #e7e5e4;
+	@apply !text-base-100;
 	border: 0 !important;
 	transition: ease-in-out 0.4s !important;
 	background-color: transparent;
@@ -136,13 +136,13 @@ button:focus-visible {
 
 .botao:hover {
 	color: #e3e5c7 !important;
-	transform: scale(1.05);
+	transform: scale(1.05) translateY(-2px);
 	transition: transform 0.3s ease;
 	transition: ease-in-out 0.3s !important;
 }
 
 .botaoIcone {
-	color: #e7e5e4 !important;
+	@apply !text-base-100;
 	border: 0 !important;
 	transition: ease-in-out 0.4s !important;
 	background-color: transparent !important;
@@ -152,7 +152,7 @@ button:focus-visible {
 
 .botaoIcone:hover {
 	color: #e3e5c7 !important;
-	transform: scale(1.13);
+	transform: scale(1.13) translateY(-2px);
 	transition: transform 0.3s ease;
 	transition: ease-in-out 0.3s !important;
 }
