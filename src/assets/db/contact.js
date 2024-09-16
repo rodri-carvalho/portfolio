@@ -17,7 +17,7 @@ const contactInfo = [
 		id: 2,
 		iconId: 2,
 		title: "WhatsApp",
-		numberOrId: "(61) 999662404",
+		numberOrId: "(61) 99966-2404",
 		href: "https://wa.me/5561999662404",
 	},
 	{

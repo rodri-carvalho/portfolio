@@ -5,7 +5,7 @@ const moreProjects = [
 		projectURL: "https://a-generic-landing-page.vercel.app/",
 		projectPic: "src/assets/pics/projects/other-projects/landing.jpg",
 		description:
-			"Landing page de uma agência fictícia com menu interativo, elementos dinâmicos, links funcionais, informações e mídias gerais.",
+			"Landing page de uma agência fictícia com menu interativo, elementos dinâmicos, links funcionais, informações e mídias diversas.",
 	},
 	{
 		id: 1,
@@ -17,7 +17,7 @@ const moreProjects = [
 	},
 	{
 		id: 2,
-		title: "Landing Page/Home",
+		title: "Home Page",
 		projectURL: "https://huddle-page-rouge.vercel.app/",
 		projectPic: "src/assets/pics/projects/other-projects/huddle.jpg",
 		description:

@@ -99,24 +99,22 @@ function About() {
 							</a>
 						</button>
 
-						<dialog id="my_modal_1" className="modal" onClick={handleOutsideClick}>
-							<div className="mt-10 w-11/12 h-5/6 bg-zinc-700 flex flex-col items-center rounded-2xl">
+						<dialog id="my_modal_1" className="modal !shadow-2xl" onClick={handleOutsideClick}>
+							<div className="w-full h-5/6 bg-accent flex flex-col items-center rounded-2xl !shadow-2xl">
 								<iframe
 									src="src/assets/docs/curriculo.pdf"
-									className="curriculo border rounded-xl h-full w-11/12 mt-5"></iframe>
-								<div className="flex mt-4">
+									className="curriculo rounded-md h-full w-11/12 mt-3 border-0"></iframe>
+								<div className="flex my-4 6xs:my-3">
 									<button
-										className="botaoCurriculo botao btn btn-active btn-neutral text-lg md:text-2xl md:h-full text-base-100 bg-accent outline-hidden"
+										className="botao md:h-full text-base-100 !bg-neutral outline-hidden !shadow-2xl text-lg md:text-2xl"
 										onClick={() => document.getElementById("my_modal_1").close()}>
 										Fechar
 									</button>
 								</div>
-
-								<div className="modal-action"></div>
 							</div>
 						</dialog>
 
-						<button className="botao shadow-2xl !bg-neutral text-xl 3xs:text-2xl sm:text-3xl lg:text-4xl 2xl:text-5xl 3xl:text-6xl md:w-2/5 lg:w-2/5 xl:w-1/3 lg:h-full flex items-center justify-center 2xl:rounded-2xl outline-hidden px-1 2xs:px-4 py-4 2xl:py-6 3xl:py-8 !shadow-2xl">
+						<button className="botao !bg-neutral text-xl 3xs:text-2xl sm:text-3xl lg:text-4xl 2xl:text-5xl 3xl:text-6xl md:w-2/5 lg:w-2/5 xl:w-1/3 lg:h-full flex items-center justify-center 2xl:rounded-2xl outline-hidden px-1 2xs:px-4 py-4 2xl:py-6 3xl:py-8 !shadow-2xl">
 							<Link to="/findme">Entre em contato</Link>
 						</button>
 					</div>

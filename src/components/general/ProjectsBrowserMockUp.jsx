@@ -37,11 +37,11 @@ function ProjectsBrowserMockUp({ id, title, projectURL, projectPic, description 
 
 	return (
 		<>
-			<button onClick={openModal} className="p-0 rounded-2xl !shadow-2xl">
-				<div className="mockup-browser bg-accent border">
+			<button onClick={openModal} className="p-0 rounded-2xl !shadow-2xl border-0 outline-hidden">
+				<div className="mockup-browser bg-accent border-0">
 					<div className="mockup-browser-toolbar gap-2 lg:gap-4 2xl:gap-6 3xl:gap-8 text-base-100">
-						<div className="campo flex justify-start w-3/4 md:w-full 3xl:ml-12">
-							<div className="input !bg-neutral !flex !m-0 2xl:py-6 3xl:py-8 items-center md:!w-8/12 xl:!w-7/12 text-xs md:text-base lg:text-lg 2xl:text-2xl 3xl:text-4xl">
+						<div className="campo flex justify-start w-3/4 2xs:w-full 3xl:ml-10 xl:py-1 3xl:py-3">
+							<div className="input !bg-neutral !flex !m-0 md:py-4 lg:py-5 xl:py-7 3xl:py-10 items-center text-xs w-11/12 3xs:!w-full 5xs:text-sm 4xs:text-base sm:text-lg md:text-xl lg:text-2xl xl:text-3xl 3xl:text-4xl">
 								{projectURL}
 							</div>
 						</div>

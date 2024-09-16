@@ -94,22 +94,24 @@ function ContactCard({ title, numberOrId, iconId, href }) {
 	};
 
 	return (
-		<div className="card bg-accent shadow-2xl w-10/12 2xs:w-9/12 xs:w-8/12 sm:w-7/12 md:w-full max-w-full px-1 overflow-hidden">
-			<div className="flex justify-center items-center mt-2 2xs:mt-5 2xs:mb-2 md:mt-6 lg:mt-10 lg:mb-5 xs:mb-1">
+		<div className="card bg-accent shadow-2xl w-10/12 2xs:w-9/12 sm:w-11/12 md:w-10/12 lg:w-11/12 xl:w-10/12 2xl:w-9/12 3xl:w-9/12 2xl:rounded-3xl 3xl:rounded-3xl max-w-full px-1 overflow-hidden">
+			<div className="flex justify-center items-center mt-2 2xs:mt-5 xs:mb-1 2xs:mb-2 md:mt-3 lg:mt-6 lg:mb-4 xl:mb-5 xl:mt-8 3xl:mb-10 3xl:mt-14 py-1 3xs:py-2 lg:py-1">
 				<h2 className="card-title botaoIcon">
 					<a
 						href={href}
 						target="_blank"
 						rel="noopener noreferrer"
-						className="botaoIcone flex items-center gap-2 2xs:gap-3 sm:gap-4 text-base-100">
-						<IconComponent className="text-3xl 3xs:text-4xl 2xs:text-5xl md:text-3xl lg:text-5xl" />
-						<div className="text-xl 3xs:text-2xl 2xs:text-2xl sm:text-3xl lg:text-4xl">{title}</div>
+						className="botaoIcone flex items-center gap-2 2xs:gap-4 sm:gap-5 3xl:gap-7 text-base-100">
+						<IconComponent className="text-3xl 3xs:text-4xl 2xs:text-5xl md:text-4xl lg:text-5xl xl:text-6xl 3xl:text-8xl" />
+						<div className="text-xl 3xs:text-2xl 2xs:text-3xl sm:text-4xl md:text-3xl lg:text-4xl xl:text-5xl 3xl:text-7xl">
+							{title}
+						</div>
 					</a>
 				</h2>
 				<div className="absolute right-3 3xs:right-4 2xs:right-5 xs:right-6 lg:right-8">
 					<div className="card-actions">
 						<button className="botao !p-0" onClick={copyToClipboard}>
-							<FaCopy className="text-lg 6xs:text-xl 3xs:text-2xl 2xs:text-3xl md:text-xl lg:text-3xl" />
+							<FaCopy className="text-lg 6xs:text-xl 3xs:text-2xl 2xs:text-3xl md:text-2xl lg:text-3xl xl:text-4xl 3xl:text-6xl" />
 						</button>
 					</div>
 				</div>
@@ -117,12 +119,12 @@ function ContactCard({ title, numberOrId, iconId, href }) {
 			<div className="w-full max-w-full flex flex-col items-center justify-center">
 				<div className="divider self-center w-10/12 xs:w-9/12 3xl:w-10/12 m-0 lg:mr-10"></div>
 			</div>
-			<div className="contactInfo flex items-center h-full pb-3 3xs:pb-5 3xs:pt-2 2xs:pb-7 2xs:pt-4 md:pb-6 md:pt-3 lg:pt-6 lg:pb-10">
+			<div className="contactInfo flex items-center h-full pb-3 3xs:pb-5 3xs:pt-2 2xs:pb-7 2xs:pt-4 md:pb-4 md:pt-1 lg:pt-4 lg:pb-8 xl:pt-6 xl:pb-10 3xl:pt-12 3xl:pb-16">
 				<div className="flex flex-col items-center justify-center w-full text-base-100">
 					<p
 						id={`numberOrID-${title}`}
 						ref={textRef}
-						className="w-full text-center break-words text-xl 3xs:text-2xl 2xs:text-3xl md:text-2xl lg:text-4xl"
+						className="w-full text-center break-words text-xl 3xs:text-2xl 2xs:text-3xl lg:text-4xl xl:text-5xl 3xl:text-7xl py-1"
 						style={{ wordBreak: "break-word", whiteSpace: "normal" }}>
 						{shouldBreak && remainingLink ? (
 							<>
