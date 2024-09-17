@@ -1,8 +1,8 @@
 import React, { useEffect, useState } from "react";
 import SectionsCard from "../components/general/SectionsCard";
-import sections from "../assets/db/sections";
-import heroBg from "../assets/pics/componentPics/hero-bg.jpg";
-import arrowDown from "../assets/pics/componentPics/white-arrow.png";
+import sections from "../../public/assets/db/sections";
+import heroBg from "../../public/assets/pics/componentPics/hero-bg.jpg";
+import arrowDown from "../../public/assets/pics/componentPics/white-arrow.png";
 import { PiArrowBendRightDown } from "react-icons/pi";
 import { FaCode } from "react-icons/fa6";
 
