@@ -3,6 +3,7 @@ const projects = [
 		id: 0,
 		title: "Marketplace de Imóveis",
 		projectURL: "https://maketplace-de-imoveis.vercel.app/",
+		repoURL: "https://github.com/rodri-carvalho/maketplace-de-imoveis",
 		projectPic: "src/assets/pics/projects/house-marketplace.jpg",
 		description: [
 			"Projeto React de um Marketplace de imóveis completo que permite a autenticação, criação, edição e visualização de anúncios. Foram combinadas diversas tecnologias e práticas modernas para criar uma aplicação web rica e funcional. Utilizando Tailwind CSS com DaisyUI para estilização, o projeto oferece uma interface limpa e responsiva, adaptável a diferentes dispositivos. A autenticação e o gerenciamento de usuários são realizados através do Firebase Authentication, integrando tanto o login tradicional por email e senha quanto o login via OAuth com Google, além de proteger rotas específicas com componentes customizados como o PrivateRoute. A exibição dinâmica de conteúdos, como o slider de itens recomendados, é implementada utilizando a biblioteca Swiper, criando uma experiência interativa para o usuário.",
@@ -14,6 +15,7 @@ const projects = [
 		id: 1,
 		title: "Suporte ao Usuário",
 		projectURL: "https://suporte-ao-usuario.onrender.com/",
+		repoURL: "https://github.com/rodri-carvalho/suporte-ao-usuario",
 		projectPic: "src/assets/pics/projects/suporte-ao-usuario.jpg",
 		description: [
 			"Mais um projeto React que simula uma interface de suporte ao usuário que permite a abertura e gerenciamento de tickets/ocorrências e seus respectivos estados para com o suporte técnico desejado. Esta implementação de um sistema de gerenciamento de ocorrências integra funcionalidades essenciais como autenticação, rotas protegidas e notificações de sucesso e erro. Utilizando o React Router Dom para o roteamento e Redux para o gerenciamento de estado, a aplicação se assegura que o usuário esteja autenticado antes de acessar rotas específicas, como a criação e visualização de ocorrências. A interface do usuário é enriquecida com o uso de React Icons e o sistema de notificações é gerenciado pela biblioteca React Toastify, proporcionando feedback visual imediato ao usuário a respeito de suas ações.",
@@ -25,6 +27,7 @@ const projects = [
 		id: 2,
 		title: "Buscador GitHub",
 		projectURL: "https://buscador-github-seven.vercel.app/",
+		repoURL: "https://github.com/rodri-carvalho/buscador-github",
 		projectPic: "src/assets/pics/projects/buscador-github.jpg",
 		description: [
 			"Projeto que aproveita o poder do React Router para gerenciar a navegação entre as diferentes páginas da aplicação, permitindo a busca de usuários do GitHub. A integração com a API do GitHub permite a busca e exibição de perfis, repositórios e outras informações pertinentes aos usuários, possibilidando ainda o direcionamento do usuário para o repertório desejado. Além disso, é empregado o Context para gerenciar o estado global da aplicação, utilizando os Providers de contexts personalizados, como o GithubProvider e o AlertProvider, para fornecer dados e funcionalidades a vários componentes sem a necessidade de passar props manualmente por cada nível de hierarquia, tornando o código mais limpo, compreensível e mantível.",
@@ -36,6 +39,7 @@ const projects = [
 		id: 3,
 		title: "App de Feedback",
 		projectURL: "https://main--projeto-feedback.netlify.app/",
+		repoURL: "https://github.com/rodri-carvalho/feedback-app",
 		projectPic: "src/assets/pics/projects/feedback.jpg",
 		description: [
 			"Projeto no qual desenvolvi um sistema de avaliação de serviços ou produtos, utilizando uma combinação de tecnologias atuais, das quais dentre as principais podemos citar React Router para navegação entre páginas, Context API para gerenciamento de estado, e Framer Motion para animações de elementos na interface. A integração dessas ferramentas permitiu criar uma aplicação dinâmica e responsiva, onde os usuários podem adicionar, editar e deletar feedbacks em tempo real, com uma experiência de usuário fluida e intuitiva.",

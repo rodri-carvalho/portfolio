@@ -12,6 +12,21 @@ function KnowledgeCard({ iconId, techId, inProgress, techList }) {
 
 	const modalId = `modal-${iconId}`;
 
+	const openModal = () => {
+		const modal = document.getElementById(modalId);
+		if (modal) {
+			modal.showModal();
+
+			// Espera o próximo frame para garantir a renderização correta e então rola o modal para o topo
+			requestAnimationFrame(() => {
+				const modalBox = modal.querySelector(".modal-box");
+				if (modalBox) {
+					modalBox.scrollTop = 0; // Garante que o conteúdo da modal box role para o topo
+				}
+			});
+		}
+	};
+
 	// Função para fechar o modal ao clicar fora dele
 	const handleOutsideClick = (e) => {
 		const modal = document.getElementById(modalId);
@@ -27,7 +42,7 @@ function KnowledgeCard({ iconId, techId, inProgress, techList }) {
 					inProgress ? "disabled-button" : ""
 				}`}
 				disabled={inProgress}
-				onClick={() => document.getElementById(modalId).showModal()}
+				onClick={() => openModal()}
 				aria-label={`Open modal for ${techName}`}>
 				{inProgress && (
 					<div className="indicator flex absolute">
@@ -53,21 +68,21 @@ function KnowledgeCard({ iconId, techId, inProgress, techList }) {
 				id={modalId}
 				className="modal modal-bottom sm:modal-middle text-base-100"
 				onClick={handleOutsideClick}>
-				<div className="modal-box pt-4 sm:max-w-full md:max-w-fit 2xl:pl-14 bg-accent">
-					<ul className="list-disc pl-4 5xs:text-lg 3xs:text-xl 2xs:text-2xl xs:text-3xl sm:text-4xl md:text-2xl lg:text-4xl xl:text-5xl 3xl:text-6xl 2xl:p-2 xs:ml-2 sm:ml-4 xl:ml-7">
+				<div className="modal-box pt-4 sm:pt-5 xl:pt-7 sm:rounded-3xl sm:max-w-full md:max-w-fit 2xl:pl-14 bg-accent !shadow-2xl">
+					<ul className="list-disc pl-4 5xs:text-lg 3xs:text-xl 2xs:text-2xl xs:text-3xl md:text-xl lg:text-3xl xl:text-4xl 3xl:text-6xl 2xl:p-2 xs:ml-2 sm:ml-4 xl:ml-7">
 						{items.map((item, index) => (
 							<li
 								key={index}
-								className="mb-1 3xs:mb-2 xs:mb-3 sm:mb-4 md:mb-3 xl:mb-5 2xl:mb-6 lg:p-1">
+								className="mb-1 3xs:mb-2 xs:mb-3 md:mb-1 xl:mb-3 2xl:mb-4 3xl:mb-7 lg:p-1">
 								{item}
 							</li>
 						))}
 					</ul>
-					<div className="modal-action w-full 2xl:mt-0">
+					<div className="modal-action w-full md:mt-4 lg:mt-4 xl:mt-4 2xl:mt-0">
 						<form
 							method="dialog"
 							className="w-full flex justify-center items-center 2xs:mt-2 xs:mt-3 sm:mt-4 md:mt-1 lg:mt-2 xl:mt-6 2xl:mt-4 3xl:mt-8 xl:mb-3 3xl:mb-5">
-							<button className="botao !bg-neutral p-1 w-2/6 md:w-1/3 text-lg 6xs:text-xl 2xs:text-2xl xs:text-3xl sm:text-4xl md:text-2xl lg:text-4xl xl:text-5xl 3xl:text-6xl text-base-100 border-0 3xs:py-1 2xs:py-2 sm:py-3 md:py-2 lg:py-3 2xl:py-4 !shadow-2xl">
+							<button className="botao !bg-neutral p-1 w-1/3 sm:w-1/4 text-lg 6xs:text-xl 2xs:text-2xl xs:text-3xl md:text-xl lg:text-3xl xl:text-4xl 3xl:text-6xl text-base-100 border-0 3xs:py-1 2xs:py-2 sm:py-3 md:py-2 lg:py-3 3xl:py-6 xl:py-4 lg:rounded-xl xl:rounded-2xl 3xl:rounded-3xl !shadow-2xl">
 								Fechar
 							</button>
 						</form>

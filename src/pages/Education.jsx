@@ -105,7 +105,7 @@ function Education() {
 								? "collapse-open 2xl:mt-7 3xl:mt-10 sm:mx-1 lg:mx-2 xl:mx-3 3xl:mx-5"
 								: ""
 						}`}>
-						<div className="w-full grid grid-cols-1 2xs:grid-cols-2 md:grid-cols-3 gap-4 sm:gap-6">
+						<div className="w-full grid grid-cols-1 2xs:grid-cols-2 md:grid-cols-3 3xl:grid-cols-4 gap-4 sm:gap-6 3xl:gap-10">
 							{courses.map((course) => (
 								<CourseCard
 									key={course.id}

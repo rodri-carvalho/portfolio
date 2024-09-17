@@ -43,7 +43,7 @@ function Projects() {
 	};
 
 	return (
-		<div className="flex flex-col w-full px-5 sm:px-9 md:px-10 lg:px-14 2xl:px-60 3xl:px-72 3xl:py-8 gap-3 sm:gap-6 md:gap-7 lg:gap-8 xl:gap-9 2xl:gap-10 3xl:gap-16">
+		<div className="flex flex-col w-full px-5 sm:px-9 md:px-10 lg:px-14 2xl:px-20 3xl:px-28 3xl:py-8 gap-3 sm:gap-6 md:gap-7 lg:gap-8 xl:gap-9 2xl:gap-10 3xl:gap-16 2xs:grid 2xs:grid-cols-2 2xs:auto-rows-max 2xs:my-1 2xs:gap-y-4 2xs:gap-x-4 xs:my-6 xs:gap-y-12 xs:gap-x-6 sm:my-6 sm:gap-y-16 sm:gap-x-8 md:my-2 md:gap-y-6 md:gap-x-6 xl:my-4 2xl:my-6 3xl:my-2 3xl:gap-x-24  3xl:gap-y-16">
 			{projects.map((project, index) => (
 				<ProjectsBrowserMockUp
 					key={project.id}
@@ -51,20 +51,21 @@ function Projects() {
 					projectPic={project.projectPic}
 					title={project.title}
 					projectURL={project.projectURL}
+					repoURL={project.repoURL}
 					description={project.description}
 				/>
 			))}
 
 			<div
 				ref={moreProjectsRef}
-				className={`collapse collapse-plus bg-accent mt-1 !shadow-2xl ${
+				className={`collapse collapse-plus bg-accent mt-1 !shadow-2xl col-span-2 ${
 					isMoreProjects ? "collapse-open" : ""
 				}`}>
 				<div
 					className={`${
 						isMoreProjects
-							? "collapse-title sm:my-4 xl:my-6 3xl:my-14 max-w-full w-full flex text-xl 2xs:text-2xl xs:text-3xl sm:text-4xl lg:text-5xl 2xl:text-6xl 3xl:text-8xl pr-4 text-base-100 lg:pl-8 2xl:pl-10 3xl:pl-14"
-							: "collapse-title sm:my-4 xl:my-6 3xl:my-14 max-w-full w-full flex text-xl 2xs:text-2xl xs:text-3xl sm:text-4xl lg:text-5xl 2xl:text-6xl 3xl:text-8xl pr-4 text-base-100 lg:pl-8 2xl:pl-10 3xl:pl-14"
+							? "collapse-title sm:my-4 xl:my-6 3xl:my-14 max-w-full w-full flex text-xl 2xs:text-2xl xs:text-3xl sm:text-4xl lg:text-5xl 2xl:text-6xl 3xl:text-8xl pr-4 text-base-100 lg:pl-8 2xl:pl-10 3xl:pl-14 self-center"
+							: "collapse-title sm:my-4 xl:my-6 3xl:my-14 max-w-full w-full flex text-xl 2xs:text-2xl xs:text-3xl sm:text-4xl lg:text-5xl 2xl:text-6xl 3xl:text-8xl pr-4 text-base-100 lg:pl-8 2xl:pl-10 3xl:pl-14 self-center"
 					}`}
 					onClick={() => setIsMoreProjects(!isMoreProjects)}>
 					Outros Projetos

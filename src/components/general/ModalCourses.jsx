@@ -13,7 +13,14 @@ function ModalCourses({
 		const modal = document.getElementById(modalId);
 		if (modal) {
 			modal.showModal();
-			modal.scrollTop = 0; // Garante que o scroll comece no topo
+
+			// Espera o próximo frame para garantir a renderização correta e então rola o modal para o topo
+			requestAnimationFrame(() => {
+				const modalBox = modal.querySelector(".modal-box");
+				if (modalBox) {
+					modalBox.scrollTop = 0; // Garante que o conteúdo da modal box role para o topo
+				}
+			});
 		}
 	};
 
@@ -38,27 +45,29 @@ function ModalCourses({
 
 			<dialog
 				id={modalId}
-				className="modal modal-bottom sm:modal-middle"
+				className="modal 2xs:modal-middle flex justify-center overflow-y-auto scroll-smooth" // Remova modal-bottom
 				onClick={handleOutsideClick}>
-				<div className="modal-box pt-4 sm:!max-w-fit md:w-4/5 bg-secondary">
+				<div className="modal-box pt-4 !max-w-fit sm:w-4/5 md:w-3/5 2xl:w-2/5 bg-accent !shadow-2xl 2xs:py-4 sm:rounded-3xl">
 					{imageSrc ? (
-						<img src={imageSrc} alt={`Certificado do curso ${title}`} />
+						<img src={imageSrc} alt={`Certificado do curso ${title}`} className="pb-4" />
 					) : (
-						<div className="xl:py-4 xl:px-2">
+						<div className="xl:py-4 xl:px-2 2xl:px-4 3xl:px-6 md:pt-0 3xl:pt-6">
 							{buttonLabel === "Descrição" ? (
 								content.map((paragraph, index) => (
 									<p
 										key={index}
-										className="text-justify mb-4 md:mb-6 text-lg md:text-xl lg:text-2xl 2xl:text-3xl md:leading-8 xl:leading-10 2xl:leading-normal 3xl:leading-relaxed">
+										className="text-justify text-lg 6xs:text-base 5xs:text-lg 4xs:text-xl xs:text-2xl sm:text-3xl md:text-2xl lg:text-3xl xl:text-4xl 3xl:text-5xl 5xs:leading-relaxed 4xs:leading-relaxed 3xs:leading-relaxed 2xs:leading-relaxed xs:leading-normal sm:leading-relaxed md:leading-relaxed lg:leading-normal xl:leading-relaxed 2xl:leading-normal 3xl:leading-relaxed pb-5 xs:pb-8 xl:pb-8 2xl:pb-10 3xl:pb-12">
 										{paragraph}
 										<br />
 									</p>
 								))
 							) : (
-								<div className="sm:flex sm:justify-center pl-12 pr-6">
-									<ul className="list-disc list-outside space-y-1 text-lg md:text-xl lg:text-2xl 2xl:text-3xl">
+								<div className="sm:flex sm:justify-center pb-5 sm:pt-2 md:pt-0 pl-6 4xs:pl-4 sm:pl-8 3xl:pl-14">
+									<ul className="list-disc list-outside space-y-1 text-lg 4xs:text-xl xs:text-2xl sm:text-3xl md:text-2xl lg:text-3xl xl:text-4xl 3xl:text-6xl">
 										{content.map((item, index) => (
-											<li key={index} className="text-left pl-2 pb-1 sm:pb-2 2xl:pb-4 3xl:pb-5">
+											<li
+												key={index}
+												className="text-left pl-1 3xs:pb-1 sm:pb-3 md:pb-1 lg:pb-2 xl:pb-3 2xl:pb-4 3xl:pb-8">
 												{item}
 											</li>
 										))}
@@ -69,8 +78,8 @@ function ModalCourses({
 					)}
 					<div className="modal-action w-full mt-0">
 						<form method="dialog" className="w-full flex justify-center">
-							<button className="btn botao flex justify-center items-center py-0 px-4 mt-3 md:mt-4 2xl:mt-0 text-lg lg:text-xl 2xl:text-3xl min-h-10 2xl:min-h-16 2xl:min-h-18 2xl:px-10 3xl:min-h-20 3xl:px-12 text-base-100 bg-accent">
-								<div className="">Fechar</div>
+							<button className="botao flex justify-center items-center text-lg 4xs:text-xl xs:text-2xl sm:text-3xl md:text-2xl lg:text-3xl xl:text-4xl 3xl:text-5xl min-h-10 2xl:min-h-16 2xl:min-h-18 2xl:px-10 3xl:min-h-20 text-base-100 !bg-secondary !shadow-2xl md:mt-0 md:mb-3 2xl:mt-0 py-0 px-4 sm:py-3 sm:px-7 sm:mb-2 xl:py-4 xl:px-10 3xl:px-16 3xl:py-5 xl:mb-4 xl:rounded-2xl">
+								Fechar
 							</button>
 						</form>
 					</div>

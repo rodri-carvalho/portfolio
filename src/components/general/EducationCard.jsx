@@ -45,17 +45,17 @@ function EducationCard({ institution, title, pic, certificate, index, content = 
 
 						<dialog
 							id={modalId}
-							className="modal max-w-full w-full modal-bottom sm:modal-middle md:flex md:justify-center"
+							className="modal !max-w-full w-full modal-bottom sm:modal-middle md:flex md:justify-center"
 							onClick={handleOutsideClick}>
-							<div className="modal-box !bg-neutral 2xl:rounded-3xl md:!max-w-full md:w-10/12 2xl:w-7/12 md:h-fit">
+							<div className="modal-box !bg-accent sm:rounded-2xl lg:rounded-3xl !max-w-full md:w-7/12 lg:w-8/12 xl:w-9/12 2xl:w-8/12 md:h-fit px-3 5xs:px-4 2xs:px-6 lg:px-8 xl:px-10 pb-0 pt-3 2xs:pt-5 xs:pt-6 xl:pt-8">
 								<img
 									src={certificate}
 									alt={`Diploma do curso de ${title}`}
 									className="h-full 2xl:p-6 3xl:p-8"
 								/>
-								<div className="modal-action justify-center 2xl:mt-0">
+								<div className="modal-action justify-center my-3 2xs:my-5 md:my-4 lg:my-6 2xl:mt-3 2xl:mb-7 3xl:mt-4 3xl:mb-10">
 									<form method="dialog" className=" w-full flex justify-center">
-										<button className="botao 2xl:rounded-xl !p-0 !min-w-fit w-1/5 text-base md:text-2xl lg:text-2xl xl:text-3xl 3xl:text-4xl 3xl:min-h-14 text-base-100 bg-accent">
+										<button className="botao 2xl:rounded-xl 3xl:rounded-3xl !min-w-fit w-1/5 py-2 sm:py-2 xl:py-3 2xl:py-4 3xl:py-7 text-xl 2xs:text-2xl xs:text-3xl md:text-2xl lg:text-4xl xl:text-5xl 3xl:text-7xl !bg-secondary !shadow-2xl">
 											Fechar
 										</button>
 									</form>
