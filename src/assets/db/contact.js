@@ -11,7 +11,7 @@ const contactInfo = [
 		iconId: 1,
 		title: "Linkedin",
 		numberOrId: "/in/rodricarvalho/",
-		href: "https://www.https://www.linkedin.com/in/rodricarvalho/",
+		href: "https://www.linkedin.com/in/rodricarvalho/",
 	},
 	{
 		id: 2,
