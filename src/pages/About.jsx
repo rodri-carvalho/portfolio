@@ -1,6 +1,7 @@
 import React, { useEffect } from "react";
 import { Link } from "react-router-dom";
 import { FaCode } from "react-icons/fa6";
+import fotoPerfil from "../../public/assets/pics/componentPics/fotoperfil.png";
 
 function About() {
 	useEffect(() => {
@@ -29,7 +30,7 @@ function About() {
 
 					<div className="avatar">
 						<div className="rounded-2xl w-28 h-32 4xs:w-32 4xs:h-36 sm:w-36 sm:h-40 md:w-40 md:h-44 lg:w-48 lg:h-52 xl:w-56 xl:h-60 2xl:w-64 2xl:h-72 3xl:w-80 3xl:h-96">
-							<img src="src/assets/pics/componentPics/fotoperfil.png" />
+							<img src={fotoPerfil} />
 						</div>
 					</div>
 				</div>
