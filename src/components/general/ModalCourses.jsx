@@ -47,9 +47,13 @@ function ModalCourses({
 				id={modalId}
 				className="modal 2xs:modal-middle flex justify-center overflow-y-auto scroll-smooth" // Remova modal-bottom
 				onClick={handleOutsideClick}>
-				<div className="modal-box pt-4 !max-w-fit sm:w-4/5 md:w-3/5 2xl:w-2/5 bg-accent !shadow-2xl 2xs:py-4 sm:rounded-3xl">
+				<div className="modal-box px-2 py-3 sm:px-4 sm:py-5 2xl:px-6 2xl:py-6 3xl:px-8 3xl:py-8 !max-w-fit sm:w-4/5 md:w-1/2 2xl:w-2/5 bg-accent !shadow-2xl 2xs:py-4 sm:rounded-3xl">
 					{imageSrc ? (
-						<img src={imageSrc} alt={`Certificado do curso ${title}`} className="pb-4" />
+						<img
+							src={imageSrc}
+							alt={`Certificado do curso ${title}`}
+							className="pb-4 xl:pb-5 2xl:pb-6 3xl:pb-8"
+						/>
 					) : (
 						<div className="xl:py-4 xl:px-2 2xl:px-4 3xl:px-6 md:pt-0 3xl:pt-6">
 							{buttonLabel === "Descrição" ? (
@@ -78,7 +82,7 @@ function ModalCourses({
 					)}
 					<div className="modal-action w-full mt-0">
 						<form method="dialog" className="w-full flex justify-center">
-							<button className="botao flex justify-center items-center text-lg 4xs:text-xl xs:text-2xl sm:text-3xl md:text-2xl lg:text-3xl xl:text-4xl 3xl:text-5xl min-h-10 2xl:min-h-16 2xl:min-h-18 2xl:px-10 3xl:min-h-20 text-base-100 !bg-secondary !shadow-2xl md:mt-0 md:mb-3 2xl:mt-0 py-0 px-4 sm:py-3 sm:px-7 sm:mb-2 xl:py-4 xl:px-10 3xl:px-16 3xl:py-5 xl:mb-4 xl:rounded-2xl">
+							<button className="botao flex justify-center items-center text-lg 4xs:text-xl xs:text-2xl sm:text-3xl md:text-2xl lg:text-3xl xl:text-4xl 3xl:text-5xl min-h-10 2xl:min-h-16 2xl:min-h-18 2xl:px-10 3xl:min-h-20 text-base-100 !bg-secondary !shadow-2xl md:mt-0 2xl:mt-0 py-0 px-4 sm:py-3 sm:px-7 xl:py-4 xl:px-10 3xl:px-16 3xl:py-5 xl:rounded-2xl">
 								Fechar
 							</button>
 						</form>
