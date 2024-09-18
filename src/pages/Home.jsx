@@ -68,7 +68,7 @@ function Home() {
 
 				<div className="w-full flex justify-center">
 					<div className="divider w-10/12 2xs:w-8/12 md:w-7/12 2xl:w-8/12 self-center mt-10 6xs:mt-10 4xs:mt-12 2xs:mt-12 md:mt-20 lg:mt-16 2xl:mt-32 3xl:mt-36">
-						<FaCode className="text-base-100 text-6xl sm:text-7xl xl:text-8xl 2xl:text-9xl 3xl:h-44 3xl:w-44" />
+						<FaCode className="!text-base-100 text-6xl sm:text-7xl xl:text-8xl 2xl:text-9xl 3xl:h-44 3xl:w-44" />
 					</div>
 				</div>
 

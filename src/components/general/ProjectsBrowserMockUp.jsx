@@ -59,7 +59,7 @@ function ProjectsBrowserMockUp({ id, title, projectURL, repoURL, projectPic, des
 					<div className="bg-base-200 flex flex-col justify-center 2xs:!h-full ">
 						<img src={projectPic} alt="" className="" />
 					</div>
-					<div className="text-lg 4xs:text-xl sm:text-2xl lg:text-3xl xl:text-4xl 2xl:text-5xl 3xl:text-6xl py-1 4xs:py-1 sm:py-2 lg:py-3 xl:py-4 2xl:py-5 3xl:py-8 !3xl:rounded-3xl">
+					<div className="text-lg 4xs:text-xl sm:text-2xl lg:text-3xl xl:text-4xl 2xl:text-5xl 3xl:text-6xl py-1 4xs:py-1 sm:py-2 lg:py-3 xl:py-4 2xl:py-5 3xl:py-8 !3xl:rounded-3xl !text-base-100">
 						{title}
 					</div>
 				</div>
@@ -76,14 +76,14 @@ function ProjectsBrowserMockUp({ id, title, projectURL, repoURL, projectPic, des
 							description.map((paragraph, index) => (
 								<p
 									key={index}
-									className="text-justify xs:text-lg sm:text-xl md:text-xl lg:text-2xl xl:text-3xl 2xl:text-4xl 3xl:text-5xl indent-8 5xs:indent-10 4xs:indent-11 3xs:indent-12 xs:indent-16 sm:indent-20 lg:indent-24 xl:indent-28 2xl:indent-32 3xl:indent-36 sm:leading-normal md:leading-normal lg:leading-normal xl:leading-normal 2xl:leading-normal 3xl:leading-normal px-1 4xs:px-2 2xs:px-3 xs:px-4 md:px-6 lg:px-8 xl:px-10">
+									className="text-justify xs:text-lg sm:text-xl md:text-xl lg:text-2xl xl:text-3xl 2xl:text-4xl 3xl:text-5xl indent-8 5xs:indent-10 4xs:indent-11 3xs:indent-12 xs:indent-16 sm:indent-20 lg:indent-24 xl:indent-28 2xl:indent-32 3xl:indent-36 sm:leading-normal md:leading-normal lg:leading-normal xl:leading-normal 2xl:leading-normal 3xl:leading-normal px-1 4xs:px-2 2xs:px-3 xs:px-4 md:px-6 lg:px-8 xl:px-10 !text-base-100">
 									{paragraph}
 									<br />
 									<br />
 								</p>
 							))
 						) : (
-							<p className="text-justify md:text-xl lg:text-2xl 2xl:text-4xl 3xl:text-5xl indent-7 lg:indent-9 2xl:indent-12 3xl:indent-20 md:leading-relaxed 2xl:leading-normal 3xl:leading-normal">
+							<p className="text-justify md:text-xl lg:text-2xl 2xl:text-4xl 3xl:text-5xl indent-7 lg:indent-9 2xl:indent-12 3xl:indent-20 md:leading-relaxed 2xl:leading-normal 3xl:leading-normal !text-base-100">
 								{description}
 							</p>
 						)}
