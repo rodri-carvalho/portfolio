@@ -60,7 +60,7 @@ function Home() {
 						<div className="arrowDiv w-full h-full flex justify-center items-end mt-4 5xs:mt-6 2xs:mt-7 xs:mt-5 sm:mt-4 md:mt-6 lg:mt-8 xl:mt-10 2xl:mt-12 3xl:mt-16 2xs:hidden md:flex">
 							<SlArrowDown
 								alt="Arrow Down"
-								className="arrow h-16 w-16 5xs:h-20 5xs:w-20 md:h-24 md:w-24 lg:h-28 lg:w-28 xl:h-36 xl:w-36 2xl:h-40 2xl:w-40 3xl:h-48 3xl:w-48"
+								className="arrow !text-base-100 h-16 w-16 5xs:h-20 5xs:w-20 md:h-24 md:w-24 lg:h-28 lg:w-28 xl:h-36 xl:w-36 2xl:h-40 2xl:w-40 3xl:h-48 3xl:w-48"
 							/>
 						</div>
 					)}

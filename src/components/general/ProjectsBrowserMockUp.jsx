@@ -67,7 +67,7 @@ function ProjectsBrowserMockUp({ id, title, projectURL, repoURL, projectPic, des
 			<dialog id={modalId} ref={modalRef} className="modal">
 				<div className="modal-box max-w-full 3xl:w-4/6 flex flex-col items-center p-3 md:p-6 lg:p-8 2xl:p-9 3xl:p-14 2xl:rounded-3xl bg-accent !shadow-2xl">
 					<img src={projectPic} alt={`Imagem do Projeto ${title}`} className="rounded-md" />
-					<h2 className="text-2xl xs:text-3xl lg:text-4xl 2xl:text-5xl 3xl:text-6xl mt-4 md:mt-6 lg:mt-8 xl:mt-10 2xl:mt-12 3xl:mt-16">
+					<h2 className="text-2xl xs:text-3xl lg:text-4xl 2xl:text-5xl 3xl:text-6xl mt-4 md:mt-6 lg:mt-8 xl:mt-10 2xl:mt-12 3xl:mt-16 !text-base-100">
 						{title}
 					</h2>
 					<div className="divider divider-neutral place-self-center mb-0 6xs:mb-1 md:mb-2 lg:mb-3 2xl:mb-4 3xl:mb-6 mt-4 xs:mt-5 md:mt-6 lg:mt-8 2xl:mt-10 3xl:mt-12 w-7/12 3xs:w-6/12 md:w-5/12 lg:w-4/12"></div>

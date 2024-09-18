@@ -51,7 +51,7 @@ function EducationCard({ institution, title, pic, certificate, index, content = 
 								<img
 									src={certificate}
 									alt={`Diploma do curso de ${title}`}
-									className="h-full 2xl:p-6 3xl:p-8"
+									className="2xl:p-6 3xl:p-8"
 								/>
 								<div className="modal-action justify-center my-3 2xs:my-5 md:my-4 lg:my-6 2xl:mt-3 2xl:mb-7 3xl:mt-4 3xl:mb-10">
 									<form method="dialog" className=" w-full flex justify-center">
