@@ -4,7 +4,11 @@ import daisyui from "daisyui";
 export default {
 	content: ["./index.html", "./src/**/*.{js,ts,jsx,tsx}"],
 	theme: {
-		extend: {},
+		extend: {
+			colors: {
+				hoverYellow: "#e3e5c7",
+			},
+		},
 		screens: {
 			"6xs": "375px",
 			"5xs": "390px",

@@ -53,7 +53,7 @@ function Education() {
 					<div
 						className={`botaoCollapse collapse-title !text-base-100 flex justify-center text-xl 4xs:text-2xl 2xs:text-3xl sm:text-4xl md:text-3xl lg:text-4xl xl:text-5xl 2xl:text-6xl 3xl:text-7xl pl-12 ${
 							isFormacaoAcademicaOpen
-								? "xs:mt-2 sm:mt-4 md:mt-1 lg:mt-3 xl:mt-0 2xl:mt-3 2xs:mb-2 xs:mb-3 sm:mb-4 md:mb-1 lg:mb-4 2xl:mb-2"
+								? "xs:mt-2 sm:mt-4 md:mt-1 lg:mt-3 xl:mt-0 2xl:mt-3 2xs:mb-2 xs:mb-3 sm:mb-4 md:mb-1 2xl:mb-2"
 								: ""
 						}`}
 						onClick={() => setIsFormacaoAcademicaOpen(!isFormacaoAcademicaOpen)}>
@@ -63,7 +63,7 @@ function Education() {
 						className={`collapse-content ${
 							isFormacaoAcademicaOpen ? "collapse-open 2xl:mt-7 3xl:mt-10 px-3" : ""
 						}`}>
-						<div className="grid md:grid-cols-2 lg:grid-cols-2 2xl:m-0 2xl:place-content-between 3xl:grid-cols-2 gap-4 3xs:gap-5 lg:gap-10 xl:gap-14 sm:mx-1 md:mx-0 lg:mx-10 lg:my-6 xl:mx-20 xl:my-10 2xl:mx-4 3xl:mx-10 3xl:pb-10">
+						<div className="grid md:grid-cols-2 xl:grid-cols-3 lg:grid-cols-2 2xl:m-0 2xl:place-content-between 3xl:grid-cols-3 gap-4 3xs:gap-5 lg:gap-4 xl:gap-4 sm:mx-1 md:mx-0 lg:mx-5 lg:my-3 xl:mx-8 xl:my-4 2xl:mx-4 3xl:mx-10 3xl:pb-10">
 							{education.map((acadCourse, index) => (
 								<EducationCard
 									key={index}
@@ -80,7 +80,7 @@ function Education() {
 					</div>
 				</div>
 				<div className="w-full flex justify-center">
-					<div className="divider w-10/12 2xs:w-9/12 sm:w-8/12 xl:w-9/12 3xl:w-8/12 self-center text-base-100">
+					<div className="divider divider-accent w-10/12 2xs:w-9/12 sm:w-8/12 xl:w-9/12 3xl:w-8/12 self-center text-base-100">
 						<FaCode className="text-6xl 3xs:text-7xl 2xs:text-8xl md:text-7xl lg:text-8xl 2xl:text-9xl" />
 					</div>
 				</div>
