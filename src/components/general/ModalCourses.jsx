@@ -45,9 +45,9 @@ function ModalCourses({
 
 			<dialog
 				id={modalId}
-				className="modal 2xs:modal-middle flex justify-center overflow-y-auto scroll-smooth" // Remova modal-bottom
+				className="modal modal-bottom sm:modal-middle 2xs:modal-middle flex justify-center overflow-y-auto scroll-smooth" // Remova modal-bottom
 				onClick={handleOutsideClick}>
-				<div className="modal-box px-2 py-3 sm:px-4 sm:py-5 2xl:px-6 2xl:py-6 3xl:px-8 3xl:py-8 !max-w-fit sm:w-4/5 md:w-1/2 2xl:w-2/5 bg-accent !shadow-2xl 2xs:py-4 sm:rounded-3xl">
+				<div className="modal-box px-6 2xs:px-8 sm:px-10 2xl:px-6  3xl:py-8 2xs:pt-6 py-3 sm:py-5  2xl:py-6 3xl:px-8!max-w-fit sm:w-4/5 md:w-3/5 2xl:w-2/5 bg-accent !shadow-2xl 2xs:py-4 sm:rounded-3xl">
 					{imageSrc ? (
 						<img
 							src={imageSrc}
@@ -60,7 +60,7 @@ function ModalCourses({
 								content.map((paragraph, index) => (
 									<p
 										key={index}
-										className="text-justify text-lg 6xs:text-base 5xs:text-lg 4xs:text-xl xs:text-2xl sm:text-3xl md:text-2xl lg:text-3xl xl:text-4xl 3xl:text-5xl 5xs:leading-relaxed 4xs:leading-relaxed 3xs:leading-relaxed 2xs:leading-relaxed xs:leading-normal sm:leading-relaxed md:leading-relaxed lg:leading-normal xl:leading-relaxed 2xl:leading-normal 3xl:leading-relaxed pb-5 xs:pb-8 xl:pb-8 2xl:pb-10 3xl:pb-12">
+										className="text-justify text-lg 5xs:text-lg 4xs:text-xl xs:text-2xl lg:text-3xl xl:text-4xl 3xl:text-5xl leading-normal 6xs:leading-relaxed 5xs:leading-relaxed 4xs:leading-relaxed 3xs:leading-relaxed 2xs:leading-relaxed xs:leading-normal sm:leading-relaxed md:leading-relaxed lg:leading-normal xl:leading-relaxed 2xl:leading-normal 3xl:leading-relaxed pb-5 xs:pb-8 xl:pb-8 2xl:pb-10 3xl:pb-12 indent-10">
 										{paragraph}
 										<br />
 									</p>
@@ -82,7 +82,7 @@ function ModalCourses({
 					)}
 					<div className="modal-action w-full mt-0">
 						<form method="dialog" className="w-full flex justify-center">
-							<button className="botao flex justify-center items-center text-lg 4xs:text-xl xs:text-2xl sm:text-3xl md:text-2xl lg:text-3xl xl:text-4xl 3xl:text-5xl min-h-10 2xl:min-h-16 2xl:min-h-18 2xl:px-10 3xl:min-h-20 text-base-100 !bg-secondary !shadow-2xl md:mt-0 2xl:mt-0 py-0 px-4 sm:py-3 sm:px-7 xl:py-4 xl:px-10 3xl:px-16 3xl:py-5 xl:rounded-2xl">
+							<button className="botao flex justify-center items-center text-lg 4xs:text-xl xs:text-2xl md:text-2xl lg:text-3xl xl:text-4xl 3xl:text-5xl min-h-10 2xl:min-h-16 2xl:min-h-18 2xl:px-10 3xl:min-h-20 text-base-100 !bg-secondary !shadow-2xl py-0 px-4 sm:py-3 sm:px-7 xl:py-4 xl:px-10 3xl:px-16 3xl:py-5 xl:rounded-2xl 2xs:mt-1 sm:-mt-2 6xs:mb-1 5xs:mb-2 4xs:mb-3 md:mb-1">
 								Fechar
 							</button>
 						</form>

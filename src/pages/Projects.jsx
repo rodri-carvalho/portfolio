@@ -92,9 +92,9 @@ function Projects() {
 						<div className="flex items-center justify-center mt-4">
 							<button
 								onClick={loadMoreProjects}
-								className="botao flex flex-col items-center w-9/12 md:w-1/2 lg:w-5/12 2xl:w-3/12 text-2xl lg:text-3xl 2xl:text-4xl 3xl:text-5xl md:mt-3 2xl:mt-5 3xl:mt-6 md:rounded-xl 2xl:rounded-3xl 3xl:rounded-3xl text-base-100 outline-hidden border-0">
+								className="botao flex flex-col items-center w-9/12 md:w-1/2 lg:w-5/12 2xl:w-3/12 text-xl lg:text-3xl 2xl:text-4xl 3xl:text-5xl md:mt-3 2xl:mt-5 3xl:mt-6 md:rounded-xl 2xl:rounded-3xl 3xl:rounded-3xl text-base-100 outline-hidden border-0">
 								Carregar mais
-								<FaArrowDown className="mt-3 2xl:mt-5 3xl:mt-7 w-6 h-8 lg:w-7 lg:h-10 2xl:w-9 2xl:h-12 3xl:w-12 3xl:h-16" />
+								<FaArrowDown className="mt-3 2xl:mt-5 3xl:mt-7 text-2xl" />
 							</button>
 						</div>
 					)}

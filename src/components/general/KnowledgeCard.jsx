@@ -54,7 +54,7 @@ function KnowledgeCard({ iconId, techId, inProgress, techList }) {
 				<div className="flex items-center !w-full !h-full">
 					<div className="card-body flex items-center p-1 gap-3 xl:gap-5 3xl:gap-10">
 						<label htmlFor={`tech-${iconId}`} className="flex items-center cursor-pointer pt-3">
-							<IconComponent className="text-6xl sm:text-7xl xl:text-9xl" />
+							<IconComponent className="text-5xl sm:text-7xl xl:text-9xl" />
 						</label>
 						<p className="lg:h-full text-xl 5xs:text-2xl xs:text-3xl sm:text-4xl lg:text-5xl xl:text-6xl 3xl:text-7xl">
 							{techName}
@@ -82,7 +82,7 @@ function KnowledgeCard({ iconId, techId, inProgress, techList }) {
 						<form
 							method="dialog"
 							className="w-full flex justify-center items-center 2xs:mt-2 xs:mt-3 sm:mt-4 md:mt-1 lg:mt-2 xl:mt-6 2xl:mt-4 3xl:mt-8 xl:mb-3 3xl:mb-5">
-							<button className="botao !bg-neutral p-1 w-1/3 sm:w-1/4 text-lg 6xs:text-xl 2xs:text-2xl xs:text-3xl md:text-xl lg:text-3xl xl:text-4xl 3xl:text-6xl text-base-100 border-0 3xs:py-1 2xs:py-2 sm:py-3 md:py-2 lg:py-3 3xl:py-6 xl:py-4 lg:rounded-xl xl:rounded-2xl 3xl:rounded-3xl !shadow-2xl">
+							<button className="botao !bg-neutral p-1 w-1/3 sm:w-1/4 text-lg 2xs:text-2xl xs:text-3xl md:text-xl lg:text-3xl xl:text-4xl 3xl:text-6xl text-base-100 border-0 3xs:py-1 2xs:py-2 sm:py-3 md:py-2 lg:py-3 3xl:py-6 xl:py-4 lg:rounded-xl xl:rounded-2xl 3xl:rounded-3xl !shadow-2xl">
 								Fechar
 							</button>
 						</form>

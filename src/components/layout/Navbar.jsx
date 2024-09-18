@@ -34,7 +34,7 @@ function Navbar({ title = "Meu Portfólio" }) {
 				<div className="flex-none px-1 2xs:ml-4 lg:ml-7">
 					<Link
 						to="/"
-						className="botaoIcone text-2xl 3xs:text-3xl md:text-3xl lg:text-5xl 2xl:text-6xl 3xl:text-7xl font-bold align-middle text-base-100 p-2 rounded-xl">
+						className="botaoIcone text-2xl 3xs:text-3xl md:text-3xl lg:text-4xl 2xl:text-6xl 3xl:text-7xl font-bold align-middle text-base-100 p-2 rounded-xl">
 						{title}
 					</Link>
 				</div>
@@ -44,32 +44,32 @@ function Navbar({ title = "Meu Portfólio" }) {
 						<div className="flex justify-end items-center md:gap-4 lg:gap-5 xl:gap-6 2xl:gap-7 3xl:gap-5 text-base-100">
 							<Link
 								to="/"
-								className="botao bg-accent !py-0 3xl:!px-3 rounded-btn md:text-2xl lg:text-4xl 2xl:text-5xl 3xl:text-6xl flex items-center 2xl:!min-h-14 3xl:!min-h-16 2xl:rounded-2xl 3xl:rounded-3xl">
+								className="botao bg-accent !py-0 3xl:!px-3 rounded-btn md:text-2xl lg:text-3xl 2xl:text-5xl 3xl:text-6xl flex items-center 2xl:!min-h-14 3xl:!min-h-16 2xl:rounded-2xl 3xl:rounded-3xl">
 								Início
 							</Link>
 							<Link
 								to="/about"
-								className="botao bg-accent !py-0 3xl:!px-3 rounded-btn md:text-2xl lg:text-4xl 2xl:text-5xl 3xl:text-6xl flex items-center 2xl:!min-h-14 3xl:!min-h-16 2xl:rounded-2xl 3xl:rounded-3xl">
+								className="botao bg-accent !py-0 3xl:!px-3 rounded-btn md:text-2xl lg:text-3xl 2xl:text-5xl 3xl:text-6xl flex items-center 2xl:!min-h-14 3xl:!min-h-16 2xl:rounded-2xl 3xl:rounded-3xl">
 								Sobre
 							</Link>
 							<Link
 								to="/knowledge"
-								className="botao bg-accent !py-0 3xl:!px-3 rounded-btn md:text-2xl lg:text-4xl 2xl:text-5xl 3xl:text-6xl flex items-center 2xl:!min-h-14 3xl:!min-h-16 2xl:rounded-2xl 3xl:rounded-3xl">
+								className="botao bg-accent !py-0 3xl:!px-3 rounded-btn md:text-2xl lg:text-3xl 2xl:text-5xl 3xl:text-6xl flex items-center 2xl:!min-h-14 3xl:!min-h-16 2xl:rounded-2xl 3xl:rounded-3xl">
 								Habilidades
 							</Link>
 							<Link
 								to="/education"
-								className="botao bg-accent !py-0 3xl:!px-3 rounded-btn md:text-2xl lg:text-4xl 2xl:text-5xl 3xl:text-6xl flex items-center 2xl:!min-h-14 3xl:!min-h-16 2xl:rounded-2xl 3xl:rounded-3xl">
+								className="botao bg-accent !py-0 3xl:!px-3 rounded-btn md:text-2xl lg:text-3xl 2xl:text-5xl 3xl:text-6xl flex items-center 2xl:!min-h-14 3xl:!min-h-16 2xl:rounded-2xl 3xl:rounded-3xl">
 								Formação
 							</Link>
 							<Link
 								to="/projects"
-								className="botao bg-accent !py-0 3xl:!px-3 rounded-btn md:text-2xl lg:text-4xl 2xl:text-5xl 3xl:text-6xl flex items-center 2xl:!min-h-14 3xl:!min-h-16 2xl:rounded-2xl 3xl:rounded-3xl">
+								className="botao bg-accent !py-0 3xl:!px-3 rounded-btn md:text-2xl lg:text-3xl 2xl:text-5xl 3xl:text-6xl flex items-center 2xl:!min-h-14 3xl:!min-h-16 2xl:rounded-2xl 3xl:rounded-3xl">
 								Projetos
 							</Link>
 							<Link
 								to="/findme"
-								className="botao bg-accent !py-0 3xl:!px-3 rounded-btn md:text-2xl lg:text-4xl 2xl:text-5xl 3xl:text-6xl flex items-center 2xl:!min-h-14 3xl:!min-h-16 2xl:rounded-2xl 3xl:rounded-3xl">
+								className="botao bg-accent !py-0 3xl:!px-3 rounded-btn md:text-2xl lg:text-3xl 2xl:text-5xl 3xl:text-6xl flex items-center 2xl:!min-h-14 3xl:!min-h-16 2xl:rounded-2xl 3xl:rounded-3xl">
 								Contato
 							</Link>
 							<ThemeToggleButton />

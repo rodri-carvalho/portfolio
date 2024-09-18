@@ -30,7 +30,7 @@ function About() {
 					</div>
 
 					<div className="avatar">
-						<div className="rounded-2xl w-28 h-32 4xs:w-32 4xs:h-36 sm:w-36 sm:h-40 md:w-40 md:h-44 lg:w-48 lg:h-52 xl:w-56 xl:h-60 2xl:w-64 2xl:h-72 3xl:w-80 3xl:h-96">
+						<div className="rounded-2xl w-24 h-32 6xs:w-28 5xs:w-32 4xs:w-28 4xs:h-36 2xs:w-36  sm:h-40 md:w-40 md:h-44 lg:w-48 lg:h-52 xl:w-56 xl:h-60 2xl:w-64 2xl:h-72 3xl:w-80 3xl:h-96">
 							<img src={fotoPerfil} />
 						</div>
 					</div>

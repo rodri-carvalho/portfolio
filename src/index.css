@@ -118,7 +118,7 @@ button:focus-visible {
 }
 
 .collapse-arrow > .collapse-title:after {
-	@apply md:!w-3 md:!h-3 md:!mt-2 md:!mr-3 lg:!w-4 lg:!h-4 lg:!mt-2 lg:mr-2 xl:!w-4 xl:!h-4 xl:!mt-3 xl:mr-4 2xl:!w-6 2xl:!h-6 2xl:!mt-3 3xl:!w-8 3xl:!h-8 3xl:!mt-10 3xl:!mr-10;
+	@apply md:!w-3 md:!h-3 md:!mt-2 md:!mr-3 lg:!w-3 lg:!h-3 lg:!mt-2 lg:mr-2 xl:!w-4 xl:!h-4 xl:!mt-3 xl:mr-4 2xl:!w-6 2xl:!h-6 2xl:!mt-3 3xl:!w-8 3xl:!h-8 3xl:!mt-10 3xl:!mr-10;
 }
 
 .collapse-plus > .collapse-title:after {

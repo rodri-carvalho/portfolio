@@ -49,7 +49,7 @@ function SectionsCard({ page, description, iconId, isOpen, query }) {
 			<div className="collapse-title custom-collapse flex justify-between items-center 2xl:w-11/12 3xl:w-full font-medium text-base-100 2xl:my-3 2xl:ml-6 3xl:ml-3 3xl:my-3">
 				<label
 					htmlFor={`accordion-${iconId}`}
-					className="flex items-center cursor-pointer text-xl 3xs:text-2xl md:text-3xl lg:text-4xl xl:text-5xl 2xl:text-5xl 3xl:text-7xl gap-1 md:gap-2 2xl:gap-3 3xl:gap-5 sm:ml-1 2xl:ml-2 3xl:ml-4">
+					className="flex items-center cursor-pointer text-xl 3xs:text-2xl md:text-3xl xl:text-5xl 2xl:text-5xl 3xl:text-7xl gap-1 md:gap-2 2xl:gap-3 3xl:gap-5 sm:ml-1 2xl:ml-2 3xl:ml-4">
 					<IconComponent />
 					<div className="ml-2 2xl:ml-0 2xl:pl-4">{page}</div>
 				</label>
