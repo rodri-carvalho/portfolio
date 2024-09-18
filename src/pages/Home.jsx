@@ -1,10 +1,10 @@
 import React, { useEffect, useState } from "react";
 import SectionsCard from "../components/general/SectionsCard";
-import sections from "../../public/assets/db/sections";
-import heroBg from "../../public/assets/pics/componentPics/hero-bg.jpg";
-import arrowDown from "../../public/assets/pics/componentPics/white-arrow.png";
+import sections from "../db/sections";
+import heroBg from "/assets/pics/componentPics/hero-bg.jpg";
 import { PiArrowBendRightDown } from "react-icons/pi";
 import { FaCode } from "react-icons/fa6";
+import { SlArrowDown } from "react-icons/sl";
 
 const tagSmile = "<>  :  ) </>";
 
@@ -57,32 +57,31 @@ function Home() {
 						</div>
 					</div>
 					{showArrow && (
-						<div className="arrowDiv w-full h-full flex justify-center items-end mt-8">
-							<img
-								src={arrowDown}
+						<div className="arrowDiv w-full h-full flex justify-center items-end mt-4 5xs:mt-6 2xs:mt-7 xs:mt-5 sm:mt-4 md:mt-6 lg:mt-8 xl:mt-10 2xl:mt-12 3xl:mt-16 2xs:hidden md:flex">
+							<SlArrowDown
 								alt="Arrow Down"
-								className="arrow h-20 w-24 4xs:h-24 4xs:w-28 md:w-36 lg:h-32 lg:w-44 xl:w-52 2xl:h-36 2xl:w-56 3xl:h-52 3xl:w-80"
+								className="arrow h-16 w-16 5xs:h-20 5xs:w-20 md:h-24 md:w-24 lg:h-28 lg:w-28 xl:h-36 xl:w-36 2xl:h-40 2xl:w-40 3xl:h-48 3xl:w-48"
 							/>
 						</div>
 					)}
 				</div>
 
 				<div className="w-full flex justify-center">
-					<div className="divider w-10/12 2xl:w-8/12 self-center mt-9 xl:mt-14 2xl:mt-16 3xl:mt-24">
-						<FaCode className="text-base-100 text-6xl sm:text-7xl xl:text-8xl 2xl:text-9xl" />
+					<div className="divider w-10/12 2xs:w-8/12 md:w-7/12 2xl:w-8/12 self-center mt-10 6xs:mt-10 4xs:mt-12 2xs:mt-12 md:mt-20 lg:mt-16 2xl:mt-32 3xl:mt-36">
+						<FaCode className="text-base-100 text-6xl sm:text-7xl xl:text-8xl 2xl:text-9xl 3xl:h-44 3xl:w-44" />
 					</div>
 				</div>
 
-				<div className="flex flex-col 3xs:mt-1 xl:mt-5">
+				<div className="flex flex-col mt-2 6xs:mt-3 5xs:mt-5 3xs:mt-6 2xs:mt-7 sm:mt-8 md:mt-14 lg:mt-10 2xl:mt-24 3xl:mt-28">
 					<div className="flex items-center justify-center">
 						<h3 className="flex text-2xl 2xs:text-3xl lg:text-4xl xl:text-5xl 2xl:text-6xl 3xl:text-7xl text-center justify-center ml-6 6xs:ml-7 4xs:ml-9 3xs:ml-10 2xl:mt-4 text-base-100">
 							Navegue pelas seções do Portfólio
 						</h3>
-						<PiArrowBendRightDown className="text-base-100 text-4xl lg:text-5xl xl:text-6xl 2xl:text-7xl 3xl:text-8xl rotate-45 translate-y-10 6xs:translate-y-9 2xs:translate-y-6 md:translate-y-7 lg:translate-y-8  xl:translate-y-11 2xl:translate-y-16 3xl:translate-y-20 -translate-x-24 6xs:-translate-x-24 5xs:-translate-x-24 4xs:-translate-x-28 2xs:-translate-x-0" />
+						<PiArrowBendRightDown className="text-base-100 text-5xl lg:text-5xl xl:text-6xl 2xl:text-7xl 3xl:text-8xl rotate-45 translate-y-9 6xs:translate-y-9 4xs:translate-y-9 3xs:translate-y-10 2xs:translate-y-8 md:translate-y-8 lg:translate-y-9 xl:translate-y-11 2xl:translate-y-16 3xl:translate-y-20 -translate-x-16 6xs:-translate-x-20 4xs:-translate-x-28 2xs:-translate-x-2" />
 					</div>
 					<div className="flex p-0 justify-center mt-4 xs:mt-5"></div>
 
-					<div className="secoes flex flex-col w-full items-center mt-3 3xs:mt-4 lg:mt-6 xl:mt-8 2xl:mt-14 3xl:mt-20 gap-2 2xs:gap-3 lg:gap-4 2xl:gap-5 3xl:gap-8">
+					<div className="secoes flex flex-col w-full items-center mt-3 3xs:mt-4 2xs:mt-6 lg:mt-8 2xl:mt-14 3xl:mt-20 gap-2 2xs:gap-3 lg:gap-4 2xl:gap-5 3xl:gap-8">
 						{sections.map((section) => (
 							<SectionsCard
 								key={section.id}

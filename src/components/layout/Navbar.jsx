@@ -87,15 +87,13 @@ function Navbar({ title = "Meu Portfólio" }) {
 								<li onClick={closeDropdown}>
 									<Link
 										to="/"
-										className="btn btn-ghost btn-sm rounded-btn text-2xl 3xs:text-3xl my-2 5xs:mt-3">
+										className="botaoIcone text-xl 3xs:text-2xl my-0 5xs:mt-2 self-center">
 										Início
 									</Link>
 								</li>
 								<div className="divider m-0 w-10/12 mx-auto 5xs:my-1"></div>
 								<li onClick={closeDropdown}>
-									<Link
-										to="/about"
-										className="btn btn-ghost btn-sm rounded-btn text-2xl 3xs:text-3xl my-2">
+									<Link to="/about" className="botaoIcone text-xl 3xs:text-2xl my-0 self-center">
 										Sobre
 									</Link>
 								</li>
@@ -103,7 +101,7 @@ function Navbar({ title = "Meu Portfólio" }) {
 								<li onClick={closeDropdown}>
 									<Link
 										to="/knowledge"
-										className="btn btn-ghost btn-sm rounded-btn text-2xl 3xs:text-3xl my-2">
+										className="botaoIcone text-xl 3xs:text-2xl my-0 self-center">
 										Habilidades
 									</Link>
 								</li>
@@ -111,23 +109,19 @@ function Navbar({ title = "Meu Portfólio" }) {
 								<li onClick={closeDropdown}>
 									<Link
 										to="/education"
-										className="btn btn-ghost btn-sm rounded-btn text-2xl 3xs:text-3xl my-2">
+										className="botaoIcone text-xl 3xs:text-2xl my-0 self-center">
 										Formação
 									</Link>
 								</li>
 								<div className="divider m-0 w-10/12 mx-auto 5xs:my-1"></div>
 								<li onClick={closeDropdown}>
-									<Link
-										to="/projects"
-										className="btn btn-ghost btn-sm rounded-btn text-2xl 3xs:text-3xl my-2">
+									<Link to="/projects" className="botaoIcone text-xl 3xs:text-2xl my-0 self-center">
 										Projetos
 									</Link>
 								</li>
 								<div className="divider m-0 w-10/12 mx-auto 5xs:my-1"></div>
 								<li onClick={closeDropdown}>
-									<Link
-										to="/findme"
-										className="btn btn-ghost btn-sm rounded-btn text-2xl 3xs:text-3xl my-2">
+									<Link to="/findme" className="botaoIcone text-xl 3xs:text-2xl my-0 self-center">
 										Contato
 									</Link>
 								</li>

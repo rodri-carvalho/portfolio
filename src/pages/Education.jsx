@@ -1,8 +1,8 @@
 import React, { useEffect, useRef, useState } from "react";
 import EducationCard from "../components/general/EducationCard";
 import CourseCard from "../components/general/CourseCard";
-import education from "../../public/assets/db/education";
-import courses from "../../public/assets/db/courses";
+import education from "../db/education";
+import courses from "../db/courses";
 import { FaCode } from "react-icons/fa6";
 
 function Education() {

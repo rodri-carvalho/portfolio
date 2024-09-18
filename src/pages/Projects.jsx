@@ -1,8 +1,8 @@
 import React, { useEffect, useRef, useState } from "react";
 import ProjectsBrowserMockUp from "../components/general/ProjectsBrowserMockUp";
 import MoreProjectsCard from "../components/general/MoreProjectsCard";
-import projects from "../../public/assets/db/projects";
-import moreProjects from "../../public/assets/db/moreProjects";
+import projects from "../db/projects";
+import moreProjects from "../db/moreProjects";
 import { FaArrowDown } from "react-icons/fa";
 
 function Projects() {

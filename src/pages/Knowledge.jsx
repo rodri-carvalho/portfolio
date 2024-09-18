@@ -1,6 +1,6 @@
 import React, { useEffect } from "react";
 import KnowledgeCard from "../components/general/KnowledgeCard";
-import techItems from "../../public/assets/db/knowledge";
+import techItems from "../db/knowledge";
 
 function Knowledge() {
 	useEffect(() => {

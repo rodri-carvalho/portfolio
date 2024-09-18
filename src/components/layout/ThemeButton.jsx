@@ -21,7 +21,7 @@ function ThemeToggleButton() {
 
 	return (
 		<button
-			className="botaoIcone place-self-center outline-hidden !m-0 !p-0 lg:!pt-1"
+			className="botaoIcone place-self-center outline-hidden mx-0 mt-2 mb-1 !p-0 lg:!pt-1"
 			onClick={toggleTheme}>
 			{theme === "light" ? (
 				<PiMoonStarsFill className="text-3xl 5xs:text-4xl md:text-3xl lg:text-5xl 2xl:text-6xl 3xl:text-7xl 5xs:mb-2 md:mb-0" />

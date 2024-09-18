@@ -1,5 +1,5 @@
 import { useEffect } from "react";
-import contactInfo from "../../public/assets/db/contact";
+import contactInfo from "../db/contact";
 import ContactCard from "../components/general/ContactCard";
 
 function FindMe() {

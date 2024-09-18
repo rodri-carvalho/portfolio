@@ -1,5 +1,5 @@
 import React from "react";
-import { iconMap, techMap } from "../../../public/assets/db/knowledge";
+import { iconMap, techMap } from "../../db/knowledge";
 import PropTypes from "prop-types";
 
 function KnowledgeCard({ iconId, techId, inProgress, techList }) {

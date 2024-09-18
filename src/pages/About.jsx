@@ -2,6 +2,7 @@ import React, { useEffect } from "react";
 import { Link } from "react-router-dom";
 import { FaCode } from "react-icons/fa6";
 import fotoPerfil from "/assets/pics/componentPics/fotoperfil.png";
+import curriculo from "/assets/docs/curriculo.pdf";
 
 function About() {
 	useEffect(() => {
@@ -109,7 +110,7 @@ function About() {
 						<dialog id="my_modal_1" className="modal !shadow-2xl" onClick={handleOutsideClick}>
 							<div className="w-11/12 md:w-9/12 h-5/6 bg-accent flex flex-col items-center rounded-2xl !shadow-2xl">
 								<iframe
-									src="src/assets/docs/curriculo.pdf"
+									src={curriculo}
 									className="curriculo rounded-2xl 2xs:rounded-3xl h-full w-full px-2 2xs:px-4 lg:px-6 xl:px-8 2xl:px-10  3xl:px-16 lg:pt-2 xl:pt-3 2xl:pt-4 3xl:pt-6 mt-3 border-0"></iframe>
 								<div className="flex my-4 6xs:my-3 3xs:my-4 2xs:my-5 md:my-3 lg:my-5 2xl:my-7 3xl:my-10">
 									<button
