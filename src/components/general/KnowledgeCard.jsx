@@ -109,7 +109,7 @@ function KnowledgeCard({ iconId, techId, inProgress, techList }) {
 
 					<div className="w-full flex justify-center">
 						<div className="divider divider-neutral w-10/12 2xs:w-8/12 md:w-7/12 2xl:w-8/12 self-center my-3 2xs:my-6 xs:my-7 sm:my-8 md:mt-2 md:mb-5 lg:mt-4 lg:mb-7 xl:mt-5 xl:mb-9 2xl:mt-7 2xl:mb-12 3xl:mt-12 3xl:mb-16">
-							<FaCode className="!text-base-100 text-5xl 5xs:text-6xl 2xs:text-7xl md:text-6xl lg:text-7xl xl:text-8xl 3xl:text-9xl 3xl:h-44 3xl:w-44" />
+							<FaCode className="!text-base-100 text-5xl 5xs:text-6xl 2xs:text-7xl md:text-6xl lg:text-7xl xl:text-8xl 3xl:text-9xl" />
 						</div>
 					</div>
 
@@ -133,7 +133,7 @@ function KnowledgeCard({ iconId, techId, inProgress, techList }) {
 					</div>
 					<div className="w-full flex justify-center">
 						<div className="divider divider-neutral w-10/12 2xs:w-8/12 md:w-7/12 2xl:w-8/12 self-center mt-6 6xs:mt-7 5xs:mt-8 2xs:mt-10 xs:mt-12 md:mt-6 md:mb-1 lg:mt-8 lg:mb-2 xl:mt-10 xl:mb-4 2xl:mt-10 2xl:mb-6 3xl:mt-16 3xl:mb-14">
-							<FaCode className="!text-base-100 text-5xl 5xs:text-6xl 2xs:text-7xl md:text-6xl lg:text-7xl xl:text-8xl 3xl:text-9xl 3xl:h-44 3xl:w-44" />
+							<FaCode className="!text-base-100 text-5xl 5xs:text-6xl 2xs:text-7xl md:text-6xl lg:text-7xl xl:text-8xl 3xl:text-9xl" />
 						</div>
 					</div>
 				</div>

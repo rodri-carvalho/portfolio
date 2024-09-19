@@ -124,7 +124,7 @@ function ContactCard({ title, numberOrId, iconId, href }) {
 					<p
 						id={`numberOrID-${title}`}
 						ref={textRef}
-						className="w-full text-center break-words text-xl 3xs:text-2xl 2xs:text-3xl lg:text-4xl xl:text-5xl 3xl:text-7xl py-1"
+						className="w-full text-center break-words text-xl 3xs:text-2xl 2xs:text-3xl lg:text-4xl xl:text-5xl 3xl:text-7xl py-1 no-underline"
 						style={{ wordBreak: "break-word", whiteSpace: "normal" }}>
 						{shouldBreak && remainingLink ? (
 							<>

@@ -57,7 +57,7 @@ function ProjectsBrowserMockUp({ id, title, projectURL, repoURL, projectPic, des
 						</div>
 					</div>
 					<div className="bg-base-200 flex flex-col justify-center 2xs:!h-full ">
-						<img src={projectPic} alt="" className="" />
+						<img src={projectPic} alt="" className="opacity-90" />
 					</div>
 					<div className="text-lg 4xs:text-xl sm:text-2xl lg:text-3xl xl:text-4xl 2xl:text-5xl 3xl:text-6xl py-1 4xs:py-1 sm:py-2 lg:py-3 xl:py-4 2xl:py-5 3xl:py-8 !3xl:rounded-3xl !text-base-100">
 						{title}
@@ -65,9 +65,13 @@ function ProjectsBrowserMockUp({ id, title, projectURL, repoURL, projectPic, des
 				</div>
 			</button>
 			<dialog id={modalId} ref={modalRef} className="modal">
-				<div className="modal-box max-w-full 3xl:w-4/6 flex flex-col items-center p-3 md:p-6 lg:p-8 2xl:p-9 3xl:p-14 2xl:rounded-3xl bg-accent !shadow-2xl">
-					<img src={projectPic} alt={`Imagem do Projeto ${title}`} className="rounded-md" />
-					<h2 className="text-2xl xs:text-3xl lg:text-4xl 2xl:text-5xl 3xl:text-6xl mt-4 md:mt-6 lg:mt-8 xl:mt-10 2xl:mt-12 3xl:mt-16 !text-base-100">
+				<div className="modal-box max-w-full 3xl:w-4/6 flex flex-col items-center p-3 md:p-6 lg:p-8 2xl:p-9 3xl:p-14 2xl:rounded-3xl bg-accent !shadow-2xl h-3/4">
+					<img
+						src={projectPic}
+						alt={`Imagem do Projeto ${title}`}
+						className="rounded-md 3xs:rounded-lg xs:rounded-xl lg:rounded-2xl 2xl:rounded-3xl w-10/12 md:w-9/12"
+					/>
+					<h2 className="text-2xl xs:text-3xl lg:text-5xl 3xl:text-6xl mt-4 md:mt-6 lg:mt-8 xl:mt-10 2xl:mt-12 3xl:mt-16 !text-base-100">
 						{title}
 					</h2>
 					<div className="divider divider-neutral place-self-center mb-0 6xs:mb-1 md:mb-2 lg:mb-3 2xl:mb-4 3xl:mb-6 mt-4 xs:mt-5 md:mt-6 lg:mt-8 2xl:mt-10 3xl:mt-12 w-7/12 3xs:w-6/12 md:w-5/12 lg:w-4/12"></div>
@@ -76,26 +80,26 @@ function ProjectsBrowserMockUp({ id, title, projectURL, repoURL, projectPic, des
 							description.map((paragraph, index) => (
 								<p
 									key={index}
-									className="text-justify xs:text-lg sm:text-xl md:text-xl lg:text-2xl xl:text-3xl 2xl:text-4xl 3xl:text-5xl indent-8 5xs:indent-10 4xs:indent-11 3xs:indent-12 xs:indent-16 sm:indent-20 lg:indent-24 xl:indent-28 2xl:indent-32 3xl:indent-36 sm:leading-normal md:leading-normal lg:leading-normal xl:leading-normal 2xl:leading-normal 3xl:leading-normal px-1 4xs:px-2 2xs:px-3 xs:px-4 md:px-6 lg:px-8 xl:px-10 !text-base-100">
+									className="text-justify 5xs:text-lg sm:text-xl md:text-xl lg:text-3xl xl:text-3xl 2xl:text-4xl 3xl:text-5xl indent-8 5xs:indent-10 4xs:indent-11 3xs:indent-12 xs:indent-16 sm:indent-20 lg:indent-24 xl:indent-28 2xl:indent-32 3xl:indent-36 leading-relaxed 6xs:leading-relaxed 5xs:leading-relaxed 4xs:leading-relaxed 3xs:leading-relaxed 2xs:leading-relaxed xs:leading-relaxed sm:leading-normal md:leading-normal lg:leading-normal xl:leading-normal 2xl:leading-normal 3xl:leading-normal px-1 4xs:px-2 2xs:px-3 xs:px-4 md:px-6 lg:px-8 xl:px-10 !text-base-100">
 									{paragraph}
 									<br />
 									<br />
 								</p>
 							))
 						) : (
-							<p className="text-justify md:text-xl lg:text-2xl 2xl:text-4xl 3xl:text-5xl indent-7 lg:indent-9 2xl:indent-12 3xl:indent-20 md:leading-relaxed 2xl:leading-normal 3xl:leading-normal !text-base-100">
+							<p className="text-justify 5xs:text-lg sm:text-xl md:text-xl lg:text-3xl xl:text-3xl 2xl:text-4xl 3xl:text-5xl indent-8 5xs:indent-10 4xs:indent-11 3xs:indent-12 xs:indent-16 sm:indent-20 lg:indent-24 xl:indent-28 2xl:indent-32 3xl:indent-36 leading-relaxed 6xs:leading-relaxed 5xs:leading-relaxed 4xs:leading-relaxed 3xs:leading-relaxed 2xs:leading-relaxed xs:leading-relaxed sm:leading-normal md:leading-normal lg:leading-normal xl:leading-normal 2xl:leading-normal 3xl:leading-normal px-1 4xs:px-2 2xs:px-3 xs:px-4 md:px-6 lg:px-8 xl:px-10 !text-base-100">
 								{description}
 							</p>
 						)}
 					</div>
-					<div className="modal-action flex justify-center w-full mt-0">
+					<div className="modal-action flex justify-center w-full mt-0 mb-1 6xs:mb-2 xs:mb-2 md:mb-0">
 						<form method="dialog" className="w-full">
-							<div className="flex flex-col items-center w-full gap-3 5xs:gap-4 sm:gap-5 lg:gap-7 xl:gap-7 2xl:gap-8 3xl:gap-11">
+							<div className="flex flex-col items-center w-full gap-3 xs:gap-3 md:gap-4 lg:gap-5 xl:gap-6 3xl:gap-8">
 								<div className="w-full flex justify-center">
 									<Link
 										to={projectURL}
 										target="_blank"
-										className="botao flex justify-center items-center rounded-lg 2xs:rounded-xl xl:rounded-2xl 2xl:rounded-2xl py-2 lg:py-4 2xl:py-6 w-3/5 2xs:w-1/4 xs:w-1/4 md:w-1/4 2xl:w-1/5 3xl:w-1/4 text-lg sm:text-xl md:text-2xl lg:text-3xl xl:text-4xl 3xl:text-5xl !bg-secondary !shadow-2xl">
+										className="botao flex justify-center items-center rounded-lg 2xs:rounded-xl xl:rounded-2xl 2xl:rounded-2xl px-3 py-2 2xs:py-3 lg:py-5 2xl:py-6 3xl:py-8 text-base 6xs:text-lg sm:text-xl md:text-2xl lg:text-3xl xl:text-4xl 3xl:text-5xl !bg-secondary !shadow-2xl w-4/6 2xs:w-1/3 md:w-1/4 2xl:w-1/5 3xl:w-1/4">
 										Visitar Projeto
 									</Link>
 								</div>
@@ -103,11 +107,11 @@ function ProjectsBrowserMockUp({ id, title, projectURL, repoURL, projectPic, des
 									<Link
 										to={repoURL}
 										target="_blank"
-										className="botao flex justify-center items-center rounded-lg 2xs:rounded-xl xl:rounded-2xl 2xl:rounded-2xl py-2 lg:py-4 2xl:py-6 w-3/5 2xs:w-1/4 xs:w-1/4 md:w-1/4 2xl:w-1/5 3xl:w-1/4 text-lg sm:text-xl md:text-2xl lg:text-3xl xl:text-4xl 3xl:text-5xl !bg-secondary !shadow-2xl">
+										className="botao flex justify-center items-center rounded-lg 2xs:rounded-xl xl:rounded-2xl 2xl:rounded-2xl px-3 py-2 2xs:py-3 lg:py-5 2xl:py-6 3xl:py-8 text-base 6xs:text-lg sm:text-xl md:text-2xl lg:text-3xl xl:text-4xl 3xl:text-5xl !bg-secondary !shadow-2xl w-4/6 2xs:w-1/3 md:w-1/4 2xl:w-1/5 3xl:w-1/4">
 										Repositório GitHub
 									</Link>
 								</div>
-								<button className="botao flex justify-center items-center rounded-lg 2xs:rounded-xl md:rounded-2xl xl:rounded-2xl 2xl:rounded-2xl py-2 lg:py-4 2xl:py-6 w-2/5 2xs:w-1/6 md:w-1/6 3xl:w-1/5 text-lg sm:text-xl md:text-2xl lg:text-3xl xl:text-4xl 3xl:text-5xl !bg-secondary !shadow-2xl">
+								<button className="botao flex justify-center items-center rounded-lg 2xs:rounded-xl xl:rounded-2xl 2xl:rounded-2xl px-3 py-2 2xs:py-3 lg:py-5 2xl:py-6 3xl:py-8 text-base 6xs:text-lg sm:text-xl md:text-2xl lg:text-3xl xl:text-4xl 3xl:text-5xl !bg-secondary !shadow-2xl w-2/5 2xs:w-1/5 md:w-1/6 3xl:w-1/5">
 									<div className="min-h-fit">Fechar</div>
 								</button>
 							</div>

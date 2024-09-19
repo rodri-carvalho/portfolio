@@ -9,7 +9,7 @@ function MoreProjectsCard({ id, title, projectURL, projectPic, description }) {
 				<img
 					src={projectPic}
 					alt="Imagem do projeto"
-					className="h-full rounded-t-xl 2xs:rounded-t-2xl"
+					className="h-full rounded-t-xl 2xs:rounded-t-2xl opacity-90"
 				/>
 			</figure>
 			<div className="card-body rounded-b-xl 2xs:rounded-b-2xl !shadow-2xl bg-secondary z-0">

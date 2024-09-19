@@ -17,7 +17,7 @@ function EducationCard({ institution, title, pic, certificate, index, content = 
 		<>
 			<div className="card image-full shadow-xl flex flex-col justify-between 2xs:mx-1 md:mx-1 ">
 				<figure className="w-full">
-					<img src={pic} alt={`logo ${institution}`} className="w-full" />
+					<img src={pic} alt={`logo ${institution}`} className="w-full opacity-95" />
 				</figure>
 				<div className="card-body py-6 px-4 flex flex-col !w-full !text-base-100 xs:gap-4 lg:gap-7 2xl:gap-8 3xl:gap-10">
 					<h2 className="card-title flex flex-col items-start gap-1 text-2xl 2xs:text-4xl sm:text-5xl md:text-4xl 2xl:text-5xl 3xl:text-6xl 2xl:ml-6 2xl:mt-4 3xl:ml-8 3xl:mt-8">
