@@ -41,7 +41,7 @@ function Home() {
 					style={{
 						backgroundImage: `url(${heroBg})`,
 					}}>
-					<div className="hero-overlay bg-opacity-75 bg-accent rounded-badge opacity-75"></div>
+					<div className="hero-overlay bg-opacity-75 bg-accent rounded-badge opacity-80"></div>
 					<div className="hero-content flex flex-col xl:max-w-full relative text-neutral-content p-4 5xs:p-0">
 						<div className="flex flex-col items-center justify-center text-base-100 mt-12 6xs:mt-14 5xs:mt-20 sm:mt-24 xl:mt-32 2xl:mt-36 3xl:mt-52">
 							<h1 className="text-center font-bold text-3xl 5xs:text-4xl sm:text-5xl  xl:text-7xl 2xl:text-8xl 3xl:text-9xl leading-snug 4xs:mx-2">

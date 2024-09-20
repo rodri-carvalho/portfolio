@@ -46,10 +46,10 @@ function ModalCourses({
 
 			<dialog
 				id={modalId}
-				className="modal modal-bottom sm:modal-middle 2xs:modal-middle flex justify-center overflow-y-auto scroll-smooth" // Remova modal-bottom
+				className="modal modal-bottom sm:modal-middle 2xs:modal-middle flex justify-center overflow-y-auto scroll-smooth transition-transform duration-500 ease-in-out" // Remova modal-bottom
 				onClick={handleOutsideClick}>
 				<div
-					className={`modal-box px-6 2xs:px-8 sm:px-10 2xl:px-6  3xl:py-8 2xs:pt-6 py-3 sm:py-5  2xl:py-6 3xl:px-8 !max-w-fit sm:w-4/5 md:w-3/5 2xl:w-2/5 bg-accent !shadow-2xl 2xs:py-4 sm:rounded-3xl`}>
+					className={`modal-box px-6 2xs:px-8 sm:px-10 2xl:px-6 3xl:py-8 2xs:pt-6 py-3 sm:py-5 2xl:py-6 3xl:px-8 !max-w-fit sm:w-4/5 md:w-3/5 2xl:w-2/5 bg-accent !shadow-2xl 2xs:py-4 sm:rounded-3xl transition-opacity duration-500 ease-in-out`}>
 					{!imageSrc && (
 						<div className="w-full flex justify-center">
 							<div className="divider divider-neutral w-10/12 2xs:w-8/12 md:w-7/12 2xl:w-8/12 self-center my-3 2xs:mb-6 2xs:mt-4 xs:mb-7 xs:mt-4 sm:my-8 md:mt-2 md:mb-5 lg:mt-4 lg:mb-7 xl:mt-5 xl:mb-9 2xl:mt-7 2xl:mb-12 3xl:mt-12 3xl:mb-16">
