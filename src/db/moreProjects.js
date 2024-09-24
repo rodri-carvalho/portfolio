@@ -56,7 +56,7 @@ const moreProjects = [
 	{
 		id: 7,
 		title: "Landing Page Dividida",
-		projectURL: "https://split-landing-page-cp74te6xi-rodri-carvalhos-projects.vercel.app/",
+		projectURL: "https://split-landing-page-tau-two.vercel.app/",
 		projectPic: "/assets/pics/projects/other-projects/split.jpg",
 		description:
 			"Split Landing Page que permite que o usuário interaja com o layout navegando com o mouse entre as opção apresentadas.",
