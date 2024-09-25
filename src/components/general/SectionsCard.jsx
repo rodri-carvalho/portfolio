@@ -61,7 +61,7 @@ function SectionsCard({ page, description, iconId, isOpen, query }) {
 				<button className="botao mt-4 3xs:mt-5 3xs:mb-2 2xs:mt-7 2xs:mb-4 xs:mt-6 xs:mb-3 lg:mt-7 lg:my-4 xl:mt-8 xl:mb-5 2xl:mt-12 2xl:mb-8 !bg-neutral p-0 !shadow-2xl">
 					<Link
 						to={`/${query}`}
-						className="block p-0 text-lg 3xs:text-xl 2xs:text-2xl lg:text-3xl xl:text-4xl 2xl:text-5xl 3xl:text-6xl !bg-neutral rounded-lg sm:rounded-xl md:rounded-2xl lg:rounded-3xl py-2 sm:py-3 xl:py-5 3xl:py-7 px-5 xs:px-6 sm:px-7 xl:px-9  3xl:px-12 !shadow-lg">
+						className="block p-0 text-lg 3xs:text-xl 2xs:text-2xl lg:text-3xl xl:text-4xl 2xl:text-5xl 3xl:text-6xl !bg-neutral rounded-lg sm:rounded-xl md:rounded-2xl lg:rounded-3xl py-2 sm:py-3 xl:py-5 3xl:py-7 px-5 xs:px-6 sm:px-7 xl:px-9 3xl:px-12 !shadow-lg">
 						Ir para a seção
 					</Link>
 				</button>

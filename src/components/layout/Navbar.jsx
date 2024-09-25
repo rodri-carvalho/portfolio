@@ -1,10 +1,12 @@
 import { IoMenu } from "react-icons/io5";
-import { Link } from "react-router-dom";
+import { Link, useLocation } from "react-router-dom";
 import React, { useState, useEffect } from "react";
 import PropTypes from "prop-types";
 import ThemeToggleButton from "./ThemeButton";
 
-function Navbar({ title = "Meu Portfólio" }) {
+function Navbar({ title = "Portfólio" }) {
+	const location = useLocation();
+
 	const [windowWidth, setWindowWidth] = useState(window.innerWidth);
 	const [isDropdownOpen, setIsDropdownOpen] = useState(false);
 
@@ -29,11 +31,11 @@ function Navbar({ title = "Meu Portfólio" }) {
 	};
 
 	return (
-		<nav className="navbar shadow-lg text-neutral-content w-full bg-secondary 4xs:py-5 2xs:py-5 lg:py-7 xl:py-8 2xl:py-9 3xl:py-12 mb-3">
-			<div className="w-full ">
+		<nav className="navbar text-neutral-content w-full bg-secondary 4xs:py-5 2xs:py-5 lg:py-7 xl:py-8 2xl:py-9 3xl:py-12 mb-3 !shadow-lg">
+			<div className="w-full">
 				<div className="flex-none px-1 2xs:ml-4 lg:ml-7">
 					<Link
-						to="/"
+						to={location.pathname === "/projects" ? "/" : "/projects"}
 						className="botaoIcone text-2xl 3xs:text-3xl md:text-3xl lg:text-4xl 2xl:text-6xl 3xl:text-7xl font-bold align-middle text-base-100 p-2 rounded-xl">
 						{title}
 					</Link>

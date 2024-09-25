@@ -56,28 +56,24 @@ function ContactCard({ title, numberOrId, iconId, href }) {
 			toastContainer.className =
 				"fixed inset-0 flex top-5 justify-center pointer-events-none max-h-fit";
 
-			// Criar alerta de sucesso
+			// Criar alerta
 			const alertSuccess = document.createElement("div");
 			alertSuccess.className =
-				"alert alert-success bg-success text-white shadow-lg max-w-xs w-full p-4 rounded-lg flex items-center justify-center opacity-0 transform scale-90 transition-all duration-500";
+				"alert alert-success bg-success flex items-center justify-center text-white shadow-lg max-w-xs w-full p-4 rounded-lg opacity-0 transform scale-90 transition-all duration-500";
 
-			// Mensagem do alerta
 			const alertSuccessSpan = document.createElement("span");
 			alertSuccessSpan.innerText = "Contato copiado com sucesso";
 			alertSuccess.appendChild(alertSuccessSpan);
 
-			// Adicionar o alerta ao container
 			toastContainer.appendChild(alertSuccess);
 
-			// Adicionar o container à página
 			document.body.appendChild(toastContainer);
 
 			setTimeout(() => {
 				alertSuccess.classList.add("opacity-100", "scale-100");
 				alertSuccess.classList.remove("opacity-0", "scale-90");
-			}, 100); // Atraso para garantir que a transição funcione
+			}, 100);
 
-			// Remover o alerta com transição suave
 			setTimeout(() => {
 				alertSuccess.classList.add("opacity-0", "scale-90");
 				alertSuccess.classList.remove("opacity-100", "scale-100");
@@ -85,7 +81,7 @@ function ContactCard({ title, numberOrId, iconId, href }) {
 				// Remover o container do DOM após a transição
 				setTimeout(() => {
 					document.body.removeChild(toastContainer);
-				}, 500); // Tempo para completar a transição
+				}, 500);
 			}, 3000);
 		} catch (err) {
 			console.error("Erro ao copiar: ", err);

@@ -18,7 +18,6 @@ function Education() {
 
 	useEffect(() => {
 		const handleClickOutside = (event) => {
-			const scrollbarWidth = window.innerWidth - document.documentElement.clientWidth;
 			const isClickOnScrollbar = event.clientX >= document.documentElement.clientWidth;
 
 			const isClickOnThemeToggleButton = event.target.closest(".theme-toggle-button");
@@ -87,7 +86,7 @@ function Education() {
 
 				<div
 					ref={formacaoTecnicaRef}
-					className={`collapse collapse-plus xl:py-4 3xl:py-8 bg-accent shadow-2xl ${
+					className={`collapse collapse-plus xl:py-4 3xl:py-8 bg-accent !shadow-2xl ${
 						isFormacaoTecnicaOpen ? "collapse-open" : ""
 					}`}>
 					<div

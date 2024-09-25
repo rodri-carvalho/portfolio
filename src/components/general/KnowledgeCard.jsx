@@ -59,6 +59,7 @@ function KnowledgeCard({ iconId, techId, inProgress, techList }) {
 				}
 			}
 		};
+		// eslint-disable-next-line react-hooks/exhaustive-deps
 	}, []);
 
 	return (

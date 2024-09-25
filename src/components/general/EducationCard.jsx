@@ -15,7 +15,7 @@ function EducationCard({ institution, title, pic, certificate, index, content = 
 
 	return (
 		<>
-			<div className="card image-full shadow-xl flex flex-col justify-between 2xs:mx-1 md:mx-1 ">
+			<div className="card image-full shadow-xl flex flex-col justify-between 2xs:mx-1 md:mx-1">
 				<figure className="w-full">
 					<img src={pic} alt={`logo ${institution}`} className="w-full opacity-95" />
 				</figure>
@@ -76,7 +76,7 @@ EducationCard.propTypes = {
 	title: PropTypes.string.isRequired,
 	pic: PropTypes.string.isRequired,
 	certificate: PropTypes.string.isRequired,
-	index: PropTypes.number,
+	index: PropTypes.number.isRequired,
 	content: PropTypes.oneOfType([PropTypes.string, PropTypes.arrayOf(PropTypes.string)]),
 };
 

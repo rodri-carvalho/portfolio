@@ -55,7 +55,7 @@ function ProjectsBrowserMockUp({ id, title, projectURL, repoURL, projectPic, des
 							</div>
 						</div>
 					</div>
-					<div className="bg-base-200 flex flex-col justify-center 2xs:!h-full ">
+					<div className="bg-base-200 flex flex-col justify-center 2xs:!h-full">
 						<img src={projectPic} alt="" className="opacity-90" />
 					</div>
 					<div className="text-lg 4xs:text-xl sm:text-2xl lg:text-3xl xl:text-4xl 2xl:text-5xl 3xl:text-6xl py-1 4xs:py-1 sm:py-2 lg:py-3 xl:py-4 2xl:py-5 3xl:py-8 !3xl:rounded-3xl !text-base-100">

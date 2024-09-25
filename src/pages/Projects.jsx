@@ -17,7 +17,6 @@ function Projects() {
 
 	useEffect(() => {
 		const handleClickOutside = (event) => {
-			const scrollbarWidth = window.innerWidth - document.documentElement.clientWidth;
 			const isClickOnScrollbar = event.clientX >= document.documentElement.clientWidth;
 
 			const isClickOnThemeToggleButton = event.target.closest(".theme-toggle-button");
@@ -43,8 +42,8 @@ function Projects() {
 	};
 
 	return (
-		<div className="flex flex-col w-full px-5 sm:px-9 md:px-10 lg:px-14 2xl:px-20 3xl:px-28 3xl:py-8 gap-3 sm:gap-6 md:gap-7 lg:gap-8 xl:gap-9 2xl:gap-10 3xl:gap-16 2xs:grid 2xs:grid-cols-2 2xs:auto-rows-max 2xs:my-1 2xs:gap-y-4 2xs:gap-x-4 xs:my-6 xs:gap-y-12 xs:gap-x-6 sm:my-6 sm:gap-y-16 sm:gap-x-8 md:my-2 md:gap-y-6 md:gap-x-6 xl:my-4 2xl:my-6 3xl:my-2 3xl:gap-x-24  3xl:gap-y-16">
-			{projects.map((project, index) => (
+		<div className="flex flex-col w-full px-5 sm:px-9 md:px-10 lg:px-14 2xl:px-20 3xl:px-28 3xl:py-8 gap-3 sm:gap-6 md:gap-7 lg:gap-8 xl:gap-9 2xl:gap-10 3xl:gap-16 2xs:grid 2xs:grid-cols-2 2xs:auto-rows-max 2xs:my-1 2xs:gap-y-4 2xs:gap-x-4 xs:my-6 xs:gap-y-12 xs:gap-x-6 sm:my-6 sm:gap-y-16 sm:gap-x-8 md:my-2 md:gap-y-6 md:gap-x-6 xl:my-4 2xl:my-6 3xl:my-2 3xl:gap-x-24 3xl:gap-y-16">
+			{projects.map((project) => (
 				<ProjectsBrowserMockUp
 					key={project.id}
 					id={project.id}

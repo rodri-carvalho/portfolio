@@ -2,7 +2,7 @@ import React from "react";
 import { Link } from "react-router-dom";
 import PropTypes from "prop-types";
 
-function MoreProjectsCard({ id, title, projectURL, projectPic, description }) {
+function MoreProjectsCard({ title, projectURL, projectPic, description }) {
 	return (
 		<div className="card card-compact !text-base-100 bg-neutral max-w-full !shadow-2xl rounded-xl 2xs:rounded-2xl">
 			<figure className="!shadow-2xl z-10">
@@ -22,7 +22,7 @@ function MoreProjectsCard({ id, title, projectURL, projectPic, description }) {
 						{description}
 					</p>
 				</div>
-				<div className="card-actions flex justify-center mt-1 5xs:mt-3 lg:mt-4 xl:mt-5 ">
+				<div className="card-actions flex justify-center mt-1 5xs:mt-3 lg:mt-4 xl:mt-5">
 					<Link
 						to={projectURL}
 						target="_blank"
