@@ -11,13 +11,11 @@ import Education from "./pages/Education";
 import FindMe from "./pages/FindMe";
 
 function App() {
-	// Set the theme based on the user's previous choice stored in localStorage
 	useEffect(() => {
 		const storedTheme = localStorage.getItem("theme");
 		if (storedTheme) {
 			document.documentElement.setAttribute("data-theme", storedTheme);
 		} else {
-			// Set a default theme if none is set
 			document.documentElement.setAttribute("data-theme", "light");
 		}
 	}, []);

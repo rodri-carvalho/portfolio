@@ -12,12 +12,11 @@ function ProjectsBrowserMockUp({ id, title, projectURL, repoURL, projectPic, des
 		if (modal) {
 			modal.showModal();
 
-			// Espera o próximo frame para garantir a renderização correta e então rola o modal para o topo
 			requestAnimationFrame(() => {
-				modal.scrollTop = 0; // Rola o modal para o topo
+				modal.scrollTop = 0;
 				const modalBox = modal.querySelector(".modal-box");
 				if (modalBox) {
-					modalBox.scrollTop = 0; // Garante que o conteúdo da modal box também role para o topo
+					modalBox.scrollTop = 0;
 				}
 			});
 		}
@@ -30,7 +29,7 @@ function ProjectsBrowserMockUp({ id, title, projectURL, repoURL, projectPic, des
 		}
 	};
 
-	// Adiciona o evento para fechar o modal ao clicar fora dele
+	// Fechar o modal ao clicar fora dele
 	useEffect(() => {
 		const modal = modalRef.current;
 		if (modal) {

@@ -14,7 +14,6 @@ function KnowledgeCard({ iconId, techId, inProgress, techList }) {
 
 	const modalId = `modal-${iconId}`;
 
-	// Estado para controlar a visibilidade da seta (false significa que a seta sumiu e não voltará)
 	const [arrowVisible, setArrowVisible] = useState(true);
 
 	const openModal = () => {
@@ -22,12 +21,11 @@ function KnowledgeCard({ iconId, techId, inProgress, techList }) {
 		if (modal) {
 			modal.showModal();
 
-			// Espera o próximo frame para garantir a renderização correta e então rola o modal para o topo
+			// Garantir que o modal abra no topo
 			requestAnimationFrame(() => {
 				const modalBox = modal.querySelector(".modal-box");
 				if (modalBox) {
-					modalBox.scrollTop = 0; // Garante que o conteúdo da modal box role para o topo
-					// Adiciona o evento de scroll apenas para o modal
+					modalBox.scrollTop = 0;
 					modalBox.addEventListener("scroll", handleScroll);
 				}
 			});
@@ -42,7 +40,7 @@ function KnowledgeCard({ iconId, techId, inProgress, techList }) {
 		}
 	};
 
-	// Função para esconder a seta ao scrollar mais de 1px, mas sem permitir que ela reapareça
+	// Função para esconder a seta ao scrollar
 	const handleScroll = (e) => {
 		const scrollTop = e.target.scrollTop;
 		if (scrollTop > 10 && arrowVisible) {
@@ -50,7 +48,7 @@ function KnowledgeCard({ iconId, techId, inProgress, techList }) {
 		}
 	};
 
-	// Limpa o evento de scroll quando o modal é fechado
+	// Limpa o evento scroll quando o modal é fechado
 	useEffect(() => {
 		const modal = document.getElementById(modalId);
 		return () => {
@@ -97,7 +95,6 @@ function KnowledgeCard({ iconId, techId, inProgress, techList }) {
 				className="modal modal-bottom sm:modal-middle text-base-100"
 				onClick={handleOutsideClick}>
 				<div className="modal-box pt-4 sm:pt-5 xl:pt-7 sm:rounded-3xl sm:max-w-full md:max-w-fit 2xl:pl-14 bg-accent !shadow-2xl h-3/5 sm:h-fit">
-					{/* Condicional para exibir ou esconder a seta */}
 					{arrowVisible && (
 						<div className="arrowDiv absolute w-full h-full flex justify-center items-end -translate-x-8 -translate-y-4 3xs:-translate-y-2 sm:hidden">
 							<SlArrowDown

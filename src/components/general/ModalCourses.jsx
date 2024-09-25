@@ -15,11 +15,11 @@ function ModalCourses({
 		if (modal) {
 			modal.showModal();
 
-			// Espera o próximo frame para garantir a renderização correta e então rola o modal para o topo
+			// Garantir que o modal abra no topo
 			requestAnimationFrame(() => {
 				const modalBox = modal.querySelector(".modal-box");
 				if (modalBox) {
-					modalBox.scrollTop = 0; // Garante que o conteúdo da modal box role para o topo
+					modalBox.scrollTop = 0;
 				}
 			});
 		}
@@ -46,7 +46,7 @@ function ModalCourses({
 
 			<dialog
 				id={modalId}
-				className="modal modal-bottom sm:modal-middle 2xs:modal-middle flex justify-center overflow-y-auto scroll-smooth transition-transform duration-500 ease-in-out" // Remova modal-bottom
+				className="modal modal-bottom sm:modal-middle 2xs:modal-middle flex justify-center overflow-y-auto scroll-smooth transition-transform duration-500 ease-in-out"
 				onClick={handleOutsideClick}>
 				<div
 					className={`modal-box px-6 2xs:px-8 sm:px-10 2xl:px-6 3xl:py-8 2xs:pt-6 py-3 sm:py-5 2xl:py-6 3xl:px-8 !max-w-fit sm:w-4/5 md:w-3/5 2xl:w-2/5 bg-accent !shadow-2xl 2xs:py-4 sm:rounded-3xl transition-opacity duration-500 ease-in-out`}>

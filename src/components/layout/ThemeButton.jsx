@@ -5,7 +5,6 @@ import { IoSunny } from "react-icons/io5";
 function ThemeToggleButton() {
 	const [theme, setTheme] = useState(() => {
 		const storedTheme = localStorage.getItem("theme");
-		// Set dark as the default theme if none is set in localStorage
 		return storedTheme ? storedTheme : "dark";
 	});
 
