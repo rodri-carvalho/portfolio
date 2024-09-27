@@ -145,7 +145,7 @@ const moreProjects = [
 		projectURL: "https://blurry-loading-alpha.vercel.app/",
 		projectPic: "/assets/pics/projects/other-projects/blurry.jpg",
 		description:
-			"Imagem que abre com blur em 100% e vai sendo revelada à medida em que a contagem percentual é acrescida.",
+			"Imagem que abre borrada em 100% e vai sendo revelada à medida em que a contagem percentual é acrescida.",
 	},
 	{
 		id: 19,
